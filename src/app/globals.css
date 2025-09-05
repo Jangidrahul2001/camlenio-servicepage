@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-scrollX {
+  animation-name: scrollX;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.animate-scrollX:hover {
+  animation-play-state: paused;
+}
+
+
+
