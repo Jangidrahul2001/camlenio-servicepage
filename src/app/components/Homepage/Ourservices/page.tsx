@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { cn } from "../../../../../lib/utils";
+import GsapReveal from "../../GsapReveal";
 
 const services = [
   {
@@ -70,26 +71,27 @@ const OurServices = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div id="next-section" className=" scroll-mt-20 min-h-screen px-6">
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="max-w-[85rem] mx-auto text-center"
-      >
-        <span className="inline-block text-gray-900 font-semibold my-2 text-2xl">
-          OUR SERVICES
-        </span>
-        <h2 className="text-3xl md:text-5xl font-semibold my-2 text-gray-900">
-          Website & Mobile App Development Services
-        </h2>
-        <p className="text-gray-700 max-w-full mx-auto">
-          Our offshore IT consulting services along with the AI-powered core
-          helps top companies stay competitive, win new markets and increase
-          shareholder
-          <br />
-          value. Choose from a wide range of custom software development
-          services and get extensive
-        </p>
+      <div className="max-w-[85rem] mx-auto text-center">
+        <GsapReveal>
+          <span className="inline-block text-gray-900 font-semibold my-2 text-2xl">
+            OUR SERVICES
+          </span>
+        </GsapReveal>
+        <GsapReveal>
+          <h2 className="text-3xl md:text-5xl font-semibold my-2 text-gray-900">
+            Website & Mobile App Development Services
+          </h2>
+        </GsapReveal>
+        <GsapReveal>
+          <p className="text-gray-700 max-w-full mx-auto">
+            Our offshore IT consulting services along with the AI-powered core
+            helps top companies stay competitive, win new markets and increase
+            shareholder
+            <br />
+            value. Choose from a wide range of custom software development
+            services and get extensive
+          </p>
+        </GsapReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-12 max-w-[90rem] mx-auto">
           {services.map((service, i) => (
@@ -120,59 +122,61 @@ const OurServices = () => {
                   />
                 )}
               </AnimatePresence>
-              <motion.div
-                whileHover={{ transition: { duration: 0.3 } }}
-                className={cn(
-                  "relative z-20 h-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl  border-1 border-gray-200 bg-transparent flex flex-col"
-                )}
-              >
-                <div
+              <GsapReveal>
+                <motion.div
+                  whileHover={{ transition: { duration: 0.3 } }}
                   className={cn(
-                    service.bg,
-                    "flex items-center justify-center p-6"
+                    "relative z-20 h-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl  border-1 border-gray-200 bg-transparent flex flex-col"
                   )}
                 >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={500}
-                    height={500}
-                    className="w-full h-auto object-contain rounded-3xl"
-                  />
-                </div>
+                  <div
+                    className={cn(
+                      service.bg,
+                      "flex items-center justify-center p-6"
+                    )}
+                  >
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      width={500}
+                      height={500}
+                      className="w-full h-auto object-contain rounded-3xl"
+                    />
+                  </div>
 
-                <div className="p-6 flex flex-col gap-4 flex-1">
-                  <h3 className="text-lg md:text-2xl font-semibold text-gray-900 text-center md:text-left">
-                    {service.title}
-                  </h3>
-                  <p className="text-base leading-tight text-gray-700 text-center md:text-left">
-                    {service.description}
-                  </p>
+                  <div className="p-6 flex flex-col gap-4 flex-1">
+                    <h3 className="text-lg md:text-2xl font-semibold text-gray-900 text-center md:text-left">
+                      {service.title}
+                    </h3>
+                    <p className="text-base leading-tight text-gray-700 text-center md:text-left">
+                      {service.description}
+                    </p>
 
-                  {service.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {service.tags.map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className="bg-gray-800 hover:bg-orange-900 cursor-pointer text-gray-100 hover:text-gray-900 text-xs font-medium px-3 py-1 rounded shadow-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                    {service.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {service.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="bg-gray-800 hover:bg-orange-900 cursor-pointer text-gray-100 hover:text-gray-900 text-xs font-medium px-3 py-1 rounded shadow-sm"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
 
-                <div className="px-6 pb-6">
-                  <button className="w-full bg-orange-500 hover:bg-orange-600 transition-colors text-sm font-medium py-2 rounded-lg flex items-center justify-center gap-2 text-white">
-                    EXPLORE NOW <span className="text-lg">→</span>
-                  </button>
-                </div>
-              </motion.div>
+                  <div className="px-6 pb-6">
+                    <button className="w-full bg-orange-500 hover:bg-orange-600 transition-colors text-sm font-medium py-2 rounded-lg flex items-center justify-center gap-2 text-white">
+                      EXPLORE NOW <span className="text-lg">→</span>
+                    </button>
+                  </div>
+                </motion.div>
+              </GsapReveal>
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

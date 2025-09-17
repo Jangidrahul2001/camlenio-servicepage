@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -41,5 +41,25 @@
   animation-play-state: paused;
 }
 
+/* about contact wiggle animation */
 
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
 
+.hover\:animate-wiggle:hover {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+.group:hover .group-hover\:animate-wiggle {
+  animation: wiggle 0.3s ease-in-out;
+}

@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import {
   Carousel,
   Card,
-} from "@/app/components/Fullstackdev/Servicecoursel/page";
+} from "@/app/components/Fullstackdev/Servicecoursel/Carousel";
 
 const services = [
   {
     title: "End-to-End Web Solutions",
     content:
-      "Our services cover the entire web development lifecycle, including UI/UX design, coding, testing, debugging, and deploying software. We also handle backend development, database management, and CMS solutions to provide a holistic approach.",
+      "Our services cover the entire web development lifecycle, including UI/UX design, coding, testing, debugging, and deploying software. We also handle backend development, database management,",
   },
   {
     title: "Secure & Scalable Backends",
@@ -45,23 +45,28 @@ const FsDevServices = () => {
   ));
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center mx-auto px-8 py-10 md:py-20">
+    <div className="min-h-screen bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove flex flex-col justify-center items-center mx-auto px-8 py-10 md:py-20">
       <motion.div
         initial={{ y: 50, opacity: 1 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-center z-20 max-w-[80rem] "
+        className="text-center z-20 max-w-7xl "
       >
-        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-semibold text-gray-900 mb-4">
+        <h2 className=" max-w-6xl mx-auto text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-4">
           Full-Stack Development Services{" "}
-          <span className="text-orange-500">Camlenio</span> Offer
+          <span
+            className="text-orange-500"
+            style={{ textShadow: "2px 2px 0 #FAF9F6, 4px 4px 0 #FFB266" }}
+          >
+            Camlenio
+          </span>{" "}
+          Offer
         </h2>
-        <p className="inline-block text-gray-900 mb-6 text-xl">
+        <p className="max-w-6xl mx-auto inline-block text-gray-900 mb-6 text-base">
           Helpful Insight offers comprehensive full-stack development services
           tailored to address every aspect of your project requirements. Our
           expertise spans both frontend and backend development, ensuring
-          high-quality results and on-time delivery. We are committed to taking
-          your business to the next level with our robust solutions.
+          high-quality results and on-time delivery.
         </p>
       </motion.div>
       <Carousel items={cards} />

@@ -113,66 +113,68 @@ const features = [
 
 export default function UiUxImportance() {
   return (
-    <div className="relative px-4 sm:px-6 lg:px-24 py-16 text-gray-900 overflow-hidden">
-      <div className="absolute left-0 top-0 w-[80px] sm:w-[120px] md:w-[160px] h-[80px] sm:h-[120px] md:h-[160px] bg-orange-500 rounded-r-full z-0"></div>
-     <div className="absolute right-0 top-0 w-[80px] sm:w-[120px] md:w-[160px] h-[80px] sm:h-[120px] md:h-[160px] bg-orange-500 rounded-l-full z-0"></div>
+    <div className="">
+      <div className="relative  py-16 text-gray-900 overflow-hidden bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+        <div className="absolute left-0 top-0 w-[80px] sm:w-[120px] md:w-[160px] h-[80px] sm:h-[120px] md:h-[160px] bg-orange-500 rounded-r-full z-0"></div>
+        <div className="absolute right-0 top-0 w-[80px] sm:w-[120px] md:w-[160px] h-[80px] sm:h-[120px] md:h-[160px] bg-orange-500 rounded-l-full z-0"></div>
 
-      <div className="sm:max-w-5xl mx-auto space-y-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-3xl  mt-4 sm:max-w-sm md:max-w-lg lg:max-w-4xl mx-auto md:text-5xl font-bold mb-4">
-            Why UI/UX Design Is Essential for Your Website
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 ">
-            It&apos;s not just how it looks — it&apos;s how it works.
-          </p>
-        </motion.div>
+        <div className="sm:max-w-5xl mx-auto space-y-12 px-8 md:px-16">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl mt-4 sm:max-w-sm md:max-w-lg lg:max-w-4xl mx-auto md:text-5xl font-bold mb-4">
+              Why UI/UX Design Is Essential for Your Website
+            </h2>
+            <p className="text-lg md:text-xl text-gray-700 ">
+              It&apos;s not just how it looks — it&apos;s how it works.
+            </p>
+          </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid sm:grid-cols-2 gap-8"
-        >
-          {features.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.4, ease: [0.42, 0, 0.58, 1] },
-                },
-              }}
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className="relative p-6 group bg-transparent border-2 border-gray-200 rounded-2xl shadow-lg"
-            >
-              {/* <div className="absolute top-0 right-0 w-20 h-20 bg-orange-500 rounded-bl-full transition-all duration-300 ease-out group-hover:w-24 group-hover:h-24" /> */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-30 h-2 bg-orange-500 rounded-t-full group-hover:w-70 transition-all duration-500 ease-out" />
-              <div className="mb-4">{item.icon}</div>
-              <h4 className="text-2xl font-semibold mb-2">{item.title}</h4>
-              <p className="text-sm text-gray-700">{item.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid sm:grid-cols-2 gap-8"
+          >
+            {features.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8 },
+                  visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: { duration: 0.4, ease: [0.42, 0, 0.58, 1] },
+                  },
+                }}
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                className="relative p-6 group bg-transparent border-2 border-gray-200 rounded-2xl shadow-lg"
+              >
+                {/* <div className="absolute top-0 right-0 w-20 h-20 bg-orange-500 rounded-bl-full transition-all duration-300 ease-out group-hover:w-24 group-hover:h-24" /> */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-30 h-2 bg-orange-500 rounded-t-full group-hover:w-70 transition-all duration-500 ease-out" />
+                <div className="mb-4">{item.icon}</div>
+                <h4 className="text-2xl font-semibold mb-2">{item.title}</h4>
+                <p className="text-sm text-gray-700">{item.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-xl font-semibold text-center pt-8"
-        >
-          Investing in UI/UX isn’t a luxury — it’s a growth strategy.
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-xl font-semibold text-center pt-8"
+          >
+            Investing in UI/UX isn’t a luxury — it’s a growth strategy.
+          </motion.p>
+        </div>
       </div>
     </div>
   );

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-export default function FreeQuotation() {
+const FreeQuotation = () => {
   return (
-    <section className="relative py-16 bg-blue-950 overflow-hidden">
+    <div className="relative py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-2xl md:text-3xl font-semibold text-orange-500">
@@ -37,7 +37,7 @@ export default function FreeQuotation() {
               id="home_email"
               name="home_email"
               type="email"
-              placeholder="Enter Email Id"
+              placeholder="Email Id"
               required
             />
             <input
@@ -46,12 +46,12 @@ export default function FreeQuotation() {
               id="home_phone"
               name="home_phone"
               type="tel"
-              placeholder="Enter Contact Number"
+              placeholder="Contact Number"
               required
             />
             <textarea
               aria-label="Message"
-              className="w-full md:col-span-3 px-4 py-3 rounded-lg border-2 border-b-8 border-blue-400 bg-transparent text-gray-50 placeholder-gray-500  outline-none"
+              className="w-full md:col-span-3 px-4 py-3 rounded-lg border-2 border-b-8 border-blue-400 bg-transparent text-gray-50 placeholder-blue-400  outline-none"
               id="home_message"
               name="home_message"
               placeholder="Message"
@@ -76,7 +76,7 @@ export default function FreeQuotation() {
         alt="Global Shape"
         width={600}
         height={600}
-        className="absolute -left-80  top-10 opacity-30 animate-spin [animation-duration:50s]"
+        className="absolute -left-80  top-10 opacity-100 animate-spin [animation-duration:50s] text-blue-500"
         unoptimized
       />
 
@@ -87,6 +87,7 @@ export default function FreeQuotation() {
         height={400}
         className="absolute right-0 bottom-0 opacity-50"
       />
-    </section>
+    </div>
   );
-}
+};
+export default FreeQuotation;

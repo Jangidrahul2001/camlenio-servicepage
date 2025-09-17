@@ -25,7 +25,7 @@ export default function HeroSection() {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-[80rem] min-h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-6">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -34,11 +34,16 @@ export default function HeroSection() {
           viewport={{ once: true }}
           className="w-full text-center md:text-left mx-auto md:w-3/5"
         >
-          <h1 className=" text-white text-2xl md:text-5xl lg:text-6xl font-bold max-w-6xl">
-            <span className="text-orange-500">Camlenio</span> Custom Software –
-            Scalable, Smart, and Built Around You
+          <h1 className=" text-white text-2xl md:text-5xl font-bold">
+            <span
+              className="text-orange-500"
+              style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+            >
+              Camlenio
+            </span>{" "}
+            Custom Software – Scalable, Smart, and Built Around You
           </h1>
-          <p className="text-xs sm:text-lg text-gray-200 font-normal pr-2">
+          <p className="text-xs sm:text-base text-gray-200 font-normal pr-2">
             At Camlenio, we specialize in building custom software solutions
             that adapt to your business—not the other way around. From intuitive
             interfaces to powerful backend systems, our applications are
@@ -61,8 +66,7 @@ export default function HeroSection() {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ opacity: 1 }}
           animate={{
-            y: [-20, 20],
-            rotate: [0, 1, -1, 0],
+            y: [-10, 10],
           }}
           transition={{
             duration: 4,
@@ -81,22 +85,16 @@ export default function HeroSection() {
             priority
           />
         </motion.div>
-        <div className="text-center">
-          <motion.button
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.95 }}
+        <div className="text-center z-10">
+          <button
             onClick={handleScroll}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:inline-flex items-center gap-1 px-6 py-3 border-2 border-gray-50 text-gray-100 text-base md:text-lg rounded-full shadow hover:border-gray-500 hover:text-white font-bold transition "
+            className="absolute bottom-20 left-1/2 -translate-x-1/2 hidden md:inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-500 text-orange-500 text-lg rounded-full shadow-xl hover:bg-orange-600 hover:text-white font-bold transition-all duration-300 "
           >
             Explore More <FaArrowDownLong />
-          </motion.button>
+          </button>
         </div>
+        <BackToTopButton />
       </div>
-      <BackToTopButton />
     </div>
   );
 }

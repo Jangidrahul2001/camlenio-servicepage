@@ -58,12 +58,12 @@ const content = {
   ],
 };
 
-export default function TechnologiesTabs() {
+const TechnologiesTabs = () => {
   const [activeTab, setActiveTab] = useState("mobile");
 
   return (
-    <section
-      className="relative py-16 text-white"
+    <div
+      className=" py-16 text-white relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove"
       style={{
         backgroundImage: "url('/Homepage/bg-enjoy.png')",
         backgroundSize: "cover",
@@ -72,13 +72,18 @@ export default function TechnologiesTabs() {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
+          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
             <span className="absolute w-8 h-2 rounded-full bg-orange-500 left-[-1.4rem] top-1/2 -translate-y-1/2"></span>
             Technologies - Now About our Weapons
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4">
             Latest and Smart{" "}
-            <span className="text-orange-500">Technologies</span>
+            <span
+              className="text-orange-500"
+              style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+            >
+              Technologies
+            </span>
           </h2>
           <p className="text-gray-200 mt-2 max-w-2xl mx-auto">
             Our Professional Developers and Designing Engineers are well versed
@@ -92,7 +97,7 @@ export default function TechnologiesTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative pb-2 text-xl ${
+              className={`relative pb-2text-sm md:text-xl ${
                 activeTab === tab.id
                   ? "text-orange-500 after:absolute after:left-0 after:right-0 after:-bottom-[1px] after:h-[2px] after:bg-orange-500 after:origin-center after:scale-x-100 after:transition-transform after:duration-500"
                   : "text-white hover:text-orange-400 after:absolute after:left-0 after:right-0 after:-bottom-[1px] after:h-[2px] after:bg-orange-500 after:origin-center after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-x-100"
@@ -122,6 +127,7 @@ export default function TechnologiesTabs() {
           )}
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+export default TechnologiesTabs;

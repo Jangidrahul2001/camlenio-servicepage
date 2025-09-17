@@ -94,142 +94,147 @@ const WebDevSolution = () => {
   };
 
   return (
-    <div className="min-h-screen px-6 py-8 overflow-hidden">
-      <div className="max-w-[85rem] mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-12 px-4 md:px-8 py-10">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/2 space-y-3"
-          >
-            <span className="inline-block text-xl md:text-2xl font-normal tracking-wider text-orange-600">
-              WEB DEVELOPMENT SOLUTION
-            </span>
-            <h3 className="text-xl md:text-3xl text-gray-800 font-semibold">
-              Our Iterative Development Methodology for Delivering Excellence
-            </h3>
-          </motion.div>
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="md:w-1/2"
-          >
-            <p className="text-sm md:text-base font-semibold text-gray-700 leading-relaxed">
-              If you are on a search for a quality web application, we have what
-              it takes to meet your requirements. We have a great team of
-              skilled developers building high-performance and reliable web
-              applications aimed at improving user experience.
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="relative w-full h-64 sm:h-80 md:h-[60vh] overflow-hidden rounded-lg hidden md:block">
-          <Image
-            src="/webdevpage/courselbg3.jpg"
-            alt="Image"
-            fill
-            className="object-cover brightness-[.6] z-0"
-          />
-          <AnimatePresence custom={direction}>
+    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="min-h-screen px-6 md:px-16 py-20 overflow-hidden ">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-12">
             <motion.div
-              key={slides[index].id}
-              className="absolute top-0 left-0 w-full h-full"
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="md:w-1/2 space-y-3"
             >
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center  px-4 z-10">
-                <motion.h2
-                  key={slides[index].heading}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-2xl sm:text-3xl md:text-7xl font-bold mb-6 max-w-5xl text-orange-400"
-                >
-                  {slides[index].heading}
-                </motion.h2>
-
-                <motion.p
-                  key={slides[index].text}
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-sm sm:text-base md:text-xl max-w-4xl px-2 text-orange-100"
-                >
-                  {slides[index].text}
-                </motion.p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-20">
-            <button
-              onClick={() => paginate(-1)}
-              className="invert px-3 py-2 rounded-r transition-all"
-            >
-              <Image
-                src="/webdevpage/right-arrow.png"
-                alt="right-arrow"
-                width={50}
-                height={24}
-                className="object-cover rotate-180"
-              />
-            </button>
-          </div>
-          <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-20">
-            <button
-              onClick={() => paginate(1)}
-              className=" invert px-3 py-2 rounded-l transition-all"
-            >
-              <Image
-                src="/webdevpage/right-arrow.png"
-                alt="right-arrow"
-                width={50}
-                height={24}
-                className="object-cover"
-              />
-            </button>
-          </div>
-
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 sm:w-48 h-1 bg-white/30 rounded overflow-hidden z-20">
-            <motion.div
-              className="h-full bg-white"
-              key={index}
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 3, ease: "linear" }}
-            />
-          </div>
-        </div>
-        <div className="md:hidden mt-10">
-          <div className="flex gap-4 overflow-x-auto px-4 snap-x snap-mandatory scroll-smooth no-scrollbar">
-            {slides.map((slide) => (
-              <motion.div
-                key={slide.id}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="snap-center shrink-0 w-[85%] bg-white rounded-xl shadow-xl overflow-hidden relative"
+              <span
+                className=" text-xl md:text-4xl font-bold tracking-wider text-orange-500"
+                style={{ textShadow: "2px 2px 0 #FAF9F6, 4px 4px 0 #FFB266" }}
               >
-                <div className="h-48 relative">
-                  <Image
-                    src={slide.image}
-                    alt={slide.heading}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {slide.heading}
-                  </h3>
-                  <p className="text-sm text-gray-600">{slide.text}</p>
+                WEB DEVELOPMENT SOLUTION
+              </span>
+              <h3 className="hidden md:inline-block text-xl md:text-2xl text-gray-800 font-semibold mt-2">
+                Our Iterative Development Methodology for Delivering Excellence
+              </h3>
+            </motion.div>
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="md:w-1/2"
+            >
+              <p className="text-sm md:text-base font-normal text-gray-700 leading-relaxed mb-4">
+                If you are on a search for a quality web application, we have
+                what it takes to meet your requirements. We have a great team of
+                skilled developers building high-performance and reliable web
+                applications aimed at improving user experience.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="relative w-full h-64 sm:h-80 md:h-[60vh] overflow-hidden rounded-lg hidden md:block">
+            <Image
+              src="/webdevpage/courselbg3.jpg"
+              alt="Image"
+              fill
+              className="object-cover brightness-[.6] z-0"
+            />
+            <AnimatePresence custom={direction}>
+              <motion.div
+                key={slides[index].id}
+                className="absolute top-0 left-0 w-full h-full"
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+              >
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center  px-4 z-10">
+                  <motion.h2
+                    key={slides[index].heading}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-2xl sm:text-3xl md:text-7xl font-bold mb-6 max-w-5xl text-orange-500"
+                  >
+                    {slides[index].heading}
+                  </motion.h2>
+
+                  <motion.p
+                    key={slides[index].text}
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-sm sm:text-base md:text-xl max-w-4xl px-2 text-orange-100"
+                  >
+                    {slides[index].text}
+                  </motion.p>
                 </div>
               </motion.div>
-            ))}
+            </AnimatePresence>
+
+            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-20">
+              <button
+                onClick={() => paginate(-1)}
+                className="invert px-3 py-2 rounded-r transition-all"
+              >
+                <Image
+                  src="/webdevpage/right-arrow.png"
+                  alt="right-arrow"
+                  width={50}
+                  height={24}
+                  className="object-cover rotate-180"
+                />
+              </button>
+            </div>
+            <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-20">
+              <button
+                onClick={() => paginate(1)}
+                className=" invert px-3 py-2 rounded-l transition-all"
+              >
+                <Image
+                  src="/webdevpage/right-arrow.png"
+                  alt="right-arrow"
+                  width={50}
+                  height={24}
+                  className="object-cover"
+                />
+              </button>
+            </div>
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-32 sm:w-48 h-1 bg-white/30 rounded overflow-hidden z-20">
+              <motion.div
+                className="h-full"
+                key={index}
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 3, ease: "linear" }}
+              />
+            </div>
+          </div>
+          <div className="md:hidden ">
+            <div className="flex gap-4 overflow-x-scroll px-4 snap-x snap-mandatory scroll-smooth hide-scrollbar py-6">
+              {slides.map((slide) => (
+                <motion.div
+                  key={slide.id}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="snap-center shrink-0 w-[85%] bg-transparent rounded-xl shadow-md overflow-hidden relative"
+                >
+                  <div className="h-48 relative">
+                    <Image
+                      src={slide.image}
+                      alt={slide.heading}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4 space-y-2">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {slide.heading}
+                    </h3>
+                    <p className="text-sm text-gray-600">{slide.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

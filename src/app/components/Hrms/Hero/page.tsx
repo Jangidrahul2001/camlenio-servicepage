@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowDownLong } from "react-icons/fa6";
 import BackToTopButton from "../../BackToTopButton";
 
-export default function Hero() {
+const Hero = () => {
   const handleScroll = () => {
     const section = document.getElementById("next-section");
     section?.scrollIntoView({ behavior: "smooth" });
@@ -72,4 +74,6 @@ export default function Hero() {
       <BackToTopButton />
     </>
   );
-}
+};
+
+export default Hero;

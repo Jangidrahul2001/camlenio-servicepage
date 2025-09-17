@@ -47,8 +47,8 @@ export default function OurServicesCarousel() {
   }, [controls]);
 
   return (
-    <div className="py-20">
-      <div className="max-w-[100rem] mx-auto px-6">
+    <div className="py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-[100rem] mx-auto px-8 md:px-16">
         <div className="mb-8 md:mb-20 text-left flex  ">
           <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight text-gray-900">
             Our Services

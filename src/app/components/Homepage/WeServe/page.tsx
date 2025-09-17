@@ -15,35 +15,35 @@ const INDUSTRIES: Industry[] = [
     title: "Banking & Finance",
     text: "The user-centric fintech industry strives to make investments easy.",
     img: "/Homepage/home_about.jpg",
-    icon: "/Homepage/industry_icon_finance.svg",
+    icon: "/Homepage/svg/industry_icon_finance.svg",
   },
   {
     id: 2,
     title: "Healthcare",
     text: "Automating the healthcare industry with breakthrough approaches.",
     img: "/Homepage/home_about.jpg",
-    icon: "/Homepage/industry_icon_health.svg",
+    icon: "/Homepage/svg/industry_icon_health.svg",
   },
   {
     id: 3,
     title: "Education",
     text: "To fulfill the new demands of the new generation with the latest technologies.",
     img: "/Homepage/home_about.jpg",
-    icon: "/Homepage/industry_icon_education.svg",
+    icon: "/Homepage/svg/industry_icon_education.svg",
   },
   {
     id: 4,
     title: "Food & Restaurants",
     text: "This broad and innovative industry is creating solutions that simplify our lives.",
     img: "/Homepage/home_about.jpg",
-    icon: "/Homepage/industry_icon_restaurant.svg",
+    icon: "/Homepage/svg/industry_icon_restaurant.svg",
   },
   {
     id: 5,
     title: "Real Estate & Property",
     text: "Tailored solutions to streamline property management and tenant engagement.",
     img: "/Homepage/home_about.jpg",
-    icon: "/Homepage/industry_icon_property.svg",
+    icon: "/Homepage/svg/industry_icon_property.svg",
   },
   {
     id: 6,
@@ -118,14 +118,20 @@ function Track({
 
 export default function WeServe() {
   return (
-    <div className="grid gap-6 p-6 py-20  ">
+    <div className="grid gap-6 p-6 py-20 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
-        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
+        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200  shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           Custom Software Development
         </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          Industries <span className="text-orange-500">We Serve</span>
+          Industries{" "}
+          <span
+            className="text-orange-500"
+            style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+          >
+            We Serve
+          </span>
         </h2>
 
         <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg mb-12">

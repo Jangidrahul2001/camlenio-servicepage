@@ -1,10 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import { FaCalendarAlt, FaComments, FaHeart } from "react-icons/fa";
 import React from "react";
 
-export default function BlogSection() {
+const BlogSection = () => {
   const blogs = [
     {
       id: 1,
@@ -30,14 +29,14 @@ export default function BlogSection() {
   ];
 
   return (
-    <>
-      <div className="py-16 bg-gray-50 overflow-hidden">
+    <div className="bg-gradient-to-r from-indigo-100 via-orange-200 to-indigo-200 bg-[length:200%_200%] animate-gradientMove">
+      <div className="py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className="rounded-xl shadow-md overflow-hidden flex flex-col h-full bg-white"
+                className="rounded-xl shadow-md overflow-hidden flex flex-col h-full bg-white group"
               >
                 <div className="relative glare-img">
                   <Image
@@ -106,6 +105,7 @@ export default function BlogSection() {
           background-position: 100% 100%;
         }
       `}</style>
-    </>
+    </div>
   );
-}
+};
+export default BlogSection;

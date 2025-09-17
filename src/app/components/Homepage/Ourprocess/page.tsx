@@ -82,7 +82,7 @@ const OurProcess = () => {
   }, [activeIndex]);
 
   return (
-    <div className="min-h-screen px-6  py-2 overflow-hidden">
+    <div className="min-h-screen px-6 py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
       <div className="max-w-[85rem] mx-auto">
         <div className="px-4 sm:px-6 lg:px-8 text-center ">
           <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
@@ -92,7 +92,12 @@ const OurProcess = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 ">
             Our Iterative Development Methodology
             <br />
-            <span className="text-orange-500">for Delivering Excellence</span>
+            <span
+              className="text-orange-500"
+              style={{ textShadow: "2px 2px 0 #FFB26B, 4px 4px 0 #fff" }}
+            >
+              for Delivering Excellence
+            </span>
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg">
@@ -143,7 +148,7 @@ const OurProcess = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="bg-transparent py-10 px-6 md:px-16 rounded-2xl border-1 border-orange-100 mb-6"
+          className="bg-gradient-to-r from-indigo-100 via-orange-200 to-indigo-100 bg-[length:200%_200%] animate-gradientMove py-10 px-6 md:px-16 rounded-3xl border-1 border-orange-100 mb-6"
         >
           <AnimatePresence mode="wait">
             <motion.div

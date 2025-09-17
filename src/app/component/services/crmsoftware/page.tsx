@@ -4,11 +4,11 @@ import Hero from "@/app/components/Crm/Hero/page";
 import WhyCamlenioSection from "@/app/components/Crm/WhyCamlenioSection/page";
 import CoreFeatures from "@/app/components/Crm/WhatMakesUsDifferent/page";
 import Benefits from "@/app/components/Crm/Benefits/page";
-import LogoSlider from "@/app/components/Homepage/Coursel/page";
+import LogoSlider from "@/app/components/Homepage/Logoslider/page";
 
-export default function Home() {
+export default function CrmSoftware() {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-orange-200 to-indigo-100">
+    <div className="relative">
       <Hero />
       <WhyCamlenioSection />
       <CoreFeatures />

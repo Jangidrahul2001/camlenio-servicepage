@@ -68,97 +68,101 @@ export default function MobAppIntegration() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div
-      id="next-section"
-      className="max-w-[80rem]  scroll-mt-30  mx-auto px-4 py-12 min-h-screen"
-    >
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-10"
+    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+      <div
+        id="next-section"
+        className="max-w-7xl scroll-mt-30  mx-auto px-4 md:px-16 py-12 min-h-screen "
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-          Mobile Application Integration
-        </h2>
-        <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-          Mobile application integration involves integrating apps with services
-          and systems to enable data sharing and better user experience.
-        </p>
-      </motion.div>
-
-      <div className="relative">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          ref={sliderRef}
-          className="flex gap-4 py-6 overflow-x-auto scroll-smooth px-2 no-scrollbar"
+          className="text-center mb-10"
         >
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`relative group flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 px-4 py-4 md:px-6 md:py-6 rounded-full w-full text-center font-medium transition duration-300 text-sm sm:text-sm md:text-base lg:text-lg shadow-[inset_0_4px_8px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(255,255,255,0.6)]
- ${
-   activeTab === tab.id
-     ? "bg-orange-500 text-white"
-     : "bg-orange-50 text-gray-800 hover:bg-orange-500 hover:text-gray-100"
- }`}
-            >
-              <span className="whitespace-nowrap capitalize">{tab.label}</span>
-              {activeTab === tab.id && (
-                <div className="absolute left-1/2 -bottom-1 md:-bottom-2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rotate-45 transition duration-300" />
-              )}
-            </button>
-          ))}
+          <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4">
+            Mobile Application Integration
+          </h2>
+          <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+            Mobile application integration involves integrating apps with
+            services and systems to enable data sharing and better user
+            experience.
+          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="relative p-4 sm:p-6 md:p-8 lg:p-10"
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="p-8 rounded-xl shadow-[inset_0_8px_16px_rgba(0,0,0,0.07),0_4px_20px_rgba(0,0,0,0.1)] w-full text-left"
-            >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-                {cardData[activeTab].title}
-              </h2>
-              <p className="text-sm md:text-base text-gray-800 font-medium mb-6 py-6">
-                {cardData[activeTab].description}
-              </p>
+        <div className="relative">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            ref={sliderRef}
+            className="flex gap-4 py-6 overflow-x-auto scroll-smooth px-2 no-scrollbar"
+          >
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`relative group flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 px-4 py-4 md:px-6 md:py-6 rounded-full w-full text-center font-medium transition duration-300 text-sm sm:text-sm md:text-base lg:text-lg shadow-[inset_0_4px_8px_rgba(0,0,0,0.1),inset_0_-4px_8px_rgba(255,255,255,0.6)] ${
+                  activeTab === tab.id
+                    ? "bg-orange-500 text-white"
+                    : "bg-orange-50 text-gray-800 hover:bg-orange-500 hover:text-gray-100"
+                }`}
+              >
+                <span className="whitespace-nowrap capitalize">
+                  {tab.label}
+                </span>
+                {activeTab === tab.id && (
+                  <div className="absolute left-1/2 -bottom-1 md:-bottom-2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rotate-45 transition duration-300" />
+                )}
+              </button>
+            ))}
+          </motion.div>
 
-              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4 justify-items-center">
-                {cardData[activeTab].apiList.map((api, index) => (
-                  <li
-                    key={index}
-                    className="bg-white hover:bg-orange-100 p-3 sm:p-4 rounded-full flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left transition-all shadow-[inset_0_4px_8px_rgba(0,0,0,0.08),inset_0_-4px_4px_rgba(0,0,0,0.08),0_4px_20px_rgba(0,0,0,0.1)]
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative p-4 sm:p-6 md:p-8 lg:p-10"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="p-8 rounded-xl shadow-[inset_0_8px_16px_rgba(0,0,0,0.07),0_4px_20px_rgba(0,0,0,0.1)] w-full text-left"
+              >
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-orange-500">
+                  {cardData[activeTab].title}
+                </h2>
+                <p className="text-sm md:text-base text-gray-800 font-medium mb-6 py-6">
+                  {cardData[activeTab].description}
+                </p>
+
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4 justify-items-center">
+                  {cardData[activeTab].apiList.map((api, index) => (
+                    <li
+                      key={index}
+                      className="bg-white hover:bg-orange-100 p-3 sm:p-4 rounded-full flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left transition-all shadow-[inset_0_4px_8px_rgba(0,0,0,0.08),inset_0_-4px_4px_rgba(0,0,0,0.08),0_4px_20px_rgba(0,0,0,0.1)]
 "
-                  >
-                    <Image
-                      src={api.icon}
-                      alt={api.label}
-                      width={32}
-                      height={32}
-                      className="object-contain mb-1 sm:mb-0"
-                    />
-                    <span className="text-xs sm:text-sm md:text-base capitalize break-words">
-                      {api.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+                    >
+                      <Image
+                        src={api.icon}
+                        alt={api.label}
+                        width={32}
+                        height={32}
+                        className="object-contain mb-1 sm:mb-0"
+                      />
+                      <span className="text-xs sm:text-sm md:text-base capitalize break-words">
+                        {api.label}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

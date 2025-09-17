@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full min-h-[calc(100vh-5.5rem)] overflow-hidden text-white">
+    <div className="relative w-full min-h-screen overflow-hidden text-white">
       <video
         autoPlay
         loop

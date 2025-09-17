@@ -3,9 +3,9 @@ import React from "react";
 
 const MakeUsTop = () => {
   return (
-    <div className="overflow-hidden min-h-screen py-20">
+    <div className="overflow-hidden bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove py-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-        <div className="relative  bg-white rounded-2xl group-hover:shadow-md p-8 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
+        <div className="relative  rounded-2xl group-hover:shadow-md p-8 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
           <Image
             src="/Homepage/bg_shape.png"
             alt="Background"
@@ -35,7 +35,7 @@ const MakeUsTop = () => {
           </p>
         </div>
         <div
-          className="bg-white group rounded-2xl hover:shadow-3xl p-6 flex flex-col 
+          className="bg-transparent border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col 
           text-left leading-tight "
         >
           <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
@@ -59,7 +59,7 @@ const MakeUsTop = () => {
           </div>
         </div>
         <div
-          className="bg-white group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
+          className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
           text-left leading-tight "
         >
           <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
@@ -83,7 +83,7 @@ const MakeUsTop = () => {
           </div>
         </div>
         <div
-          className="bg-white group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
+          className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
           text-left leading-tight "
         >
           <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
@@ -107,7 +107,7 @@ const MakeUsTop = () => {
           </div>
         </div>
         <div
-          className="bg-white group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
+          className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
           text-left leading-tight "
         >
           <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">

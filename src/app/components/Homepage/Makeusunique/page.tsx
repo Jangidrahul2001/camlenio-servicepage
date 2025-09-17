@@ -25,10 +25,17 @@ const cards = [
 
 export default function MakeUsUnique() {
   return (
-    <div className="overflow-hidden  py-20 bg-gray-900">
+    <div className="overflow-hidden  py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl  lg:text-5xl font-bold text-gray-50 mb-4">
-          What Make <span className="text-orange-500"> Us Unique</span>
+          What Make{" "}
+          <span
+            className="text-orange-500"
+            style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+          >
+            {" "}
+            Us Unique
+          </span>
         </h2>
 
         <p className="max-w-6xl mx-auto text-gray-100 text-base sm:text-lg mb-12">
@@ -44,7 +51,7 @@ export default function MakeUsUnique() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-white group rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-colors duration-700 hover:bg-orange-500"
+            className="bg-gray-50 group rounded-2xl  p-6 flex flex-col items-center text-center hover:shadow-xl transition-colors duration-700 hover:bg-orange-500 "
           >
             <Image
               src={card.icon}

@@ -8,7 +8,7 @@ export default function BackToTopButton() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setVisible(window.scrollY > 200);
+      setVisible(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -33,6 +33,6 @@ export default function BackToTopButton() {
           <ArrowUp className="w-5 h-5" />
         </motion.button>
       )}
-    </> 
+    </>
   );
 }

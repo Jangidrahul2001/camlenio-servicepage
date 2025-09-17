@@ -1,7 +1,7 @@
 "use client";
+
 import Image from "next/image";
 import BackToTopButton from "../../BackToTopButton";
-
 import React from "react";
 import {
   motion,
@@ -95,8 +95,8 @@ const products = [
 export default function Hero() {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
+
+  const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -125,7 +125,7 @@ export default function Hero() {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-200, 200]),
     springConfig
   );
 
@@ -133,41 +133,25 @@ export default function Hero() {
     <>
       <div
         ref={ref}
-        className="h-[300vh] py-40 relative overflow-hidden antialiased  flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+        className="h-[200vh] py-16 relative overflow-hidden antialiased flex flex-col [perspective:200px] [transform-style:preserve-3d]"
       >
         <Header />
-        <motion.div
-          style={{
-            rotateX,
-            rotateZ,
-            translateY,
-            opacity,
-          }}
-        >
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-10">
+        <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-10">
             {firstRow.map((product) => (
               <ProductCard
+                key={product.title}
                 product={product}
                 translate={translateX}
-                key={product.title}
               />
             ))}
           </motion.div>
-          <motion.div className="flex flex-row mb-20 space-x-20">
+          <motion.div className="flex flex-row mb-10 space-x-20">
             {secondRow.map((product) => (
               <ProductCard
+                key={product.title}
                 product={product}
                 translate={translateXReverse}
-                key={product.title}
-              />
-            ))}
-          </motion.div>
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-            {thirdRow.map((product) => (
-              <ProductCard
-                product={product}
-                translate={translateX}
-                key={product.title}
               />
             ))}
           </motion.div>
@@ -178,49 +162,44 @@ export default function Hero() {
   );
 }
 
-export const Header = () => {
-  return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full">
-      <h1 className="text-2xl md:text-[4.5rem] font-black text-gray-900 ">
-        Full-Stack Development That Transforms Ideas into Scalable Products
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-800 ">
-        At <span className="text-orange-500">Camlenio</span>, we don’t just
-        build websites — we engineer powerful digital ecosystems. From stunning
-        UI/UX to robust backend architecture, our full-stack solutions are
-        designed to deliver performance, security, and growth for your business.
-      </p>
-    </div>
-  );
-};
+const Header = () => (
+  <div className="max-w-7xl relative mx-auto py-20 px-4 w-full">
+    <h1 className="text-2xl md:text-[4.5rem] font-black text-gray-900">
+      Full-Stack Development That Transforms Ideas into Scalable Products
+    </h1>
+    <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-800">
+      At <span className="text-orange-500">Camlenio</span>, we don’t just build
+      websites — we engineer powerful digital ecosystems. From stunning UI/UX to
+      robust backend architecture, our full-stack solutions are designed to
+      deliver performance, security, and growth for your business.
+    </p>
+  </div>
+);
 
-export const ProductCard = ({
+const ProductCard = ({
   product,
   translate,
 }: {
   product: { title: string; link: string; thumbnail: string };
   translate: MotionValue<number>;
-}) => {
-  return (
-    <motion.div
-      style={{ x: translate }}
-      whileHover={{ y: -20 }}
-      key={product.title}
-      className="group/product h-[25rem] w-[48rem] relative shrink-0"
-    >
-      <a href={product.link} className="block group-hover/product:shadow-2xl ">
-        <Image
-          src={product.thumbnail}
-          alt={product.title}
-          fill
-          className="object-contain w-full  object-left-top rounded-3xl"
-          sizes="(max-width: 768px) 100vw, 600px"
-        />
-      </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-3xl"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
-    </motion.div>
-  );
-};
+}) => (
+  <motion.div
+    style={{ x: translate }}
+    whileHover={{ y: -10 }}
+    className="group h-[25rem] w-[40rem] relative shrink-0 md:w-[40vw] md:h-[18rem]"
+  >
+    <a href={product.link} className="block group-hover:shadow-2xl">
+      <Image
+        src={product.thumbnail}
+        alt={product.title}
+        fill
+        className="object-contain w-full object-left-top rounded-3xl"
+        sizes="(max-width: 768px) 100vw, 600px"
+      />
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-70 bg-black pointer-events-none rounded-3xl transition-opacity duration-500"></div>
+    </a>
+    <h2 className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 text-white transition-opacity duration-300">
+      {product.title}
+    </h2>
+  </motion.div>
+);

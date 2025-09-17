@@ -33,64 +33,69 @@ const migrationlist = [
 
 const Migration = () => {
   return (
-    <div className="px-6 py-8 overflow-hidden">
-      <div className="max-w-[85rem] mx-auto">
-        <div className="flex flex-col md:flex-row items-left md:items-start justify-between gap-8 md:gap-12 px-4 md:px-8 py-10">
+    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="px-6 md:px-16 py-10 overflow-hidden">
+        <div className="max-w-[85rem] mx-auto">
+          <div className="flex flex-col md:flex-row items-left md:items-start justify-between gap-2 md:gap-12">
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="md:w-2/5 space-y-3"
+            >
+              <span
+                className="text-xl md:text-4xl font-bold tracking-wider text-orange-500"
+                style={{ textShadow: "2px 2px 0 #FAF9F6, 4px 4px 0 #FFB266" }}
+              >
+                MIGRATIONS
+              </span>
+              <h3 className="hidden md:inline-block text-xl md:text-3xl text-gray-800 font-semibold">
+                Migration and Modernization
+              </h3>
+            </motion.div>
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className="md:w-3/5"
+            >
+              <p className="text-sm md:text-lg font-normal text-gray-700 leading-relaxed">
+                Migration and modernization are the activities that entail the
+                relocation of applications, data, and ICT infrastructure to
+                advanced contemporary cloud computing solutions. They allow
+                businesses to achieve increased performance, scalability, and
+                agility at reduced costs.
+              </p>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="md:w-2/5 space-y-3"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 bg-orange-200 gap-4 my-6 rounded-2xl"
           >
-            <span className="inline-block text-xl md:text-2xl font-normal tracking-wider text-orange-600">
-              MIGRATIONS
-            </span>
-            <h3 className="text-xl md:text-3xl text-gray-800 font-semibold">
-              Migration and Modernization
-            </h3>
-          </motion.div>
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="md:w-3/5"
-          >
-            <p className="text-sm md:text-lg font-semibold text-gray-700 leading-relaxed">
-              Migration and modernization are the activities that entail the
-              relocation of applications, data, and ICT infrastructure to
-              advanced contemporary cloud computing solutions. They allow
-              businesses to achieve increased performance, scalability, and
-              agility at reduced costs. These also enable organizations speedily
-              and with assurance to move workloads, data, and applications to
-              current cloud-based frameworks.
-            </p>
+            {migrationlist.map((migrationlist, idx) => (
+              <motion.li
+                key={idx}
+                whileTap={{ scale: 0.97 }}
+                whileHover={{ scale: 1.01 }}
+                className="list-none flex text-left items-center justify-start gap-4 bg-orange-100 hover:bg-orange-300 transition-colors duration-500 p-6 rounded-2xl "
+              >
+                <Image
+                  src={migrationlist.img}
+                  alt="php-to-laravel"
+                  width={50}
+                  height={30}
+                  className="object-contain "
+                />
+                <span className="lg:text-xl mx-auto text-left justify-start flex capitalize text-black ">
+                  {migrationlist.text}
+                </span>
+              </motion.li>
+            ))}
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 bg-orange-50 gap-4 my-6"
-        >
-          {migrationlist.map((migrationlist, idx) => (
-            <li
-              key={idx}
-              className="list-none flex items-center justify-start gap-4 bg-white hover:bg-orange-100 p-8 rounded-2xl "
-            >
-              <Image
-                src={migrationlist.img}
-                alt="php-to-laravel"
-                width={50}
-                height={30}
-                className="object-contain "
-              />
-              <span className="lg:text-xl mc-auto itmes-center justify-center flex capitalize">
-                {migrationlist.text}
-              </span>
-            </li>
-          ))}
-        </motion.div>
       </div>
     </div>
   );
