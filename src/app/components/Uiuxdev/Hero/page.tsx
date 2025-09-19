@@ -48,7 +48,7 @@ export default function HeroSection() {
   return (
     <div className="px-6 md:px-16 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="relative max-w-7xl pt-14 md:min-h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-8">
-        <div className=" hidden md:block absolute top-1/2 left-1/3 min-w-7xl -translate-y-1/2 z-7">
+        {/*<div className=" hidden md:block absolute top-1/2 left-1/3 min-w-7xl -translate-y-1/2 z-7">
           <MetaBalls
             color="#A5C9FF"
             cursorBallColor="#A5C9FF"
@@ -61,7 +61,7 @@ export default function HeroSection() {
             clumpFactor={1}
             speed={0.3}
           />
-        </div>
+        </div>*/}
         <div className=" w-full text-center md:text-left relative z-10">
           <h1
             className="text-4xl md:text-3xl lg:text-[3.02rem]  font-bold mb-4 
