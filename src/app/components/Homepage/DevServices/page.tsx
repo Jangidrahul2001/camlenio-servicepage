@@ -10,7 +10,7 @@ const features = [
     id: 1,
     title: "Mobile App Development",
     cardtitle: "Software Development Consulting",
-    desc: "We’re an ISO certified mobile app development company that is serving customers globally. Our app development services include Android, iOS, and cross-platform app development. Our experienced team of more than 80+ developers has expertise working on technologies such as Swift, Kotlin, Flutter, and React Native to deliver scalable solutions that meet today’s challenges and stand in the future with confidence..",
+    desc: "We design and develop mobile applications that blend performance, scalability, and user experience. Our solutions work seamlessly across iOS and Android, offering modern interfaces and powerful features. From real-time tracking and secure payment gateways to interactive dashboards, each app is built to enhance customer engagement, streamline operations, and accelerate business growth in today’s competitive digital era.",
     icon: (
       <Image
         src="/Homepage/svg/mobile-development.svg"
@@ -40,8 +40,8 @@ const features = [
   {
     id: 2,
     title: "Web Development",
-    cardtitle: "Web Development Services",
-    desc: "Want to build a responsive web application that has optimal user experience across devices ensuring your digital impression is as impressive and accessible as your business is. We strongly emphasize robust security by adhering to the OWASP Application Security Verification Standard (ASVS), and search engine optimization (SEO) to strengthen your posture in the digital competitive landscape. Schedule a consultation session with us to introduce you to the best web development solutions.",
+    cardtitle: "Web Development",
+    desc: "A website is more than just an online presence — it’s the face of your brand. Our web development services focus on building responsive, high-performing platforms that reflect your identity while connecting with your audience. From business websites to custom platforms, we leverage modern technologies to ensure speed, security, and scalability, creating a site that not only looks professional but also drives measurable business results.",
     icon: (
       <Image
         src="/Homepage/svg/web-development.svg"
@@ -80,8 +80,8 @@ const features = [
   {
     id: 3,
     title: "Ecommerce Development",
-    cardtitle: "Ecommerce Development Services",
-    desc: "Our e-commerce development services are designed to provide you with a secure, scalable, and responsive Ecommerce storefront. From Magento, Shopify, and WooCommerce to custom solutions using technologies like Laravel, PHP, Node.js, etc, we have the expertise to answer all your needs. Our team ensures seamless integration with payment gateways, inventory management systems, and CRM integration to have a fully functional storefront.",
+    cardtitle: "Ecommerce Development",
+    desc: "We create ecommerce solutions that go beyond selling — they inspire trust and deliver results. Tailored for B2B, B2C, and D2C models, our platforms feature advanced product catalogs, secure payment integrations, and smooth navigation for effortless shopping. With a strong focus on scalability and customer experience, our ecommerce development ensures businesses can boost conversions, maximize revenue, and build lasting customer relationships.",
     icon: (
       <Image
         src="/Homepage/svg/ecommerce-development.svg"
@@ -120,8 +120,8 @@ const features = [
   {
     id: 4,
     title: "UI UX Design",
-    cardtitle: "UI UX Design Services",
-    desc: "Delivering optically captivating, and user-centric digital experiences is what we have inherent in our core ethics. Our team leverages UI UX design tools like Sketch, Figma, Adobe XD, and InVision to design functional and visually appealing designs that speak about your business. We conduct comprehensive user journey mapping and heuristic evaluations to identify and solve the potential issues to deliver a pixel-perfect design.",
+    cardtitle: "UI UX Design",
+    desc: " Design is at the heart of every digital experience, and our UI/UX services focus on making it intuitive and impactful. From research and wireframes to polished interfaces, we craft user journeys that are simple, engaging, and visually appealing. Every design balances aesthetics with functionality, ensuring products are not just attractive but also solve real business challenges. The result is a seamless experience that users love and remember.",
     icon: (
       <Image
         src="/Homepage/svg/ui-design.svg"
@@ -193,36 +193,39 @@ const DevServices = () => {
         <div className="max-w-6xl mx-auto text-center mb-4">
           <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-50 shadow-sm text-xs md:text-sm font-medium text-black mb-4 z-20">
             <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-            Our Complete Software Development Services
+            Innovating the Future Together
           </span>
-          <h2 className="text-2xl md:text-5xl font-bold text-gray-50 z-20">
-            Let’s Build Something Extraordinary Together <br />
+          <h4 className="text-2xl md:text-5xl font-bold text-gray-50 z-20">
+            From software to apps, we build digital solutions that tackle
+            <br />
             <span
               className="text-orange-500"
-              style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+              style={{
+                textShadow:
+                  "-1px -1px 0px #da5f00, 3px 3px 0px #161e2e, 4px 6px 0px #ff582336",
+              }}
             >
-              to Drive Your Business Forward
+              today and prepare you for tomorrow.
             </span>
-          </h2>
-          <p className="text-sm md:text-xl text-gray-50 mt-4">
-            At Helpful Insight, we believe that extraordinary results stem from
-            extraordinary collaboration. We have tailored services that are
-            specific to each client, and truly reflect their individualized
-            necessities.
+          </h4>
+          <p className="text-sm md:text-xl text-gray-50 mt-4 font-sans">
+            Our mission is to simplify technology and build secure, scalable
+            solutions that empower businesses to innovate, transform, and
+            achieve measurable growth.
           </p>
         </div>
-        <div className="relative px-6 py-10 text-gray-800 p-4 ">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-14 border-2 border-black/20  p-6 rounded-2xl   bg-gradient-to-r from-gray-900 via-gray-500/10 to-transparent backdrop-blur-3xl shadow-[0_-2px_28px_rgba(255,255,255,0.1)]">
+        <div className="relative py-10 text-gray-800">
+          <div className="max-w-7xl mx-auto  flex flex-col md:flex-row gap-14 border-2 border-black/20  p-6 rounded-2xl   bg-gradient-to-r from-gray-900 via-gray-500/10 to-transparent backdrop-blur-3xl shadow-[0_-2px_28px_rgba(255,255,255,0.1)]">
             <div className="w-full md:w-1/3 flex flex-col gap-4">
               {features.map((feature) => (
                 <motion.button
                   key={feature.id}
                   onClick={() => setActive(feature.id)}
                   whileHover={{ scale: 1.02 }}
-                  className={`flex items-center group gap-3 text-left p-3 rounded-xl transition-colors duration-300 ${
+                  className={`flex items-center group gap-3 text-left p-2 rounded-xl transition-colors duration-300 ${
                     active === feature.id
                       ? "bg-orange-500 text-white"
-                      : "bg-gray-200 text-black hover:bg-orange-500 hover:text-white"
+                      : "bg-gray-200 text-gray-900 hover:bg-orange-500 hover:text-white"
                   }`}
                 >
                   <div className="relative w-[50px] h-[50px] flex-shrink-0">
@@ -255,12 +258,12 @@ const DevServices = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 10 }}
                   transition={{ duration: 0.6 }}
-                  className="p-2 rounded-2xl"
+                  className="rounded-2xl"
                 >
-                  <h3 className="text-lg md:text-2xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  <h3 className="text-[1.3rem] md:text-2xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
                     {activeFeature?.cardtitle}
                   </h3>
-                  <p className="text-gray-300 text-xs md:text-base mb-4">
+                  <p className="text-gray-300 text-[.85rem] md:text-base mb-4 font-sans">
                     {activeFeature?.desc}
                   </p>
 
@@ -299,11 +302,11 @@ const DevServices = () => {
         </div>
       </div>
       <Image
-        src="/Homepage/shapes/global_shap.png"
+        src="/Homepage/shapes/bg-shape11.png"
         alt="Global Shape"
         width={600}
         height={600}
-        className="absolute -right-[20%] -top-[30%] opacity-100 animate-spin [animation-duration:50s] text-gray-900 z-10"
+        className="absolute -left-[22%] -top-[4%] -rotate-40 opacity-30  [animation-duration:50s] text-gray-900 z-10"
         unoptimized
       />
     </div>

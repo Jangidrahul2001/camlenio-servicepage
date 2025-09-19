@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaCalendarAlt, FaComments, FaHeart } from "react-icons/fa";
 import React from "react";
 
-const BlogSection = () => {
+const Blogs = () => {
   const blogs = [
     {
       id: 1,
@@ -26,12 +26,43 @@ const BlogSection = () => {
       comments: 33,
       title: "Do do tempor deserunt ullamco. Voluptate sunt..",
     },
+    {
+      id: 4,
+      img: "/Homepage/blog_img.jpg",
+      date: "02 Apr 2023",
+      comments: 23,
+      title: "Providing solutions for Industrial men restoration.",
+    },
+    {
+      id: 5,
+      img: "/Homepage/blog_img.jpg",
+      date: "02 Apr 2023",
+      comments: 25,
+      title: "Occaecat nisi cupidatat deserunt culpa sit..",
+    },
+    {
+      id: 6,
+      img: "/Homepage/blog_img.jpg",
+      date: "02 Apr 2023",
+      comments: 33,
+      title: "Do do tempor deserunt ullamco. Voluptate sunt..",
+    },
   ];
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 via-orange-200 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className="bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove">
       <div className="py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
+          <div className="text-gray-900  text-center space-y-6 mb-12 px-6">
+            <h1 className="text-3xl md:text-5xl font-bold">Blogs</h1>
+            <p className="text-base">
+              We design, develop, and deliver scalable IT solutions that
+              simplify operations, improve customer engagement, and drive
+              sustainable growth.We design, develop, and deliver scalable IT
+              solutions that simplify operations, improve customer engagement,
+              and drive sustainable growth.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {blogs.map((blog) => (
               <div
@@ -108,4 +139,4 @@ const BlogSection = () => {
     </div>
   );
 };
-export default BlogSection;
+export default Blogs;

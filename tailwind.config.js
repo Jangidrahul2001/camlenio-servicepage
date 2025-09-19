@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+         roboto: ["var(--font-roboto)", "sans-serif"],
+         lufgaFont: ["var(--font-lufgaFont)", "sans-serif"],
       },
       keyframes: {
         spin: {

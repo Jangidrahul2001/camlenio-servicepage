@@ -63,29 +63,28 @@ const TechnologiesTabs = () => {
 
   return (
     <div
-      className=" py-16 text-white relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove"
-      style={{
-        backgroundImage: "url('/Homepage/bg-enjoy.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className=" py-16 text-white relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove"
+      
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
+          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
             <span className="absolute w-8 h-2 rounded-full bg-orange-500 left-[-1.4rem] top-1/2 -translate-y-1/2"></span>
             Technologies - Now About our Weapons
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4">
+          <h6 className="text-3xl md:text-4xl font-bold mt-4">
             Latest and Smart{" "}
             <span
               className="text-orange-500"
-              style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+              style={{
+                textShadow:
+                  "-1px -1px 0px #da5f00, 3px 3px 0px #033f57, 4px 6px 0px #ff582336",
+              }}
             >
               Technologies
             </span>
-          </h2>
-          <p className="text-gray-200 mt-2 max-w-2xl mx-auto">
+          </h6>
+          <p className="text-gray-200 mt-2 max-w-2xl mx-auto font-sans">
             Our Professional Developers and Designing Engineers are well versed
             in versatile and modern Technologies. These updated technologies
             help to turn the solution more robust and offer seamless experience

@@ -1,46 +1,60 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 import { FaStar, FaStarHalf } from "react-icons/fa";
 import GsapReveal from "../../GsapReveal";
 
 const ItSolution = () => {
   return (
-    <div className="relative py-16 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <GsapReveal>
-          <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
-            <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-            Camlenio Software Development Company
-          </span>
-        </GsapReveal>
+    <div className="relative py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 text-center">
+        <motion.div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
+          <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
+          Camlenio Software Development Company
+        </motion.div>
 
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <motion.h2
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 "
+        >
           Essential IT Solutions for{" "}
           <span
             className="text-orange-500"
-            style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
+            }}
           >
             Modern Businesses
           </span>
-        </h1>
+        </motion.h2>
 
-        <GsapReveal>
-          <p className="max-w-5xl mx-auto text-gray-600 text-base sm:text-lg mb-12">
-            Camlenio is a trusted software development company based in India,
-            dedicated to helping businesses succeed with innovative digital
-            solutions. Our expert team blends creativity, technology, and
-            strategy to build custom websites, mobile apps, and fintech
-            platforms that deliver real business impact. We believe in
-            transparency, collaboration, and innovation—ensuring every project
-            aligns with your vision. From startups to enterprises, we transform
-            your ideas into powerful digital realities.
-          </p>
-        </GsapReveal>
+        <motion.p
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto text-gray-600 text-sm text-center md:text-base mb-12 font-sans"
+        >
+          Camlenio is a trusted software development company based in India,
+          dedicated to helping businesses succeed with innovative digital
+          solutions. Our expert team blends creativity, technology, and strategy
+          to build custom websites, mobile apps, and fintech platforms that
+          deliver real business impact. We believe in transparency,
+          collaboration, and innovation—ensuring every project aligns with your
+          vision. From startups to enterprises, we transform your ideas into
+          powerful digital realities.
+        </motion.p>
+
         <GsapReveal>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
             <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">
               <h3 className="text-5xl font-extrabold text-orange-600">2005</h3>
-              <p className="text-gray-800 text-xl font-bold">
+              <p className="text-gray-800 text-xl font-bold font-sans">
                 We&apos;re epic since
               </p>
               <div className="absolute left-[82%]  -bottom-[25%] rotate-44  z-10 hidden lg:block">
@@ -66,7 +80,7 @@ const ItSolution = () => {
 
             <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
               <h3 className="text-5xl font-extrabold text-orange-600">210+</h3>
-              <p className="text-gray-800 text-xl font-bold">
+              <p className="text-gray-800 text-xl font-bold font-sans">
                 Clients around the globe
               </p>
               <div className="absolute right-[82%]  -bottom-[25%] -rotate-44  z-10 hidden lg:block">
@@ -88,7 +102,7 @@ const ItSolution = () => {
                 priority
               />
               <div className="absolute inset-0 bg-blue-700/60 rounded-xl z-10" />
-              <p className="relative z-20 text-2xl font-semibold text-gray-100">
+              <h3 className="relative z-20 text-2xl font-semibold text-gray-100">
                 <span className="flex items-center justify-center gap-1 text-orange-500">
                   <FaStar />
                   <FaStar />
@@ -100,13 +114,13 @@ const ItSolution = () => {
                 Rated 4.80 out of 5
                 <br /> based on over{" "}
                 <span className="text-orange-500">1000 reviews</span>
-              </p>
+              </h3>
             </div>
 
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center">
-              <p className="text-gray-700 font-semibold">
+              <h3 className="text-gray-700 font-semibold font-sans">
                 Award-winning solution
-              </p>
+              </h3>
               <div className="w-20 h-20">
                 <Image
                   src="/Homepage/svg/award.svg"
@@ -116,21 +130,21 @@ const ItSolution = () => {
                   className="object-contain"
                 />
               </div>
-              <p className="mt-3 text-gray-800 font-medium">
+              <p className="mt-3 text-gray-800 font-medium font-sans">
                 We&apos;ve got a few awards thanks to our amazing clients.
               </p>
             </div>
 
             <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
               <h3 className="text-3xl font-extrabold text-orange-600">600+</h3>
-              <p className="mt-2 text-gray-800 font-medium">
+              <p className="mt-2 text-gray-800 font-medium font-sans">
                 Successfully completed projects
               </p>
             </div>
 
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">
               <h3 className="text-3xl font-extrabold text-orange-600">500+</h3>
-              <p className="mt-2 text-gray-800 font-medium">
+              <p className="mt-2 text-gray-800 font-medium font-sans">
                 Business Partners
               </p>
             </div>

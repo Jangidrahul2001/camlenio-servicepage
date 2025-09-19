@@ -11,7 +11,7 @@ export default function HeroSection() {
     section?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden scroll-smooth">
       <video
         autoPlay
         loop
@@ -20,21 +20,21 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="/customsoftware/bg-videocustomsoftware.webm"
-          type="video/webm"
+          src="/customsoftware/bg-videocustomsoftware.mp4"
+          type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
       <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-[80rem] min-h-screen mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-8 px-6">
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="w-full text-center md:text-left mx-auto md:w-3/5"
         >
-          <h1 className=" text-white text-2xl md:text-5xl font-bold">
+          <h1 className=" text-white text-2xl md:text-4xl font-bold mb-4">
             <span
               className="text-orange-500"
               style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
@@ -43,7 +43,7 @@ export default function HeroSection() {
             </span>{" "}
             Custom Software – Scalable, Smart, and Built Around You
           </h1>
-          <p className="text-xs sm:text-base text-gray-200 font-normal pr-2">
+          <p className="text-xs md:text-sm text-gray-200 font-normal pr-2">
             At Camlenio, we specialize in building custom software solutions
             that adapt to your business—not the other way around. From intuitive
             interfaces to powerful backend systems, our applications are
@@ -63,17 +63,9 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          animate={{
-            y: [-10, 10],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 4 }}
           className="w-full md:w-2/5 max-w-xs md:max-w-sm mx-auto relative z-50"
         >
           <Image
@@ -81,7 +73,7 @@ export default function HeroSection() {
             alt="Hero"
             width={500}
             height={500}
-            className="rounded object-contain"
+            className="w-70 h-70 rounded object-contain"
             priority
           />
         </motion.div>

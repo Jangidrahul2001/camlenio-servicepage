@@ -12,43 +12,43 @@ type Industry = {
 const INDUSTRIES: Industry[] = [
   {
     id: 1,
-    title: "Banking & Finance",
-    text: "The user-centric fintech industry strives to make investments easy.",
+    title: "Education",
+    text: "We build e-learning platforms, student management systems, and interactive apps to meet the needs of modern learners and institutions.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_finance.svg",
   },
   {
     id: 2,
-    title: "Healthcare",
-    text: "Automating the healthcare industry with breakthrough approaches.",
+    title: "Food & Restaurants",
+    text: "From restaurant software to delivery apps, we help businesses streamline operations and deliver seamless dining experiences.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_health.svg",
   },
   {
     id: 3,
-    title: "Education",
-    text: "To fulfill the new demands of the new generation with the latest technologies.",
+    title: "Healthcare",
+    text: "We design secure telemedicine apps, patient management systems, and health platforms that simplify care delivery.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_education.svg",
   },
   {
     id: 4,
-    title: "Food & Restaurants",
-    text: "This broad and innovative industry is creating solutions that simplify our lives.",
+    title: "Fintech",
+    text: "Our solutions include payment gateways, wallets, and lending platforms built for speed, security, and trust in finance.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_restaurant.svg",
   },
   {
     id: 5,
-    title: "Real Estate & Property",
-    text: "Tailored solutions to streamline property management and tenant engagement.",
+    title: "Retail & Ecommerce",
+    text: " We create ecommerce platforms and shopping apps that boost sales, enhance engagement, and simplify customer journeys.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_property.svg",
   },
   {
     id: 6,
-    title: "Manufacturing",
-    text: "Sustainable solutions to enhance modern manufacturing practices.",
+    title: "Travel & Hospitality",
+    text: " From booking engines to travel apps, we deliver solutions that improve experiences, automate processes, and grow revenue.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/industry_icon_manufacturing.webp",
   },
@@ -99,12 +99,12 @@ function Track({
               </div>
 
               {/* Sub text */}
-              <p className="text-gray-200 text-xs md:text-base mt-3">
+              <p className="text-gray-200 text-xs md:text-base mt-3 font-sans">
                 {card.text}
               </p>
               <a
                 href="#"
-                className="text-orange-500 text-sm font-semibold mt-2 flex items-center gap-1 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500"
+                className="text-orange-500 text-sm font-semibold mt-2 flex items-center gap-1 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 "
               >
                 Explore-more →
               </a>
@@ -118,25 +118,25 @@ function Track({
 
 export default function WeServe() {
   return (
-    <div className="grid gap-6 p-6 py-20 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove ">
+    <div className="grid gap-6 p-6 py-20 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
-        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200  shadow-sm text-sm font-medium text-orange-600 mb-4">
+        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-500 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-          Custom Software Development
+          Solutions That Scale
         </span>
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           Industries{" "}
           <span
             className="text-orange-500"
-            style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+            style={{ textShadow: "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336" }}
           >
             We Serve
           </span>
-        </h2>
+        </h6>
 
-        <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg mb-12">
-          We provide superior website and mobile app development services to
-          businesses across many different industry verticals.
+        <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg mb-12 font-sans">
+          We deliver tailored digital solutions across industries to solve
+          unique challenges and unlock new growth opportunities.
         </p>
       </div>
       <Track items={INDUSTRIES} reverse={false} speed={66} />

@@ -11,7 +11,7 @@ const logos = Array.from(
 
 const LogoSlider = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="relative w-full bg-transparent overflow-hidden py-4">
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-24 bg-transparent z-10" />
         <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-24 bg-transparent z-10" />

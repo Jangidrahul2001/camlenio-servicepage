@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -28,8 +29,16 @@ export default function Footer() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-base">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Camlenio</h3>
-            <div className="flex space-x-4">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo-w.png"
+                alt="Camlenio"
+                width={200}
+                height={80}
+                className="w-30 md:w-40 h-auto object-contain"
+              />
+            </Link>
+            <div className="flex mt-4 space-x-4">
               <Link href="#">
                 <X size={20} />
               </Link>

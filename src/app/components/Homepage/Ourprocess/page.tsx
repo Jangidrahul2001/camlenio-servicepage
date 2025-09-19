@@ -8,54 +8,57 @@ import { GiCheckMark } from "react-icons/gi";
 const sections = [
   {
     title: "Discovery and Planning",
-    desc: "The first step on the ladder of building an application begins with understanding client requirements, and market dynamics to lay the foundation for successful execution.",
+    desc: "The first step of building an application begins with understanding client requirements and analyzing market dynamics to lay the foundation for successful execution.",
     img: "/Homepage/process-planning-img.webp",
     checklist: [
-      "In depth client consultation",
-      "Market research",
-      "Defining project scope",
-      "Creating a detailed project plan",
-      "Establishing communication",
-      "Setting up success metrics",
+      "In-depth Client Consultation",
+      "Market Research",
+      "Defining Project Scope",
+      "Creating a Detailed Project Plan",
     ],
   },
   {
     title: "Design & Prototyping",
-    desc: "We design wireframes, and prototypes to give you a glimpse into the layout, and functionality of your application before the final development takes place.",
+    desc: "This stage focuses on transforming ideas into visual structures and interactive models to ensure clarity before development begins.",
     img: "/Homepage/process-design-img.webp",
     checklist: [
-      "User research",
-      "Design mockups",
-      "Iterative design process",
-      "Building wireframes",
-      "User testing",
-      "Creating a clickable prototype",
+      "Wireframing & Mockups",
+      "User Experience (UX) Design",
+      "User Interface (UI) Design",
+      "Prototype Testing",
     ],
   },
   {
     title: "Development",
-    desc: "It’s time to translate your app development idea into something tangible following the best practices, and maintaining the highest quality of code standards.",
+    desc: "The core stage where concepts and designs turn into functional software through coding, integration, and testing.",
     img: "/Homepage/process-development-img.webp",
     checklist: [
-      "Agile development methodology",
-      "Quality assurance testing",
-      "Performance optimization",
-      "Coding and development",
-      "Continuous integration and deployment",
-      "Security testing",
+      "Backend Development",
+      "Frontend Development",
+      "Integration of APIs",
+      "Quality Assurance Testing",
+    ],
+  },
+  {
+    title: "Deployment",
+    desc: "The core stage where concepts and designs turn into functional software through coding, integration, and testing.",
+    img: "/Homepage/process-Development-img.webp",
+    checklist: [
+      "Backend Development",
+      "Frontend Development",
+      "Integration of APIs",
+      "Quality Assurance Testing",
     ],
   },
   {
     title: "Post Maintenance Support",
-    desc: "We walk a mile extra to guarantee that your application optimally performs after the deployment. We implement continuous updates, bug fixes, and enhancements shaped by your feedback.",
+    desc: "After deployment, continuous support ensures the software remains secure, updated, and optimized for performance.",
     img: "/Homepage/process-maintenance-img.webp",
     checklist: [
-      "Product launch",
-      "On-going maintenance",
-      "Providing technical support",
-      "Post-launch monitoring",
-      "Updates and enhancements",
-      "Measuring success",
+      "Performance Monitoring",
+      "Bug Fixes & Updates",
+      "Security Enhancements",
+      "Scalability Support",
     ],
   },
 ];
@@ -64,6 +67,7 @@ const steps = [
   { label: "Discovery & Planning", icon: "/Homepage/svg/discovery.svg" },
   { label: "Designing & Prototyping", icon: "/Homepage/svg/design.svg" },
   { label: "Development", icon: "/Homepage/svg/development.svg" },
+  { label: "Deployment", icon: "/Homepage/svg/discovery.svg" },
   { label: "Post Maintenance Support", icon: "/Homepage/svg/discovery.svg" },
 ];
 
@@ -82,27 +86,29 @@ const OurProcess = () => {
   }, [activeIndex]);
 
   return (
-    <div className="min-h-screen px-6 py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
+    <div className="min-h-screen px-6 py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
       <div className="max-w-[85rem] mx-auto">
         <div className="px-4 sm:px-6 lg:px-8 text-center ">
-          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
+          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100  shadow-sm text-sm font-medium text-orange-600 mb-4">
             <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
             Custom Software Development
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 ">
-            Our Iterative Development Methodology
-            <br />
+          <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 ">
+            A Structured Approach to Building {""}
             <span
               className="text-orange-500"
-              style={{ textShadow: "2px 2px 0 #FFB26B, 4px 4px 0 #fff" }}
+              style={{
+                textShadow:
+                  "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
+              }}
             >
-              for Delivering Excellence
+              Smarter Software
             </span>
-          </h2>
+          </h6>
 
-          <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg">
-            We provide superior website and mobile app development services to
-            businesses across many different industry verticals.
+          <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg font-sans">
+            We craft scalable web and mobile solutions through a well-defined
+            process that ensures quality, efficiency, and client satisfaction.
           </p>
         </div>
 
@@ -122,7 +128,7 @@ const OurProcess = () => {
                 className={`relative group flex text-center flex-col md:flex-row text-[0.5rem] sm:text-[0.77rem] md:text-[1.2rem] font-medium px-3 md:px-4 lg:px-6 py-2 lg:py-4 rounded-xl w-full justify-center items-center gap-1 md:gap-2 lg:gap-4 cursor-pointer z-10 transition duration-300 ease-in-out hover:scale-[1.02]  ${
                   activeIndex === index
                     ? "bg-orange-500 text-white "
-                    : "bg-gray-50 text-gray-800 hover:bg-orange-500 hover:text-gray-50"
+                    : "bg-orange-200 text-gray-800 hover:bg-orange-500 hover:text-gray-50"
                 }`}
                 onClick={() => setActiveIndex(index)}
               >
@@ -131,9 +137,9 @@ const OurProcess = () => {
                   alt={step.label}
                   width={24}
                   height={24}
-                  className="w-8 h-8 object-contain shadow-2xl z-40 "
+                  className="w-6 h-6 object-contain shadow-2xl z-40 "
                 />
-                <span className="whitespace-nowrap text-xs md:text-sm lg:text-lg capitalize text-left">
+                <span className="whitespace-nowrap text-xs md:text-sm lg:text-sm capitalize text-left">
                   {step.label}
                 </span>
                 {activeIndex === index && (
@@ -170,10 +176,10 @@ const OurProcess = () => {
                 </div>
 
                 <div className="w-full md:w-1/2">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
                     {sections[activeIndex].title}
                   </h3>
-                  <p className="text-gray-700 mb-8">
+                  <p className="text-gray-700 mb-8 font-sans">
                     {sections[activeIndex].desc}
                   </p>
 
@@ -183,7 +189,7 @@ const OurProcess = () => {
                         <span className="text-orange-500 mb-1 text-xl ">
                           <GiCheckMark />
                         </span>
-                        <p className="text-gray-800">{item}</p>
+                        <p className="text-gray-800 font-sans">{item}</p>
                       </div>
                     ))}
                   </div>

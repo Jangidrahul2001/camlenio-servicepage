@@ -2,24 +2,24 @@ import Image from "next/image";
 import React from "react";
 const cards = [
   {
-    title: "Innovative Solution",
+    title: "Innovative Approach",
     icon: "/Homepage/innovative_solution.webp",
-    desc: "Expertise solution with combination of perfect solution with your expectation.",
+    desc: "We combine creativity with cutting-edge technology to deliver solutions that truly make a lasting impact.",
   },
   {
     icon: "/Homepage/ontime_delivery.webp",
-    title: "On Time Delivery",
-    desc: "We work to progress with time, our commitment to deliver with accurate result.",
+    title: "End-to-End Expertise",
+    desc: "From idea to design, development, and launch — we handle everything seamlessly under one roof.",
   },
   {
     icon: "/Homepage/client_centred_solver.webp",
-    title: "Client-Centred Solver",
-    desc: "Develop the key profession to serve according to client's satisfaction.",
+    title: "Scalable & Secure",
+    desc: "Our solutions are built to scale as your business grows, while ensuring top-level security and reliability.",
   },
   {
     icon: "/Homepage/core_values.webp",
-    title: "Core Values",
-    desc: "Develop the key profession to serve according to client's satisfaction.",
+    title: "Client-Centric",
+    desc: "We work with transparency and collaboration, always putting your business goals and success first.",
   },
 ];
 
@@ -27,24 +27,29 @@ export default function MakeUsUnique() {
   return (
     <div className="overflow-hidden  py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl  lg:text-5xl font-bold text-gray-50 mb-4">
-          What Make{" "}
+        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-400 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
+          <span className="absolute w-7 h-[6px]  rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
+          Solutions That Scale
+        </span>
+        <h6 className="text-4xl md:text-5xl font-bold text-gray-50 mb-4">
+          Why Businesses Choose{" "}
           <span
             className="text-orange-500"
-            style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #263242, 4px 6px 0px #ff582336",
+            }}
           >
             {" "}
-            Us Unique
+            Camlenio
           </span>
-        </h2>
+        </h6>
 
-        <p className="max-w-6xl mx-auto text-gray-100 text-base sm:text-lg mb-12">
-          Our team envisions transforming the world through innovation in
-          website development and software development. We tackle challenges
-          head-on to provide digital solutions that unlock future possibilities
-          and deliver exceptional value to our clients. By employing the right
-          technical approach, we empower our clients to achieve maximum results
-          and drive success.
+        <p className="max-w-6xl mx-auto text-gray-100 text-base sm:text-lg mb-12 font-sans">
+          At Camlenio, we don’t just deliver software — we create solutions that
+          drive measurable growth for businesses. What makes us unique is the
+          way we blend innovation, technical expertise, and long-term trust to
+          empower companies of every size.
         </p>
       </div>
       <div className=" max-w-[90rem] mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
@@ -63,7 +68,7 @@ export default function MakeUsUnique() {
             <h2 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-gray-50 transition-all duration-500">
               {card.title}
             </h2>
-            <p className="mt-2 text-gray-600 group-hover:text-gray-50 transition-all duration-500">
+            <p className="mt-2 text-gray-600 group-hover:text-gray-50 transition-all duration-500 font-sans">
               {card.desc}
             </p>
           </div>

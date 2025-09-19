@@ -258,7 +258,7 @@ const Header: React.FC = () => {
           <Image
             src="/logo.png"
             alt="Camlenio"
-            width={230}
+            width={200}
             height={80}
             className="w-50 md:w-60 h-auto object-contain"
           />

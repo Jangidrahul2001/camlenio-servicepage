@@ -8,7 +8,7 @@ const FreeQuotation = () => {
     <div className="relative py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
-          <p className="text-2xl md:text-3xl font-semibold text-orange-500">
+          <p className="text-2xl md:text-3xl font-semibold text-orange-500 font-sans">
             “Every Great, Big thing starts with a decision that you take today”
           </p>
         </div>
@@ -17,7 +17,7 @@ const FreeQuotation = () => {
             <h5 className="text-3xl font-semibold text-white">
               Get a FREE QUOTATION
             </h5>
-            <p className="text-xl text-white/90 font-light  mb-6">
+            <p className="text-xl text-white/90 font-light  mb-6 font-sans">
               Don’t worry your data and business ideas are safe with us.
             </p>
           </div>

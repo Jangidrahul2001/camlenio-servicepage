@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import GsapReveal from "../../../GsapReveal";
 
 import { FiPhone } from "react-icons/fi";

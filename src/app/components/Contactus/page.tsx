@@ -1,7 +1,5 @@
 import React from "react";
 
-import { motion } from "framer-motion";
-
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiUser } from "react-icons/fi";
@@ -10,7 +8,7 @@ import { TbMessageDots } from "react-icons/tb";
 
 export default function ContactUs() {
   return (
-    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove py-20 px-8 md:px-16">
+    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove py-20 px-8 md:px-16 scroll-smooth">
       <div className="max-w-7xl mx-auto">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent border-1 border-gray-300 p-8 rounded-2xl shadow-lg">
           <div>

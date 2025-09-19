@@ -7,9 +7,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function EarthAnimation() {
-  const mountRef = useRef(null);
+  const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const mountNode = mountRef.current;
+    if (!mountNode) return;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       60,
@@ -19,16 +22,15 @@ export default function EarthAnimation() {
     );
     camera.position.set(0, 0, 5);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 1);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    mountRef.current.appendChild(renderer.domElement);
+    mountNode.appendChild(renderer.domElement);
 
-    // Lights
     const ambient = new THREE.AmbientLight(0xffffff, 2);
     scene.add(ambient);
 
-    // Load texture
     const textureLoader = new THREE.TextureLoader();
     const earthTexture = textureLoader.load(
       "/earth.jpg",
@@ -54,7 +56,7 @@ export default function EarthAnimation() {
     const phi = (90 - lat) * (Math.PI / 180);
     const theta = (lon + 180) * (Math.PI / 180);
     const markerGeometry = new THREE.SphereGeometry(0.05, 32, 32);
-    const markerMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const markerMaterial = new THREE.MeshBasicMaterial({ color: "#fff" });
     const marker = new THREE.Mesh(markerGeometry, markerMaterial);
     marker.position.set(
       -(radius * Math.sin(phi) * Math.cos(theta)),
@@ -101,10 +103,13 @@ export default function EarthAnimation() {
     animate();
 
     return () => {
+      // Cleanup GSAP ScrollTrigger to prevent memory leaks
+      tl.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
       window.removeEventListener("resize", handleResize);
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
-      }
+      mountNode.removeChild(renderer.domElement);
+      renderer.dispose();
     };
   }, []);
 

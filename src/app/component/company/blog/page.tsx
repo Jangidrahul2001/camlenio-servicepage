@@ -1,12 +1,14 @@
-import { HeroScrollDemo } from "@/app/components/company/blog/Hero/page";
+import Blogs from "@/app/components/company/blog/blogs/page";
+import HeroPage from "@/app/components/company/blog/Hero/page";
 import React from "react";
 
-const blog = () => {
+const BlogPage = () => {
   return (
     <div className="relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <HeroScrollDemo />
+      <HeroPage />
+      <Blogs />
     </div>
   );
 };
 
-export default blog;
+export default BlogPage;

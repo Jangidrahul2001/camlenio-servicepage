@@ -10,6 +10,7 @@ import Technologies from "./components/Homepage/Technologies/page";
 import Testimonials from "./components/Homepage/Testimonials/page";
 import FreeQuotation from "./components/Homepage/Freequotation/page";
 import BlogSection from "./components/Homepage/Blogsection/page";
+import LogoSlider from "./components/Homepage/Logoslider/page";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div className=" relative">
+    <div className=" relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
       <Hero />
       <ItSolution />
       <IndustriesSection />
@@ -32,6 +33,7 @@ const Home = () => {
       <Testimonials />
       <FreeQuotation />
       <BlogSection />
+      <LogoSlider />
     </div>
   );
 };

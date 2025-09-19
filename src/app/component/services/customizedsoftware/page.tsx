@@ -8,7 +8,7 @@ import LogoSlider from "@/app/components/Homepage/Logoslider/page";
 
 export default function CustomedSoftware() {
   return (
-    <div className="relative">
+    <div className="relative scroll-smooth">
       <Hero />
       <WhyCustomSoftware />
       <OurServicesSection />

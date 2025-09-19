@@ -39,11 +39,11 @@ const features = [
 
 export default function WhyCamlenioSection() {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div
-        id="next-section"
-        className="min-h-screen scroll-mt-20 text-gray-900 px-8 md:px-16 py-20"
-      >
+    <div
+      id="next-section"
+      className="scroll-mt-20 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove"
+    >
+      <div className="min-h-screen text-gray-900 px-8 md:px-16 py-20">
         <div className="max-w-6xl mx-auto space-y-10">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

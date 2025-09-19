@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import localFont from "next/font/local";
-import SmoothScrolling from "./components/SmoothScrolling";
+import LenisWrapper from "./LenisWrapper";
 
 export const metadata = {
   title: "Camlenio - Digital Solutions",
@@ -31,11 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={lufgaFont.className}>
+    <html lang="en" className={`${lufgaFont.className}`}>
       <body className="bg-gray-900 text-white overflow-x-hidden">
-        <SmoothScrolling />
         <Header />
-        <main>{children}</main>
+        <main>
+          <LenisWrapper>{children}</LenisWrapper>
+        </main>
         <Footer />
       </body>
     </html>
