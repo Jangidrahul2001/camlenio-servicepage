@@ -21,7 +21,7 @@ const Hero = () => {
       tagColor: "bg-blue-100 text-blue-600",
       title: "Transfer your data to low carbon servers",
       co2: "68 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const Hero = () => {
       tagColor: "bg-pink-100 text-pink-600",
       title: "Replace natural gas with biomethane",
       co2: "15 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const Hero = () => {
       tagColor: "bg-orange-100 text-orange-600",
       title: "Switch to rented IT equipment",
       co2: "12 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
   ];
 
