@@ -97,7 +97,7 @@ const Hero = () => {
           className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove h-[30rem] md:h-[40rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5"
         >
           <div
-            className="relative flex justify-center items-center w-full h-full [perspective:1000px]"
+            className="relative flex justify-center items-center min-w-screen min-h-screen [perspective:1000px]"
             onMouseLeave={() => setHoveredIndex(null)}
           >
             {cards.map((card, index) => {
