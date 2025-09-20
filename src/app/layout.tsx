@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import localFont from "next/font/local";
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Header />
         <main>
           <LenisWrapper>{children}</LenisWrapper>
+          <Analytics />
         </main>
         <Footer />
       </body>
