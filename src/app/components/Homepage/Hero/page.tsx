@@ -153,6 +153,7 @@ const Hero = () => {
                         alt="alternative"
                         width={500}
                         height={300}
+                        priority
                         className="w-full h-full object-cover"
                       />
                     </div>
