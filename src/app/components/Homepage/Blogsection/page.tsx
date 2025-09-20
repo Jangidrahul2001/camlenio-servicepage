@@ -29,7 +29,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-indigo-100 via-orange-200 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className="bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
@@ -65,7 +65,7 @@ const BlogSection = () => {
                   <div className="mt-auto flex items-center justify-between">
                     <a
                       href="#"
-                      className="flex items-center gap-2 text-orange-500 font-medium hover:gap-3 transition-all duration-300group-hover:scale-x-110 group-hover:tracking-wider origin-left"
+                      className="flex items-center gap-2 text-orange-500 font-medium hover:gap-3 transition-all duration-300 group-hover:scale-x-110 group-hover:tracking-wider origin-left"
                     >
                       Read More →
                     </a>

@@ -260,7 +260,7 @@ const DevServices = () => {
                   transition={{ duration: 0.6 }}
                   className="rounded-2xl"
                 >
-                  <h3 className="text-[1.3rem] md:text-2xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  <h3 className="text-[1.3rem] md:text-2xl lg:text-4xl font-bold mb-2 text-orange-500">
                     {activeFeature?.cardtitle}
                   </h3>
                   <p className="text-gray-300 text-[.85rem] md:text-base mb-4 font-sans">

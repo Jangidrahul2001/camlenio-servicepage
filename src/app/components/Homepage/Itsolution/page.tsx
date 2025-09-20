@@ -102,8 +102,8 @@ const ItSolution = () => {
                 priority
               />
               <div className="absolute inset-0 bg-blue-700/60 rounded-xl z-10" />
-              <h3 className="relative z-20 text-2xl font-semibold text-gray-100">
-                <span className="flex items-center justify-center gap-1 text-orange-500">
+              <div className="relative z-20 text-xl text-gray-100 leading-tight">
+                <span className="flex items-center justify-center gap-1 text-orange-500 ">
                   <FaStar />
                   <FaStar />
                   <FaStar />
@@ -111,10 +111,12 @@ const ItSolution = () => {
                   <FaStarHalf />
                 </span>
                 <br />
-                Rated 4.80 out of 5
-                <br /> based on over{" "}
-                <span className="text-orange-500">1000 reviews</span>
-              </h3>
+                <p className="font-sans text-base">
+                  {" "}
+                  Rated 4.80 out of 5
+                  <br /> based on over 1000 reviews
+                </p>
+              </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center">

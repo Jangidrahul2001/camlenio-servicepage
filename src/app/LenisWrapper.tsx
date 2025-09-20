@@ -26,6 +26,7 @@ export default function LenisWrapper({ children }: Props) {
     });
 
     gsap.ticker.lagSmoothing(0);
+    window.scrollTo(0, 0);
 
     return () => lenis.destroy();
   }, [pathname]);

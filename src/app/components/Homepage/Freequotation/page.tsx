@@ -12,7 +12,7 @@ const FreeQuotation = () => {
             “Every Great, Big thing starts with a decision that you take today”
           </p>
         </div>
-        <div className="relative text-center border-2 border-blue-400 p-8 rounded-2xl backdrop-blur-md bg-transparent">
+        <div className="relative text-center border-2 border-blue-400 p-8 rounded-2xl bg-transparent">
           <div className="mb-6">
             <h5 className="text-3xl font-semibold text-white">
               Get a FREE QUOTATION
@@ -60,10 +60,10 @@ const FreeQuotation = () => {
             <div className="md:col-span-3">
               <button
                 type="submit"
-                className="relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 overflow-hidden font-semibold text-gray-900 bg-white rounded-full group text-sm sm:text-base lg:text-lg transition-all"
+                className="relative group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 overflow-hidden font-semibold text-gray-900 bg-white rounded-full group text-sm sm:text-base lg:text-lg transition-all"
               >
                 <span className="absolute inset-0 w-full h-full bg-orange-500 rounded-full transform translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></span>
-                <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
+                <span className="relative z-10 group-hover:text-white transition-all duration-500 flex items-center gap-2 group-hover:scale-x-108 ">
                   Talk to Experts <FaLongArrowAltRight />
                 </span>
               </button>

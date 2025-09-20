@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { HeroTextAnimate } from "../../HeroTextAnimate";
 import FormPopup from "@/app/components/FormPopup";
+import BackToTopButton from "../../BackToTopButton";
 
 const Hero = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -21,7 +22,7 @@ const Hero = () => {
       tagColor: "bg-blue-100 text-blue-600",
       title: "Transfer your data to low carbon servers",
       co2: "68 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
     {
       id: 2,
@@ -29,7 +30,7 @@ const Hero = () => {
       tagColor: "bg-pink-100 text-pink-600",
       title: "Replace natural gas with biomethane",
       co2: "15 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
     {
       id: 3,
@@ -37,7 +38,7 @@ const Hero = () => {
       tagColor: "bg-orange-100 text-orange-600",
       title: "Switch to rented IT equipment",
       co2: "12 tCO₂e",
-      image: "/Homepage/Home_about.jpg",
+      image: "/Homepage/home_about.jpg",
     },
   ];
 
@@ -134,7 +135,9 @@ const Hero = () => {
                   <span
                     className={`text-[.80rem] font-semibold px-2 py-1 rounded-lg self-start ${
                       card.tagColor
-                    } ${card.id === 2 ? "mx-auto" : ""} ${card.id === 3 ? "ml-auto" : ""}`}
+                    } ${card.id === 2 ? "mx-auto" : ""} ${
+                      card.id === 3 ? "ml-auto" : ""
+                    }`}
                   >
                     {card.tag}
                   </span>
@@ -145,7 +148,9 @@ const Hero = () => {
                     CO₂ avoided:{" "}
                     <span className="font-semibold">{card.co2}</span>
                   </p>
-                  <p className="text-xs text-gray-500 mt-2 font-sans">Alternatives</p>
+                  <p className="text-xs text-gray-500 mt-2 font-sans">
+                    Alternatives
+                  </p>
                   {card.image && (
                     <div className="mt-3 w-full h-24 rounded-lg overflow-hidden">
                       <Image
@@ -153,6 +158,7 @@ const Hero = () => {
                         alt="alternative"
                         width={500}
                         height={300}
+                        priority
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -163,6 +169,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+      <BackToTopButton/>
     </div>
   );
 };
