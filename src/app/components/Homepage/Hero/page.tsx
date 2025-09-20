@@ -43,7 +43,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-20">
+    <div className="relative lg:min-h-screen bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-20 overflow-hidden">
       <div className="flex flex-col md:flex-row pt-16 md:py-0">
         <FormPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
         <motion.div
@@ -94,7 +94,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove h-[30rem] md:h-[40rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5"
+          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove h-[30rem] md:h-[40rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5 overflow-hidden"
         >
           <div
             className="relative flex justify-center items-center min-w-screen min-h-screen [perspective:1000px]"
@@ -169,7 +169,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <BackToTopButton/>
+      <BackToTopButton />
     </div>
   );
 };
