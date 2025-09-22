@@ -1,15 +1,50 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+
+const cardsData = [
+  {
+    icon: "/Homepage/on_demand_resources.webp",
+    title: "On-Demand Resources",
+    description:
+      "We have a flexible, and salable workforce of resources to allow you to hire the professionals to adapt to your ongoing requirements without long-term commitment.",
+  },
+  {
+    icon: "/Homepage/agile_methodology.webp",
+    title: "Agile Methodology",
+    description:
+      "We’re a strong advocate of agile development methodologies enabling us to deliver iterative improvements to meet client expectations and market demands.",
+  },
+  {
+    icon: "/Homepage/security_first.webp",
+    title: "Security-First",
+    description:
+      "Our development process strongly embeds comprehensive threat modeling, periodic security audits, and penetration testing to develop highly secure mobile applications for your business.",
+  },
+  {
+    icon: "/Homepage/post_launch_support.webp",
+    title: "Post-Launch Support",
+    description:
+      "From bug fixing to performance monitoring, we offer comprehensive support after deployment to ensure your app can adapt to the evolving market conditions.",
+  },
+];
+
+interface FeatureCardProps {
+  icon: string;
+  title: string;
+  description: string;
+}
 
 const MakeUsTop = () => {
   return (
     <div className="overflow-hidden bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove py-20">
       <div className="max-w-7xl mx-auto text-center px-4">
         {" "}
-        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-white shadow-sm text-sm font-medium text-orange-600 mb-4">
+        <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           Camlenio Software Development Company
-        </span>
+        </div>
         <h5 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           Essential IT Solutions for{" "}
           <span
@@ -22,15 +57,15 @@ const MakeUsTop = () => {
             Modern Businesses
           </span>
         </h5>
-        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-base text-center break-words sm:text-lg mb-12 font-sans">
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
           Camlenio is a trusted software development company based in India,
           dedicated to helping businesses succeed with innovative digital
           solutions. Our expert team blends creativity, technology, and strategy
           to build custom websites, mobile apps, and fintech platforms that
           deliver real business impact.
         </p>
-        <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="relative  rounded-2xl group-hover:shadow-md p-8 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
+        <div className="  grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="relative  group rounded-2xl  hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
             <Image
               src="/Homepage/bg_shape.png"
               alt="Background"
@@ -45,121 +80,81 @@ const MakeUsTop = () => {
                 alt="Award"
                 height={60}
                 width={60}
-                className="object-contain absolute top-10 left-10 animate-spin "
+                className="object-contain absolute top-10 left-10 animate-spin  group-hover:scale-102 transition-transform duration-500 ease-in "
                 style={{ animationDuration: "10s" }}
               />
             </div>
-            <h1 className=" w-full  z-20 text-xl  md:text-2xl font-semibold text-gray-50 mb-2">
+            <motion.h1
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className=" w-full  z-20 text-xl  md:text-2xl font-semibold text-gray-50 mb-2"
+            >
               CWhat Makes Us a Top App Development Company?
-            </h1>
-            <p className="relative z-20 text-base font-medium text-gray-50 font-sans">
+            </motion.h1>
+            <motion.p
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans"
+            >
               We are at the front line of leveraging cutting-edge technologies
               and adhering to best industry practices to deliver secure and
               optimized digital solutions. Experience the difference of working
               with an IT company that has a single vision of positioning you as
               the leader in your industry.
-            </p>
+            </motion.p>
           </div>
-          <div
-            className="bg-transparent border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col 
-          text-left leading-tight "
-          >
-            <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
-              <Image
-                src="/Homepage/on_demand_resources.webp"
-                alt="Award"
-                height={60}
-                width={60}
-                className="object-contain "
-              />
-            </div>
-            <div className="transition-all duration-300 group-hover:-translate-y-8">
-              <h3 className="text-2xl font-extrabold text-gray-900 mb-4">
-                On-Demand Resources
-              </h3>
-              <p className="text-gray-500 text-[1.2rem] font-normal font-sans">
-                We have a flexible, and salable workforce of resources to allow
-                you to hire the professionals to adapt to your ongoing
-                requirements without long-term commitment.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
-          text-left leading-tight "
-          >
-            <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
-              <Image
-                src="/Homepage/agile_methodology.webp"
-                alt="Award"
-                height={50}
-                width={50}
-                className="object-contain "
-              />
-            </div>
-            <div className="transition-all duration-300 group-hover:-translate-y-8">
-              <h3 className="text-2xl font-extrabold text-gray-900 mb-4">
-                Agile Methodology
-              </h3>
-              <p className="text-gray-500 text-[1.2rem] font-normal font-sans">
-                We’re a strong advocate of agile development methodologies
-                enabling us to deliver iterative improvements to meet client
-                expectations and market demands.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
-          text-left leading-tight "
-          >
-            <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
-              <Image
-                src="/Homepage/security_first.webp"
-                alt="Award"
-                height={50}
-                width={50}
-                className="object-contain "
-              />
-            </div>
-            <div className="transition-all duration-300 group-hover:-translate-y-8">
-              <h3 className="text-2xl font-extrabold text-gray-900 mb-4">
-                Security-First
-              </h3>
-              <p className="text-gray-500 text-[1.2rem] font-normal font-sans">
-                Our development process strongly embeds comprehensive threat
-                modeling, periodic security audits, and penetration testing to
-                develop highly secure mobile applications for your business.
-              </p>
-            </div>
-          </div>
-          <div
-            className="bg-transparent border-2 border-gray-300 group rounded-2xl group-hover:shadow-xl p-6 flex flex-col 
-          text-left leading-tight "
-          >
-            <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
-              <Image
-                src="/Homepage/post_launch_support.webp"
-                alt="Award"
-                height={50}
-                width={50}
-                className="object-contain "
-              />
-            </div>
-            <div className="transition-all duration-300 group-hover:-translate-y-8">
-              <h3 className="text-2xl font-extrabold text-gray-900 mb-4">
-                Post-Launch Support
-              </h3>
-              <p className="text-gray-500 text-[1.2rem] font-normal font-sans">
-                From bug fixing to performance monitoring, we offer
-                comprehensive support after deployment to ensure your app can
-                adapt to the evolving market conditions.
-              </p>
-            </div>
-          </div>
+          {cardsData.map((card, index) => (
+            <FeatureCard
+              key={index}
+              icon={card.icon}
+              title={card.title}
+              description={card.description}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  icon,
+  title,
+  description,
+}) => (
+  <div className="bg-transparent border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left leading-tight">
+    <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
+      <Image
+        src={icon}
+        alt={title}
+        height={60}
+        width={60}
+        className="object-contain"
+      />
+    </div>
+    <div className="transition-all duration-500 group-hover:-translate-y-8">
+      <motion.h3
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="text-xl font-extrabold text-gray-900 mb-4"
+      >
+        {title}
+      </motion.h3>
+      <motion.p
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-gray-500 text-base font-normal font-sans"
+      >
+        {description}
+      </motion.p>
+    </div>
+  </div>
+);
 
 export default MakeUsTop;

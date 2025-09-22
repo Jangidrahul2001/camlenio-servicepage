@@ -41,41 +41,43 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div className="py-20 px-8 md:px-16 ">
-        <div className="text-center">
-          <span className="relative inline-block px-6 py-1 text-base font-medium text-orange-500 bg-orange-100 border-1 border-orange-50 rounded-full">
-            <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-            What Clients says
+    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove py-20">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
+        <span className="relative inline-block px-6 py-1 text-base font-medium text-orange-500 bg-orange-100 border-1 border-orange-50 rounded-full">
+          <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
+          What Clients says
+        </span>
+        <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Testimonials That Inspire Us{" "}
+          <span
+            className="text-orange-500"
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
+            }}
+          >
+            Inspire Us
           </span>
-          <h6 className="text-3xl md:text-4xl font-bold mt-4 text-gray-900">
-            Testimonials
-          </h6>
-          <p className="mt-2 text-gray-600 max-w-5xl mx-auto font-sans">
-            The EskyDecode follows certain quality standards that help provide
-            mobile and web apps development services meeting the client’s
-            expectation. Our strategy has helped us achieve customer
-            satisfaction and a great client retention rate.
-          </p>
-        </div>
+        </h6>
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+          Camlenio Software, we take pride in being a trusted partner for our
+          clients. Our commitment lies in delivering innovative, secure, and
+          user-friendly solutions that truly make a difference. We believe in
+          building long-term relationships based on reliability, transparency,
+          and customer satisfaction.
+        </p>
         <div className="relative max-w-5xl mx-auto overflow-hidden grid md:grid-cols-2 rounded-4xl border-2 border-orange-500 mt-4">
           <div className="p-8 flex flex-col justify-center ">
             <div className="text-center mb-12">
-              <span className="relative inline-block px-6 py-1 text-base font-medium text-black border-2 border-orange-200 rounded-full">
-                <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-                What Clients says
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-4 text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold mt-4 text-orange-500">
                 Testimonials
               </h2>
               <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-sans">
-                The EskyDecode follows certain quality standards that help
-                provide mobile and web apps development services meeting the
-                client’s expectation. Our strategy has helped us achieve
-                customer satisfaction and a great client retention rate.
-              </p>
-              <p className="mt-2 text-black font-medium text-xl  text-center ">
-                Looking for Digital Solution?
+                We are dedicated to providing excellence through every project
+                we deliver. By combining the latest technology with a
+                customer-first approach, we ensure our clients get solutions
+                that are both effective and future-ready. Our goal is to create
+                value and trust that last beyond the services we provide.
               </p>
             </div>
           </div>

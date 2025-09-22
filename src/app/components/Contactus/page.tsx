@@ -103,7 +103,7 @@ export default function ContactUs() {
                   Our Address
                 </h3>
                 <p className="text-gray-300 text-xs md:text-xl">
-                  2nd Floor, Gopi Tower, Ajmer Rd,
+                  ground Floor, Gopi Tower, Ajmer Rd,
                   <br />
                   Near Kamla Devi Govt. School, Satya Colony,
                   <br />

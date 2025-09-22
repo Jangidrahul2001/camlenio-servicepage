@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: "Design & Prototyping",
-    desc: "This stage focuses on transforming ideas into visual structures and interactive models to ensure clarity before development begins.",
+    desc: "This stage works on an idea as a visual structure or as an interactive model for a clear understanding before the development.",
     img: "/Homepage/process-design-img.webp",
     checklist: [
       "Wireframing & Mockups",
@@ -30,7 +30,7 @@ const sections = [
   },
   {
     title: "Development",
-    desc: "The core stage where concepts and designs turn into functional software through coding, integration, and testing.",
+    desc: "This is one time in the product life cycle whilst notions and designs are metamorphosed into a working software through the processes of coding, integrating, and testing.",
     img: "/Homepage/process-development-img.webp",
     checklist: [
       "Backend Development",
@@ -52,7 +52,7 @@ const sections = [
   },
   {
     title: "Post Maintenance Support",
-    desc: "After deployment, continuous support ensures the software remains secure, updated, and optimized for performance.",
+    desc: "Continuous assistance after deployment keeps the software secure, updated, and fine-tuned in terms of performance.",
     img: "/Homepage/process-maintenance-img.webp",
     checklist: [
       "Performance Monitoring",
@@ -64,11 +64,20 @@ const sections = [
 ];
 
 const steps = [
-  { label: "Discovery & Planning", icon: "/Homepage/svg/discovery.svg" },
-  { label: "Designing & Prototyping", icon: "/Homepage/svg/design.svg" },
-  { label: "Development", icon: "/Homepage/svg/development.svg" },
-  { label: "Deployment", icon: "/Homepage/svg/discovery.svg" },
-  { label: "Post Maintenance Support", icon: "/Homepage/svg/discovery.svg" },
+  {
+    label: "Discovery & Planning",
+    icon: "/Homepage/svg/Discovery & Planning.svg",
+  },
+  {
+    label: "Designing & Prototyping",
+    icon: "/Homepage/svg/Designing & Prototyping.svg",
+  },
+  { label: "Development", icon: "/Homepage/svg/Development.svg" },
+  { label: "Deployment", icon: "/Homepage/svg/Deployment.svg" },
+  {
+    label: "Post Maintenance Support",
+    icon: "/Homepage/svg/Post Maintenance Support-n.svg",
+  },
 ];
 
 const OurProcess = () => {
@@ -86,31 +95,29 @@ const OurProcess = () => {
   }, [activeIndex]);
 
   return (
-    <div className="min-h-screen px-6 py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
-      <div className="max-w-[85rem] mx-auto">
-        <div className="px-4 sm:px-6 lg:px-8 text-center ">
-          <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100  shadow-sm text-sm font-medium text-orange-600 mb-4">
-            <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-            Custom Software Development
+    <div className="py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
+        <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100  shadow-sm text-sm font-medium text-orange-600 mb-4">
+          <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
+          Custom Software Development
+        </span>
+        <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          A Structured Approach to Building {""}
+          <span
+            className="text-orange-500"
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
+            }}
+          >
+            Smarter Software
           </span>
-          <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 ">
-            A Structured Approach to Building {""}
-            <span
-              className="text-orange-500"
-              style={{
-                textShadow:
-                  "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
-              }}
-            >
-              Smarter Software
-            </span>
-          </h6>
+        </h6>
 
-          <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg font-sans">
-            We craft scalable web and mobile solutions through a well-defined
-            process that ensures quality, efficiency, and client satisfaction.
-          </p>
-        </div>
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+          We craft scalable web and mobile solutions through a well-defined
+          process that ensures quality, efficiency, and client satisfaction.
+        </p>
 
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -137,7 +144,9 @@ const OurProcess = () => {
                   alt={step.label}
                   width={24}
                   height={24}
-                  className="w-6 h-6 object-contain shadow-2xl z-40 "
+                  className={`w-6 h-6 object-contain shadow-2xl z-40 group-hover:invert-0 ${
+                    activeIndex === index ? "invert-0" : "invert"
+                  }`}
                 />
                 <span className="whitespace-nowrap text-xs md:text-sm lg:text-sm capitalize text-left">
                   {step.label}
@@ -171,12 +180,12 @@ const OurProcess = () => {
                     alt={sections[activeIndex].title}
                     width={800}
                     height={600}
-                    className="rounded-3xl w-full h-auto object-cover"
+                    className="rounded-3xl w-full h-auto object-cover hover:scale-101 transition-all duration-500 ease-in-out"
                   />
                 </div>
 
-                <div className="w-full md:w-1/2">
-                  <h3 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
+                <div className="w-full md:w-1/2 text-left">
+                  <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
                     {sections[activeIndex].title}
                   </h3>
                   <p className="text-gray-700 mb-8 font-sans">

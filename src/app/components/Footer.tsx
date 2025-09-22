@@ -69,7 +69,7 @@ export default function Footer() {
               </span>
               <div className="text-gray-950  md:border-l pl-2 md:pl-2 border-gray-800">
                 <h3 className="font-medium">Call for more info :-</h3>
-                <p>+91-9773323814</p>
+                <p>+91-9773323810</p>
               </div>
             </div>
 
@@ -89,12 +89,12 @@ export default function Footer() {
               <span className="text-gray-800 text-2xl md:text-3xl">
                 <ImLocation2 />
               </span>
-              <div className="text-gray-950 text-center  md:border-l pl-2 md:pl-2 border-gray-800">
+              <div className="text-gray-950 text-center md:text-left  md:border-l pl-2 md:pl-2 border-gray-800">
                 <p className="text-sm">
-                  2nd Floor, Gopi Tower, Ajmer Rd,
+                  Ground Floor, Gopi Tower, Ajmer Rd,
                   <br /> Near Kamla Devi Govt. School,
-                  <br /> Satya Colony, Tagore Nagar,
-                  <br /> Jaipur, Rajasthan 302021
+                  <br /> Satya Colony, Tagore Nagar,Jaipur,
+                  <br />  Rajasthan 302021
                 </p>
               </div>
             </div>

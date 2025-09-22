@@ -189,13 +189,13 @@ const DevServices = () => {
   const activeFeature = features.find((f) => f.id === active);
   return (
     <div className="relative py-16 overflow-hidden bg-gradient-to-r from-gray-800 via-gray-800 to-gray-900 bg-[length:200%_200%] animate-gradientMove">
-      <div className="container mx-auto px-4 relative">
+      <div className="mx-auto px-8 md:px-16 relative">
         <div className="max-w-6xl mx-auto text-center mb-4">
-          <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-50 shadow-sm text-xs md:text-sm font-medium text-black mb-4 z-20">
+          <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-100 shadow-sm text-xs md:text-sm font-medium text-black mb-4 z-20">
             <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
             Innovating the Future Together
           </span>
-          <h4 className="text-2xl md:text-5xl font-bold text-gray-50 z-20">
+          <h4 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4">
             From software to apps, we build digital solutions that tackle
             <br />
             <span
@@ -208,13 +208,13 @@ const DevServices = () => {
               today and prepare you for tomorrow.
             </span>
           </h4>
-          <p className="text-sm md:text-xl text-gray-50 mt-4 font-sans">
+          <p className="max-w-5xl mx-auto text-gray-50 text-sm text-left md:text-base mb-12 font-sans">
             Our mission is to simplify technology and build secure, scalable
             solutions that empower businesses to innovate, transform, and
             achieve measurable growth.
           </p>
         </div>
-        <div className="relative py-10 text-gray-800">
+        <div className="relative pb-10 text-gray-800">
           <div className="max-w-7xl mx-auto  flex flex-col md:flex-row gap-14 border-2 border-black/20  p-6 rounded-2xl   bg-gradient-to-r from-gray-900 via-gray-500/10 to-transparent backdrop-blur-3xl shadow-[0_-2px_28px_rgba(255,255,255,0.1)]">
             <div className="w-full md:w-1/3 flex flex-col gap-4">
               {features.map((feature) => (

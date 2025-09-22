@@ -8,11 +8,11 @@ import GsapReveal from "../../GsapReveal";
 const ItSolution = () => {
   return (
     <div className="relative py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div className="max-w-7xl mx-auto px-6 md:px-16 text-center">
-        <motion.div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
+        <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           Camlenio Software Development Company
-        </motion.div>
+        </div>
 
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
@@ -38,16 +38,19 @@ const ItSolution = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-gray-600 text-sm text-center md:text-base mb-12 font-sans"
+          className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans"
         >
-          Camlenio is a trusted software development company based in India,
-          dedicated to helping businesses succeed with innovative digital
-          solutions. Our expert team blends creativity, technology, and strategy
+          Camlenio is an established software development company in India that
+          is committed to helping businesses thrive through innovative digital
+          solutions. Our expert team Blends creativity, technology, and strategy
           to build custom websites, mobile apps, and fintech platforms that
-          deliver real business impact. We believe in transparency,
-          collaboration, and innovation—ensuring every project aligns with your
-          vision. From startups to enterprises, we transform your ideas into
-          powerful digital realities.
+          actually transact business.
+          <br />
+          We believe in transparency, collaboration, and innovation—ensuring
+          every project aligns with your vision. We transform ideas into great
+          digital realities, from startups to enterprises a like.
+          <br />
+          👉 Let&apos;s Come and Build Your Future Business!
         </motion.p>
 
         <GsapReveal>

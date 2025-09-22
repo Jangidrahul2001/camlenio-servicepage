@@ -13,42 +13,42 @@ const INDUSTRIES: Industry[] = [
   {
     id: 1,
     title: "Education",
-    text: "We build e-learning platforms, student management systems, and interactive apps to meet the needs of modern learners and institutions.",
+    text: "We build e-learning software, a student-manager system, apps, interactive software, and other solutions to meet the needs of the modern-day learners and institutions.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_finance.svg",
   },
   {
     id: 2,
     title: "Food & Restaurants",
-    text: "From restaurant software to delivery apps, we help businesses streamline operations and deliver seamless dining experiences.",
+    text: "From restaurant software to delivery applications, we help businesses streamline the smooth operations for seamless dining experiences.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_health.svg",
   },
   {
     id: 3,
     title: "Healthcare",
-    text: "We design secure telemedicine apps, patient management systems, and health platforms that simplify care delivery.",
+    text: "We architect telemedicine software, patient management applications, and health platforms while making care delivery simpler and secure.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_education.svg",
   },
   {
     id: 4,
     title: "Fintech",
-    text: "Our solutions include payment gateways, wallets, and lending platforms built for speed, security, and trust in finance.",
+    text: "Payment gateways, e-wallets, platforms for lending, built for speed and security, and to establish trust in finance are in our purvey.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_restaurant.svg",
   },
   {
     id: 5,
     title: "Retail & Ecommerce",
-    text: " We create ecommerce platforms and shopping apps that boost sales, enhance engagement, and simplify customer journeys.",
+    text: "We create online shopping, ecommerce platforms that increase sales, enhance engagement, and simplify the customer's journey.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/svg/industry_icon_property.svg",
   },
   {
     id: 6,
     title: "Travel & Hospitality",
-    text: " From booking engines to travel apps, we deliver solutions that improve experiences, automate processes, and grow revenue.",
+    text: "Our solutions, from booking engines to travel apps, focus on improvements of the user experience and automation of manual processes, thus growing revenues.",
     img: "/Homepage/home_about.jpg",
     icon: "/Homepage/industry_icon_manufacturing.webp",
   },
@@ -128,15 +128,18 @@ export default function WeServe() {
           Industries{" "}
           <span
             className="text-orange-500"
-            style={{ textShadow: "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336" }}
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
+            }}
           >
             We Serve
           </span>
         </h6>
 
-        <p className="max-w-3xl mx-auto text-gray-600 text-base sm:text-lg mb-12 font-sans">
-          We deliver tailored digital solutions across industries to solve
-          unique challenges and unlock new growth opportunities.
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+          Tailored digital solutions for unique challenges and growth
+          opportunities across industries.
         </p>
       </div>
       <Track items={INDUSTRIES} reverse={false} speed={66} />

@@ -62,17 +62,14 @@ const TechnologiesTabs = () => {
   const [activeTab, setActiveTab] = useState("mobile");
 
   return (
-    <div
-      className=" py-16 text-white relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove"
-      
-    >
+    <div className=" py-16 text-white relative bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
             <span className="absolute w-8 h-2 rounded-full bg-orange-500 left-[-1.4rem] top-1/2 -translate-y-1/2"></span>
             Technologies - Now About our Weapons
           </span>
-          <h6 className="text-3xl md:text-4xl font-bold mt-4">
+          <h6 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4">
             Latest and Smart{" "}
             <span
               className="text-orange-500"
@@ -84,11 +81,16 @@ const TechnologiesTabs = () => {
               Technologies
             </span>
           </h6>
-          <p className="text-gray-200 mt-2 max-w-2xl mx-auto font-sans">
-            Our Professional Developers and Designing Engineers are well versed
-            in versatile and modern Technologies. These updated technologies
-            help to turn the solution more robust and offer seamless experience
-            to the users.
+          <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-left break-words sm:text-base mb-12 font-sans">
+            In today’s fast-paced digital world, businesses need modern,
+            scalable, and efficient web solutions to stay ahead. At Camlenio
+            Software, we harness the{" "}
+            <span className="font-bold text-orange-500">
+              {" "}
+              latest and smartest technologies in web development
+            </span>{" "}
+            to create powerful, user-friendly, and secure web applications
+            tailored to your business needs.
           </p>
         </div>
         <div className="flex justify-center space-x-6 border-b border-gray-500 mb-8">
@@ -96,7 +98,7 @@ const TechnologiesTabs = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative pb-2text-sm md:text-xl ${
+              className={`relative pb-2 text-xs sm:text-sm md:text-xl ${
                 activeTab === tab.id
                   ? "text-orange-500 after:absolute after:left-0 after:right-0 after:-bottom-[1px] after:h-[2px] after:bg-orange-500 after:origin-center after:scale-x-100 after:transition-transform after:duration-500"
                   : "text-white hover:text-orange-400 after:absolute after:left-0 after:right-0 after:-bottom-[1px] after:h-[2px] after:bg-orange-500 after:origin-center after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-x-100"
@@ -106,7 +108,7 @@ const TechnologiesTabs = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6  justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6  justify-center max-w-7xl  mx-auto">
           {content[activeTab as keyof typeof content].map(
             (item: { name: string; icon: string }, idx: number) => (
               <div
