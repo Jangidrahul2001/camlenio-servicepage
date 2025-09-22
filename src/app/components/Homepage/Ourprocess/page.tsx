@@ -66,14 +66,14 @@ const sections = [
 const steps = [
   {
     label: "Discovery & Planning",
-    icon: "/Homepage/svg/Discovery & Planning.svg",
+    icon: "/Homepage/svg/Discovery & Planning-n.svg",
   },
   {
     label: "Designing & Prototyping",
-    icon: "/Homepage/svg/Designing & Prototyping.svg",
+    icon: "/Homepage/svg/Designing & Prototyping-n.svg",
   },
-  { label: "Development", icon: "/Homepage/svg/Development.svg" },
-  { label: "Deployment", icon: "/Homepage/svg/Deployment.svg" },
+  { label: "Development", icon: "/Homepage/svg/Development-n.svg" },
+  { label: "Deployment", icon: "/Homepage/svg/Deployment-n.svg" },
   {
     label: "Post Maintenance Support",
     icon: "/Homepage/svg/Post Maintenance Support-n.svg",
