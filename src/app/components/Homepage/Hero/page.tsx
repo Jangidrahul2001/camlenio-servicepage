@@ -25,6 +25,7 @@ const Hero = () => {
       tag: "DIGITAL",
       tagColor: "bg-blue-100 text-blue-600",
       title: "Empowering Businesses with Smart Fintech Solutions",
+      decs: "Switch to rented IT equipment Switch to rented",
       image: "/Homepage/home_about.jpg",
     },
     {
@@ -32,6 +33,7 @@ const Hero = () => {
       tag: "ENERGY",
       tagColor: "bg-pink-100 text-pink-600",
       title: "Innovating Technology, Simplifying Success",
+      decs: "Switch to rented IT equipment Switch to rented",
       image: "/Homepage/home_about.jpg",
     },
     {
@@ -39,6 +41,7 @@ const Hero = () => {
       tag: "OFFICE",
       tagColor: "bg-orange-100 text-orange-600",
       title: "Switch to rented IT equipment",
+      decs: "Switch to rented IT equipment Switch to rented",
       image: "/Homepage/home_about.jpg",
     },
   ];
@@ -155,6 +158,7 @@ const Hero = () => {
                   <h3 className="mt-3 font-semibold text-gray-900 text-[.70rem]">
                     {card.title}
                   </h3>
+                  <p className="mt-3 text-gray-900 text-[.60rem]">{card.decs}</p>
                   {card.image && (
                     <motion.div
                       initial={{ x: 0 ? -20 : 20, opacity: 0 }}
