@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollToPlugin);
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { InteractiveHoverButton } from "../../interactive-hover-button";
 import { FaArrowDownLong } from "react-icons/fa6";
 import BackToTopButton from "../../BackToTopButton";
 
-const MetaBalls = dynamic(() => import("@/app/components/metaBalls"), {
-  ssr: false,
-});
+// const MetaBalls = dynamic(() => import("@/app/components/metaBalls"), {
+//   ssr: false,
+// });
 
 export default function HeroSection() {
   const handleScroll = () => {

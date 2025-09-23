@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useId, useRef, useMemo } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from ".././../../lib/utils";
@@ -20,7 +20,6 @@ export function HeroTextAnimate({
   textClassName,
   animationDuration = 700,
 }: ContainerTextFlipProps) {
-  const id = useId();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [width, setWidth] = useState(0);
   const containerRef = useRef<HTMLParagraphElement>(null);

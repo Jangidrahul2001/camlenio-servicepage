@@ -396,7 +396,6 @@ const Header: React.FC = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<string>("");
   const pathname = usePathname();
   const navItemRef = useRef<HTMLDivElement | null>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -404,7 +403,6 @@ const Header: React.FC = () => {
   const handleMouseLeave = useCallback(() => {
     timeoutRef.current = window.setTimeout(() => {
       setOpenDropdown(null);
-      setActiveTab("");
     }, 160);
   }, []);
 
