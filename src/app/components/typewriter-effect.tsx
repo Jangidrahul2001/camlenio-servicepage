@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "../../../lib/utils";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export const TypewriterEffect = ({
   words,
@@ -25,7 +25,7 @@ export const TypewriterEffect = ({
 
   const renderWords = () => {
     return (
-      <motion.div  className="inline">
+      <motion.div className="inline">
         {wordsArray.map((word, idx) => {
           return (
             <div key={`word-${idx}`} className="inline-block">
@@ -33,10 +33,7 @@ export const TypewriterEffect = ({
                 <motion.span
                   initial={{}}
                   key={`char-${index}`}
-                  className={cn(
-                    ` text-black opacity-0 hidden`,
-                    word.className
-                  )}
+                  className={cn(` text-black opacity-0 hidden`, word.className)}
                 >
                   {char}
                 </motion.span>

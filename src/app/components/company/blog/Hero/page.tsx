@@ -1,101 +1,35 @@
 "use client";
-import { useEffect, useState, useMemo } from "react";
-import Image from "next/image";
-import { ContainerScroll } from "@/app/components/container-scroll-animation";
-
-// Words for the typing effect
-const texts = [
-  "Efficient",
-  "Award winning",
-  "Affordable",
-  "Trustworthy",
-  "Scalable",
-  "Reliable",
-  "Secure",
-  "Innovative",
-  "Dependable",
-  "Powerful",
-  "Impactful",
-  "Quality",
-] as const;
-
-// Constants for the typing animation
-const TYPING_SPEED = 120;
-const DELETING_SPEED = 50;
-const PAUSE_DURATION = 1000;
-
-/**
- * A custom hook to manage the typing animation logic.
- * @param words - An array of words to cycle through.
- */
-const useTypingEffect = (words: readonly string[]) => {
-  const texts = useMemo(() => words, [words]);
-  const [index, setIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    // Guard against empty or invalid data
-    if (!texts || texts.length === 0 || !texts[index]) {
-      return;
-    }
-
-    // If word is fully typed, pause and then start deleting
-    if (subIndex === texts[index].length + 1 && !deleting) {
-      const timer = setTimeout(() => setDeleting(true), PAUSE_DURATION);
-      return () => clearTimeout(timer);
-    }
-
-    // If word is fully deleted, move to the next word
-    if (subIndex === 0 && deleting) {
-      setDeleting(false);
-      setIndex((prev) => (prev + 1) % texts.length);
-      return;
-    }
-
-    // Type or delete next character
-    const timeout = setTimeout(
-      () => setSubIndex((prev) => prev + (deleting ? -1 : 1)),
-      deleting ? DELETING_SPEED : TYPING_SPEED
-    );
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, deleting, index, texts]);
-
-  // Return empty string if texts is not ready
-  if (!texts || texts.length === 0 || !texts[index]) {
-    return "";
-  }
-  return texts[index].substring(0, subIndex);
-};
+import { SparklesCore } from "@/app/components/BlogSparkles";
 
 export default function HeroPage() {
-  const typedText = useTypingEffect(texts);
   return (
-    <div className="overflow-hidden flex justify-center text-center items-center">
-      <ContainerScroll
-        titleComponent={
-          <>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl  font-bold text-gray-900 mb-6 leading-snug lg:leading-tight">
-              Build{" "}
-              <span className="text-orange-500">
-                {typedText}
-                <span className="border-r-2 border-orange-500 animate-pulse ml-0.5"></span>
-              </span>
-              <br /> with Camlenio
-            </h1>
-          </>
-        }
-      >
-        <Image
-          src={`/blogs/blog-img.png`}
-          alt="hero"
-          height={720}
-          width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
-          draggable={false}
-        />
-      </ContainerScroll>
+    <div className="relative py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
+      <div className="max-w-7xl mx-auto  text-center py-20 px-8 md:px-16">
+        <h1
+          className="md:text-7xl text-3xl lg:text-9xl font-bold text-center bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-clip-text text-transparent animate-gradientMove relative z-20"
+          style={{
+            textShadow:
+              "-1px -1px 0px , 3px 3px 0px , 4px 6px 0px #ff582336",
+          }}
+        >
+          Camlenio
+        </h1>
+        <div className="w-[40rem] h-40 mx-auto relative">
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-[2px] w-3/4 blur-sm" />
+          <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent h-px w-3/4" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent h-[5px] w-1/4 blur-sm" />
+          <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px w-1/4" />
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full flex justify-center items-center"
+            particleColor="#ff6900"
+          />
+          <div className="absolute inset-0 w-full h-full bg-transparent"></div>
+        </div>
+      </div>
     </div>
   );
 }

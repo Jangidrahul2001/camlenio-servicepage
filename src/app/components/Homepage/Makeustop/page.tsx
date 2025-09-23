@@ -85,17 +85,17 @@ const MakeUsTop = () => {
               />
             </div>
             <motion.h1
-              initial={{ y: 50, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ duration: 0.8 }}
               className=" w-full  z-20 text-xl  md:text-2xl font-semibold text-gray-50 mb-2"
             >
               CWhat Makes Us a Top App Development Company?
             </motion.h1>
             <motion.p
-              initial={{ y: 50, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8 }}
               className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans"
             >
               We are at the front line of leveraging cutting-edge technologies
@@ -136,16 +136,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     </div>
     <div className="transition-all duration-500 group-hover:-translate-y-8">
       <motion.h3
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         className="text-xl font-extrabold text-gray-900 mb-4"
       >
         {title}
       </motion.h3>
       <motion.p
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}

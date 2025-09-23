@@ -53,8 +53,8 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center justify-center w-full md:w-3/5"
         >
-          <div className="max-w-2xl space-y-4 px-4 sm:px-4 ">
-            <h1 className="text-[1.5rem] md:text-[2rem] lg:text-[2.3rem] font-bold text-gray-900 leading-tight ">
+          <div className="max-w-2xl space-y-4 px-4 sm:px-4">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Camlenio is a Leading Software
               <br />
               Development in Fintech{" "}
@@ -156,7 +156,19 @@ const Hero = () => {
                     {card.title}
                   </h3>
                   {card.image && (
-                    <div className="mt-3 w-full h-24 rounded-lg overflow-hidden">
+                    <motion.div
+                      initial={{ x: 0 ? -20 : 20, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 40,
+                        damping: 25,
+                        delay: 0.1,
+                      }}
+                      className="mt-3 w-full h-24 rounded-lg overflow-hidden"
+                    >
                       <Image
                         src={card.image}
                         alt="alternative"
@@ -165,7 +177,7 @@ const Hero = () => {
                         priority
                         className="w-full h-full object-cover"
                       />
-                    </div>
+                    </motion.div>
                   )}
                 </motion.div>
               );

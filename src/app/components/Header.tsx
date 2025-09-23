@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { safeLink } from "../../../lib/utils";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
 import {
   ChevronDownIcon,
   Bars3Icon,
@@ -30,6 +31,10 @@ const availablePages = [
   "/component/services/androidappdevelopment",
   "/component/services/ui_uxdesigning",
   "/component/services/webdevelopment",
+  "/component/company/blog",
+  "/component/company/about",
+  "/component/company/career",
+  "/component/company/contact",
 ];
 
 const navItems = [
@@ -394,7 +399,6 @@ const Header: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("");
   const pathname = usePathname();
   const navItemRef = useRef<HTMLDivElement | null>(null);
-  const dropdownRef = useRef<HTMLDivElement | null>(null);
   const timeoutRef = useRef<number | null>(null);
 
   const handleMouseLeave = useCallback(() => {
@@ -413,17 +417,112 @@ const Header: React.FC = () => {
     document.body.classList.toggle("overflow-hidden", mobileMenuOpen);
   }, [mobileMenuOpen]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      gsap.fromTo(
+        "#c",
+        { y: -5, z: -5, rotateX: -15, rotateY: -10 },
+        {
+          y: 0,
+          z: 0,
+          rotateX: 0,
+          rotateY: 0,
+          duration: 0.8,
+          ease: "power1.inOut",
+        }
+      );
+
+      gsap.fromTo(
+        "#a",
+        { y: 50, rotateX: -90, transformOrigin: "bottom center" },
+        { y: 0, rotateX: 0, duration: 1, ease: "power3.out" }
+      );
+
+      gsap.fromTo(
+        "#m",
+        { x: 0 },
+        {
+          x: 20,
+          duration: 1.2,
+          ease: "elastic.out(1, 0.5)",
+          onComplete: () => {
+            gsap.to("#m", { x: 0, duration: 0.5, ease: "power1.out" });
+          },
+        }
+      );
+
+      gsap.fromTo(
+        "#e",
+        { y: -30 },
+        { y: 0, duration: 0.8, ease: "bounce.out" }
+      );
+
+      gsap.fromTo(
+        "#n",
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1, ease: "back.out(1.7)" }
+      );
+
+      gsap.to("#i", {
+        rotateX: 360,
+        scale: 1.2,
+        duration: 1.5,
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 6,
+        ease: "power2.inOut",
+      });
+
+      gsap.to("#o", {
+        rotateY: -15,
+        duration: 3,
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 10,
+        ease: "power2.inOut",
+      });
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove shadow-md overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center space-x-1">
           <Image
-            src="/logo.png"
+            src="/logo-icon.png"
             alt="Camlenio"
             width={200}
             height={80}
-            className="w-50 md:w-60 h-auto object-contain"
+            className="w-8 md:w-14 h-auto object-contain"
           />
+          <span className="text-2xl md:text-4xl font-bold text-black">
+            <span id="c" className="inline-block">
+              C
+            </span>
+            <span id="a" className="inline-block">
+              a
+            </span>
+            <span id="m" className="inline-block">
+              m
+            </span>
+            <span id="l" className="inline-block">
+              l
+            </span>
+            <span id="e" className="inline-block">
+              e
+            </span>
+            <span id="n" className="inline-block">
+              n
+            </span>
+            <span id="i" className="inline-block">
+              i
+            </span>
+            <span id="o" className="inline-block">
+              o
+            </span>
+          </span>
         </Link>
         <nav className="hidden md:flex md:space-x-4 lg:space-x-6 items-center relative font-normal">
           {navItems.map((item, idx) =>
@@ -494,7 +593,7 @@ const Header: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-orange-100 shadow-lg rounded-b-2xl border-b p-6 md:hidden overflow-y-auto max-h-screen"
+            className="fixed top-0 left-0 right-0 z-50  bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove shadow-lg rounded-b-2xl border-b p-6 md:hidden overflow-y-auto max-h-screen"
           >
             <div className="flex justify-between">
               <Link href="/" className="flex items-left">
@@ -525,12 +624,12 @@ const Header: React.FC = () => {
                         mobileDropdown === item.title ? null : item.title
                       )
                     }
-                    className="w-full flex justify-between items-center p-4 text-gray-800 font-semibold rounded hover:bg-orange-50 transition"
+                    className="w-full flex justify-between items-center text-base p-4 text-gray-800 font-semibold rounded hover:bg-orange-50 transition-all duration-300"
                   >
                     {item.title}
                     <ChevronDownIcon
                       className={clsx(
-                        "w-5 h-5 transition-transform duration-200",
+                        "w-5 h-5 transition-transform duration-300 ",
                         mobileDropdown === item.title && "rotate-180"
                       )}
                     />
@@ -543,7 +642,7 @@ const Header: React.FC = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="overflow-hidden mt-2 pl-4 space-y-2"
+                        className="overflow-hidden mt-2 pl-4 space-y-2 border-t border-gray-200"
                       >
                         {Array.isArray(item.items)
                           ? item.items.map((link) => (
@@ -556,7 +655,7 @@ const Header: React.FC = () => {
                                   availablePages
                                 )}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="block text-sm text-gray-700 hover:text-gray-900"
+                                className=" text-base flex flex-col items-center justify-center bg-white/60 backdrop-blur-3xl font-extrabold font-sans rounded-2xl p-1 text-gray-700  hover:text-gray-900"
                               >
                                 {link}
                               </Link>

@@ -45,7 +45,7 @@ export default function SmoothScrolling() {
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
-    window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       if (scrollTween) scrollTween.kill();
     };
   }, []);
