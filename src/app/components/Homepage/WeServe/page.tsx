@@ -14,7 +14,7 @@ const INDUSTRIES: Industry[] = [
     id: 1,
     title: "Education",
     text: "We build e-learning software, a student-manager system, apps, interactive software, and other solutions to meet the needs of the modern-day learners and institutions.",
-    img: "/Industries/education.jpg",
+    img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627310/education_focdoj.jpg",
     icon: "/Homepage/svg/industry_icon_finance.svg",
   },
   {
