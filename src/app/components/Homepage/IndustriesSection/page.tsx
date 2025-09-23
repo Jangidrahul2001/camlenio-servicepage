@@ -47,7 +47,7 @@ const IndustriesSection = () => {
           {[
             {
               title: "Who We Are?",
-              img: "/Homepage/home_about.jpg",
+              img: "/Homepage/IndustriesSection/who-we-are.jpg",
               text: "We are passionate and innovative developers, designers, and strategists. Camlenio has been founded to promise to deliver solutions that really transform businesses digitally. With quality, creativity, and problem-solving attributes, we give ideas life and make technology simple, effective, and ready for the future for every client we serve.",
             },
             {
@@ -57,7 +57,7 @@ const IndustriesSection = () => {
             },
             {
               title: "What We Do?",
-              img: "/Homepage/home_about.jpg",
+              img: "/Homepage/IndustriesSection/what-we-do.jpg",
               text: "Camlenio gives the entire range of technology solutions fitting every business, however big or small. From custom software, mobile apps, fintech, and responsive websites, we develop platforms that are secure, scalable, and user-friendly. Our goal is to empower businesses to survive, innovate, and grow in this fast-paced, now digital-first economy.",
             },
           ].map((card, i) => (

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+/* @import url(https://db.onlinewebfonts.com/c/a29ad04aae062e207c8d7a8dd84f8983?family=AvantGardeGothicITC+W05+Bold); */
 
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -63,3 +64,7 @@
 .group:hover .group-hover\:animate-wiggle {
   animation: wiggle 0.3s ease-in-out;
 }
+
+/* .font-itc {
+  font-family: "AvantGardeGothicITC W05 Bold", sans-serif;
+} */

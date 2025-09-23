@@ -69,7 +69,7 @@ const ItSolution = () => {
 
           <div className="bg-white rounded-xl shadow-xl overflow-hidden md:col-span-2 lg:col-span-2">
             <Image
-              src="/Homepage/home_about.jpg"
+              src="/Homepage/itsolution/about.jpg"
               alt="Team Working"
               width={1200}
               height={200}
