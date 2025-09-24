@@ -3,21 +3,21 @@ import React from "react";
 const cards = [
   {
     title: "Innovative Approach",
-    icon: "/Homepage/innovative_solution.webp",
+    icon: "/Homepage/SolutionsThatScale/Innovative.svg",
     desc: "We combine creativity with cutting-edge technology to deliver solutions that truly make a lasting impact.",
   },
   {
-    icon: "/Homepage/ontime_delivery.webp",
+    icon: "/Homepage/SolutionsThatScale/expertise.svg",
     title: "End-to-End Expertise",
     desc: "From idea to design, development, and launch — we handle everything seamlessly under one roof.",
   },
   {
-    icon: "/Homepage/client_centred_solver.webp",
+    icon: "/Homepage/SolutionsThatScale/secure.svg",
     title: "Scalable & Secure",
     desc: "Our solutions are built to scale as your business grows, while ensuring top-level security and reliability.",
   },
   {
-    icon: "/Homepage/core_values.webp",
+    icon: "/Homepage/SolutionsThatScale/centric.svg",
     title: "Client-Centric",
     desc: "We work with transparency and collaboration, always putting your business goals and success first.",
   },

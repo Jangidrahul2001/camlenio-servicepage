@@ -33,15 +33,15 @@ const cards = [
 
 const AboutTheCompany = () => {
   return (
-    <div className="relative py-16 px-8 md:px-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-left md:text-center pl-6 md:pl-0">
-          <span className="relative inline-block px-4 py-1.5 rounded-full text-center border border-orange-300 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
+    <div className="relative py-16 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
+        <div className="text-center">
+          <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-300 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
             <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
             About the Company
           </span>
         </div>
-        <h1 className="max-w-6xl mx-auto text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-left md:text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-left md:text-center">
           One stop for all of your{" "}
           <span
             className="text-orange-500"
@@ -51,7 +51,7 @@ const AboutTheCompany = () => {
           </span>
           needs
         </h1>
-        <p className="text-gray-600 text-base sm:text-lg mb-12 text-left md:text-center ">
+        <p className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
           Emizen tech Pvt Ltd began as a Web Development Company in the year
           2013, in Jaipur, Rajasthan, with the vision to help clients grow, we
           started incorporating modern technology solutions in their businesses.
@@ -67,7 +67,7 @@ const AboutTheCompany = () => {
           conduct business, gain information, and carry out transactions.
         </p>
         <GsapReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
             {cards.map((card, index) => (
               <div
                 key={index}

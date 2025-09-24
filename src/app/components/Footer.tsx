@@ -94,7 +94,7 @@ export default function Footer() {
                   Ground Floor, Gopi Tower, Ajmer Rd,
                   <br /> Near Kamla Devi Govt. School,
                   <br /> Satya Colony, Tagore Nagar,Jaipur,
-                  <br />  Rajasthan 302021
+                  <br /> Rajasthan 302021
                 </p>
               </div>
             </div>
@@ -126,16 +126,28 @@ export default function Footer() {
               />
             </Link>
             <div className="flex mt-4 space-x-4">
-              <Link href="#">
+              <Link
+                href="#"
+                className="transition-all duration-300 hover:text-orange-500 hover:scale-105"
+              >
                 <X size={20} />
               </Link>
-              <Link href="#">
+              <Link
+                href="#"
+                className="transition-all duration-300 hover:text-orange-500 hover:scale-105"
+              >
                 <Linkedin size={20} />
               </Link>
-              <Link href="#">
+              <Link
+                href="#"
+                className="transition-all duration-300 hover:text-orange-500 hover:scale-105"
+              >
                 <Facebook size={20} />
               </Link>
-              <Link href="#">
+              <Link
+                href="#"
+                className="transition-all duration-300 hover:text-orange-500 hover:scale-105"
+              >
                 <Instagram size={20} />
               </Link>
             </div>

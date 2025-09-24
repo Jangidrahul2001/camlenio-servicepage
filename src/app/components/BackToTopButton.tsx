@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 
 export default function BackToTopButton() {
@@ -20,7 +20,7 @@ export default function BackToTopButton() {
   };
 
   return (
-    <>
+    <AnimatePresence>
       {visible && (
         <motion.button
           onClick={scrollToTop}
@@ -33,6 +33,6 @@ export default function BackToTopButton() {
           <ArrowUp className="w-5 h-5" />
         </motion.button>
       )}
-    </>
+    </AnimatePresence>
   );
 }

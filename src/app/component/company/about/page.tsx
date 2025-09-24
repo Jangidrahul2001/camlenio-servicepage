@@ -5,6 +5,7 @@ import OurMission from "@/app/components/company/about/OurMission/page";
 import OurValues from "@/app/components/company/about/OurValues/page";
 import WhoWeAre from "@/app/components/company/about/WhoWeAre/page";
 import HaveAChat from "@/app/components/company/about/HaveAChat/page";
+import { AnimatedTestimonials } from "@/app/components/animated-testimonials";
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
       <OurMission />
       <OurValues />
       <WhoWeAre />
+      <AnimatedTestimonials autoplay={true} />
       <HaveAChat />
     </div>
   );

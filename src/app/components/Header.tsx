@@ -487,13 +487,13 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove shadow-md overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4 ">
-        <Link href="/" className="flex items-center space-x-1">
+        <Link href="/" className="flex items-center space-x-1 tracking-tight ">
           <Image
             src="/logo-icon.png"
             alt="Camlenio"
             width={200}
             height={80}
-            className="w-8 md:w-14 h-auto object-contain"
+            className="w-8 md:w-13 h-auto object-contain"
           />
           <span className="text-2xl md:text-4xl font-bold text-black">
             <span id="c" className="inline-block">

@@ -57,7 +57,7 @@ const Hero = () => {
           className="flex flex-col items-center justify-center w-full md:w-3/5"
         >
           <div className="max-w-2xl space-y-4 px-4 sm:px-4">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight ">
               Camlenio is a Leading Software
               <br />
               Development in Fintech{" "}
@@ -145,6 +145,7 @@ const Hero = () => {
                     opacity: isAnyHovered ? (isHovered ? 1 : 0.1) : 1,
                   }}
                   transition={{ type: "spring", stiffness: 100, damping: 15 }}
+                  viewport={{ once: true }}
                 >
                   <span
                     className={`text-[.80rem] font-semibold px-2 py-1 rounded-lg self-start ${
@@ -158,7 +159,9 @@ const Hero = () => {
                   <h3 className="mt-3 font-semibold text-gray-900 text-[.70rem]">
                     {card.title}
                   </h3>
-                  <p className="mt-3 text-gray-900 text-[.60rem]">{card.decs}</p>
+                  <p className="mt-3 text-gray-900 text-[.60rem]">
+                    {card.decs}
+                  </p>
                   {card.image && (
                     <motion.div
                       initial={{ x: 0 ? -20 : 20, opacity: 0 }}

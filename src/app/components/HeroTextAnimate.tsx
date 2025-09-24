@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
-
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from ".././../../lib/utils";
 
-export interface ContainerTextFlipProps {
+export interface HeroTextAnimateProps {
   words?: string[];
   interval?: number;
   className?: string;
@@ -19,76 +18,80 @@ export function HeroTextAnimate({
   className,
   textClassName,
   animationDuration = 700,
-}: ContainerTextFlipProps) {
+}: HeroTextAnimateProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [width, setWidth] = useState(0);
-  const containerRef = useRef<HTMLParagraphElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const longestWord = useMemo(
     () => words.reduce((a, b) => (a.length > b.length ? a : b)),
     [words]
   );
 
+  // auto-change words
+  useEffect(() => {
+    const id = setInterval(
+      () => setCurrentWordIndex((i) => (i + 1) % words.length),
+      interval
+    );
+    return () => clearInterval(id);
+  }, [words, interval]);
+
+  // calculate width only once for longest word
   useEffect(() => {
     if (containerRef.current) {
-      const tempSpan = document.createElement("span");
-      const style = getComputedStyle(containerRef.current);
-      tempSpan.style.fontSize = style.fontSize;
-      tempSpan.style.fontWeight = style.fontWeight;
-      tempSpan.style.fontFamily = style.fontFamily;
-      tempSpan.style.visibility = "hidden";
-      tempSpan.style.position = "absolute";
-      tempSpan.innerText = longestWord;
-      document.body.appendChild(tempSpan);
-      setWidth(tempSpan.offsetWidth);
-      document.body.removeChild(tempSpan);
+      const container = containerRef.current;
+      const span = document.createElement("span");
+      const style = getComputedStyle(container);
+      Object.assign(span.style, {
+        fontSize: style.fontSize,
+        fontWeight: style.fontWeight,
+        fontFamily: style.fontFamily,
+        position: "absolute",
+        visibility: "hidden",
+      });
+
+      const paddingX =
+        parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+
+      span.innerText = longestWord;
+      document.body.appendChild(span);
+      setWidth(span.offsetWidth + paddingX);
+      document.body.removeChild(span);
     }
-  }, [words, longestWord]);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, interval);
-
-    return () => clearInterval(intervalId);
-  }, [words, interval]);
+  }, [longestWord, className, textClassName]);
 
   return (
     <motion.div
       ref={containerRef}
-      animate={{ width: width > 0 ? width : "auto" }}
+      animate={{ width: width || "auto" }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "relative inline-block rounded-lg py-1 text-center text-[1.5rem] md:text-[2rem] lg:text-[2.3rem] font-bold text-gray-50 align-top",
+        "relative inline-block rounded-lg px-4 py-1 text-center font-bold text-gray-50 text-[1.5rem] md:text-[2rem] lg:text-[2.3rem]",
         "[background:linear-gradient(to_bottom,#f97316,#f97316)]",
         className
       )}
     >
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={words[currentWordIndex]}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: animationDuration / 2000, ease: "easeInOut" }}
-          className={cn("inline-block", textClassName)}
-        >
-          {words[currentWordIndex]}
-        </motion.span>
-      </AnimatePresence>
-
-      <span
-        style={{
-          visibility: "hidden",
-          position: "absolute",
-          pointerEvents: "none",
-          top: 0,
-          left: 0,
-        }}
-        aria-hidden="true"
+      <motion.div
+        key={words[currentWordIndex]}
+        className={cn("inline-block", textClassName)}
       >
-        {longestWord}
-      </span>
+        {words[currentWordIndex].split("").map((letter, i) => (
+          <motion.span
+            key={i}
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{
+              delay: i * 0.03,
+              duration: animationDuration / 2000,
+              ease: "easeOut",
+            }}
+            className="inline-block"
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.div>
     </motion.div>
   );
 }

@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 
 const cardsData = [
   {
-    icon: "/Homepage/on_demand_resources.webp",
+    icon: "/Homepage/mbi/API.svg",
     title: "On-Demand Resources",
     description:
       "We have a flexible, and salable workforce of resources to allow you to hire the professionals to adapt to your ongoing requirements without long-term commitment.",
   },
   {
-    icon: "/Homepage/agile_methodology.webp",
+    icon: "/Homepage/mbi/fintech-1.svg",
     title: "Agile Methodology",
     description:
       "We’re a strong advocate of agile development methodologies enabling us to deliver iterative improvements to meet client expectations and market demands.",
   },
   {
-    icon: "/Homepage/security_first.webp",
+    icon: "/Homepage/mbi/fintech-2.svg",
     title: "Security-First",
     description:
       "Our development process strongly embeds comprehensive threat modeling, periodic security audits, and penetration testing to develop highly secure mobile applications for your business.",
   },
   {
-    icon: "/Homepage/post_launch_support.webp",
+    icon: "/Homepage/mbi/fintech-3.svg",
     title: "Post-Launch Support",
     description:
       "From bug fixing to performance monitoring, we offer comprehensive support after deployment to ensure your app can adapt to the evolving market conditions.",
@@ -140,7 +140,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-xl font-extrabold text-gray-900 mb-4"
+        className="text-xl font-extrabold text-gray-900 mb-1"
       >
         {title}
       </motion.h3>

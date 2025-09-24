@@ -35,17 +35,17 @@ export default function ProjectCTA() {
                 stiffness: 400,
                 damping: 20,
               }}
-              className="text-[4rem] md:text-[8rem] font-extrabold leading-none"
+              className="text-[2.5rem] md:text-[6rem] lg:text-[8rem] font-extrabold leading-none"
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
         </div>
 
-        <div className="flex items-center justify-start md:justify-end gap-3 group ">
+        <div className="flex items-center justify-end gap-3 group ">
           <a
             href="mailto:business@camlenio.com"
-            className="text-2xl font-medium relative group"
+            className="text-[1rem] md:text-[1.5rem] font-medium relative group"
           >
             <span className=" inline-block text-black group-hover:text-orange-500 transition-all duration-500">
               <span className="absolute left-0 -bottom-1 h-[1px] w-0 bg-black transition-all duration-500 group-hover:w-full"></span>
