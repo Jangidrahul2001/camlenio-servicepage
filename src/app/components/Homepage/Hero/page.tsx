@@ -22,26 +22,26 @@ const Hero = () => {
   const cards = [
     {
       id: 1,
-      tag: "DIGITAL",
+      tag: "Customized",
       tagColor: "bg-blue-100 text-blue-600",
-      title: "Empowering Businesses with Smart Fintech Solutions",
-      decs: "Switch to rented IT equipment Switch to rented",
+      title: "Customized Software Tailored to Your Growth",
+      decs: "We develop software solutions that adapt to your unique business needs. Our customized technology evolves as your business grows.",
       image: "/Homepage/home_about.jpg",
     },
     {
       id: 2,
-      tag: "ENERGY",
+      tag: "Fintech",
       tagColor: "bg-pink-100 text-pink-600",
-      title: "Innovating Technology, Simplifying Success",
-      decs: "Switch to rented IT equipment Switch to rented",
+      title: "Empowering Businesses with Smart Fintech Solutions",
+      decs: "Fintech blends finance with technology to create smarter, faster, and more secure digital financial Software.",
       image: "/Homepage/home_about.jpg",
     },
     {
       id: 3,
-      tag: "OFFICE",
+      tag: "Innovation",
       tagColor: "bg-orange-100 text-orange-600",
-      title: "Switch to rented IT equipment",
-      decs: "Switch to rented IT equipment Switch to rented",
+      title: "Innovating Technology, Simplifying Success",
+      decs: "We turn complex technologies into simple, powerful solutions that drive your business forward.",
       image: "/Homepage/home_about.jpg",
     },
   ];
@@ -108,7 +108,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove min-h-[24rem] sm:min-h-[28rem] md:h-[36rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5 overflow-hidden"
+          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove min-h-[28rem] sm:min-h-[28rem] md:h-[36rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5 overflow-hidden"
         >
           <div
             className="relative flex justify-center items-center w-full h-full [perspective:1000px]"

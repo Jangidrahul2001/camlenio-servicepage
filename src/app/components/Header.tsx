@@ -18,6 +18,10 @@ import {
   FaInstagram,
   FaLinkedin,
   FaPinterest,
+  FaBlog,
+  FaCircleInfo,
+  FaEnvelope,
+  FaBriefcase,
   FaTwitter,
 } from "react-icons/fa6";
 
@@ -197,12 +201,40 @@ const DesktopDropdown = React.memo(
       return "";
     });
 
+    // const getCompanyIcon = (name: string): React.ReactNode => {
+    //   const key = (name || "").toString().toLowerCase();
+    //   const iconPath = "/Homepage/web_design_orange.png";
+    //   const className = key.includes("career")
+    //     ? "h-10 w-12 object-contain"
+    //     : "h-10 w-14 object-contain";
+    //   return (
+    //     <Image
+    //       src={iconPath}
+    //       alt={`${name} icon`}
+    //       width={100}
+    //       height={100}
+    //       className={className}
+    //     />
+    //   );
+    // };
+
     const getCompanyIcon = (name: string): React.ReactNode => {
-      const key = (name || "").toString().toLowerCase();
-      const iconPath = "/Homepage/web_design_orange.png";
-      const className = key.includes("career")
-        ? "h-10 w-12 object-contain"
-        : "h-10 w-14 object-contain";
+      const key = (name || "").toLowerCase();
+
+      const iconMap: Record<string, string> = {
+        blog: "/header/aboutus/blog.svg",
+        about: "/header/aboutus/about-us.svg",
+        career: "/header/aboutus/career-2.svg",
+        contact: "/header/aboutus/contact.svg",
+      };
+
+      const iconPath = iconMap[key] || "/header/aboutus/about-us.svg";
+
+      const className =
+        key === "career"
+          ? "h-10 w-14 object-contain"
+          : "h-8 w-14 object-contain";
+
       return (
         <Image
           src={iconPath}
@@ -236,7 +268,7 @@ const DesktopDropdown = React.memo(
                 const current = activeTab || tabs[0] || "";
 
                 return (
-                  <div className="flex w-full max-w-[900px] h-auto gap-4 ">
+                  <div className="flex w-full max-w-[900px] h-auto gap-4">
                     {item.title === "Company" ? (
                       <>
                         <div className="w-1/3 pr-4 flex flex-col justify-center items-start ml-10 border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl  shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
@@ -263,7 +295,7 @@ const DesktopDropdown = React.memo(
                               >
                                 {getCompanyIcon(tab)}
                                 <span className="flex justify-center items-center mb-2 text-center">
-                                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                  {tab}
                                 </span>
                               </Link>
                             );
@@ -672,7 +704,7 @@ const Header: React.FC = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="overflow-hidden mt-2 pl-4 space-y-2"
+                        className="overflow-hidden mt-2 pl-4"
                       >
                         {Array.isArray(item.items) ? (
                           item.items.map((link) => (
@@ -685,7 +717,7 @@ const Header: React.FC = () => {
                                 availablePages
                               )}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block text-sm text-gray-700 hover:text-gray-900 p-2"
+                              className="block text-xl p-2 text-gray-700 hover:text-orange-900 space-y-2"
                             >
                               {link}
                             </Link>
