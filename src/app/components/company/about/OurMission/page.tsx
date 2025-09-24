@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const OurMission = () => {
   return (
-    <div className="py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove px-4 md:px-20">
-      <div className="max-w-7xl mx-auto text-center">
+    <div className="relative py-16 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto text-left md:text-center px-8 md:px-16">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           Our Mission &{" "}
           <span
@@ -19,8 +19,10 @@ const OurMission = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div className="text-left md:text-right">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="max-w-5xl mx-auto text-gray-600 text-sm text-right md:text-base flex-wrap break-words mb-12 font-sans">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Mission
+            </h2>
+            <p className="text-gray-600 text-sm text-left md:text-right md:text-base flex-wrap break-words mb-12 font-sans">
               Our mission is to provide result-oriented and competitive
               solutions to our clients and help them gain a winning edge over
               their competitors. We offer cost-effective, robust, and
@@ -46,8 +48,10 @@ const OurMission = () => {
           </motion.div>
 
           <div className="text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Vision</h2>
-            <p className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Vision
+            </h2>
+            <p className=" text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
               Our vision is to become a leading and top-ranked software
               development company both nationally and globally. We believe in
               our excellent and innovative services to make this vision come

@@ -1,4 +1,4 @@
-// import AnimatedText from "@/app/components/AnimatedText";
+import { HoverEffect } from "@/app/components/About-card-hover-effect";
 import GsapReveal from "@/app/components/GsapReveal";
 import React from "react";
 import {
@@ -13,7 +13,7 @@ import {
 const cards = [
   {
     icon: (
-      <div className="p-4 rounded-full bg-white/20 group-hover:bg-white/20 transition-colors duration-300">
+      <div className="p-4 inline-block rounded-full bg-white/20 group-hover:bg-white/20 transition-colors duration-300">
         <RiTeamFill
           size={60}
           className="text-white  group-hover:animate-wiggle"
@@ -25,7 +25,7 @@ const cards = [
   },
   {
     icon: (
-      <div className="bg-white/20 p-4 rounded-full group-hover:bg-white/10 transition-colors duration-300">
+      <div className="bg-white/20 p-4 inline-block rounded-full group-hover:bg-white/10 transition-colors duration-300">
         <RiLightbulbFlashFill
           size={60}
           className="text-white group-hover:animate-wiggle"
@@ -37,7 +37,7 @@ const cards = [
   },
   {
     icon: (
-      <div className="bg-white/20 p-4 rounded-full group-hover:bg-white/10 transition-colors duration-300">
+      <div className="bg-white/20 p-4 inline-block rounded-full group-hover:bg-white/10 transition-colors duration-300">
         <RiCustomerService2Fill
           size={60}
           className="text-white group-hover:animate-wiggle"
@@ -49,7 +49,7 @@ const cards = [
   },
   {
     icon: (
-      <div className="bg-white/20 p-4 rounded-full group-hover:bg-white/10 transition-colors duration-300">
+      <div className="bg-white/20 p-4 inline-block rounded-full group-hover:bg-white/10 transition-colors duration-300">
         <RiHandCoinFill
           size={60}
           className="text-white group-hover:animate-wiggle"
@@ -61,7 +61,7 @@ const cards = [
   },
   {
     icon: (
-      <div className="bg-white/20 p-4 rounded-full group-hover:bg-white/10 transition-colors duration-300">
+      <div className="bg-white/20 p-4 inline-block rounded-full group-hover:bg-white/10 transition-colors duration-300">
         <RiShieldStarFill
           size={60}
           className="text-white group-hover:animate-wiggle"
@@ -73,7 +73,7 @@ const cards = [
   },
   {
     icon: (
-      <div className="bg-white/20 p-4 rounded-full group-hover:bg-white/10 transition-colors duration-300">
+      <div className="bg-white/20 p-4 inline-block rounded-full group-hover:bg-white/10 transition-colors duration-300">
         <RiFocus3Fill
           size={60}
           className="text-white group-hover:animate-wiggle"
@@ -117,25 +117,9 @@ const OurValues = () => {
         </p>
 
         <div className="w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-left md:text-center ">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="relative bg-gray-800 border-2 group border-gray-700 overflow-hidden shadow-md p-4 flex flex-col items-left md:items-center text-center hover:shadow-lg transition-shadow duration-300 group-hover:border-orange-600 h-[500px]"
-              >
-                <div className="absolute inset-0 w-full h-full bg-orange-500 transition-transform duration-500 ease-in-out -translate-y-full group-hover:translate-y-0" />
-                <div className="relative flex flex-col items-start">
-                  {card.icon}
-                  <h3 className="text-xl md:text-xl font-semibold text-gray-50 group-hover:text-white mt-4 mb-2 transition-colors duration-300">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-100 group-hover:text-orange-50 text-base text-left transition-colors duration-300 font-sans">
-                    {card.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GsapReveal>
+            <HoverEffect items={cards} className="lg:grid-cols-3" />
+          </GsapReveal>
         </div>
       </div>
     </div>

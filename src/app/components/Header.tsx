@@ -12,6 +12,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/20/solid";
+import { MobileDropdown } from "./MobileDropdown";
 import {
   FaFacebook,
   FaInstagram,
@@ -485,7 +486,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove shadow-md overflow-hidden">
+    <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-md overflow-hidden">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4 ">
         <Link href="/" className="flex items-center space-x-1 tracking-tight ">
           <Image
@@ -591,26 +592,57 @@ const Header: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 right-0 z-50  bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove shadow-lg rounded-b-2xl border-b p-6 md:hidden overflow-y-auto max-h-screen"
+            className="fixed top-0 left-0 right-0 z-50  bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-lg rounded-b-2xl p-6 md:hidden overflow-y-auto max-h-screen"
           >
             <div className="flex justify-between">
-              <Link href="/" className="flex items-left">
+              <Link
+                href="/"
+                className="flex items-center space-x-1 tracking-tight "
+              >
                 <Image
-                  src="/logo.png"
+                  src="/logo-icon.png"
                   alt="Camlenio"
-                  width={230}
+                  width={200}
                   height={80}
-                  className="w-40 h-auto object-contain"
+                  className="w-8 md:w-13 h-auto object-contain"
                 />
+                <span className="text-2xl md:text-4xl font-bold text-black">
+                  <span id="c" className="inline-block">
+                    C
+                  </span>
+                  <span id="a" className="inline-block">
+                    a
+                  </span>
+                  <span id="m" className="inline-block">
+                    m
+                  </span>
+                  <span id="l" className="inline-block">
+                    l
+                  </span>
+                  <span id="e" className="inline-block">
+                    e
+                  </span>
+                  <span id="n" className="inline-block">
+                    n
+                  </span>
+                  <span id="i" className="inline-block">
+                    i
+                  </span>
+                  <span id="o" className="inline-block">
+                    o
+                  </span>
+                </span>
               </Link>{" "}
               <div className="md:hidden">
-                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                  {mobileMenuOpen ? (
-                    <XMarkIcon className="w-8 h-8 text-gray-800" />
-                  ) : (
-                    <Bars3Icon className="w-8 h-8 text-gray-800" />
-                  )}
-                </button>
+                <AnimatePresence>
+                  <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                    {mobileMenuOpen ? (
+                      <XMarkIcon className="w-8 h-8 text-gray-800" />
+                    ) : (
+                      <Bars3Icon className="w-8 h-8 text-gray-800" />
+                    )}
+                  </button>
+                </AnimatePresence>
               </div>
             </div>
             {navItems.map((item, idx) =>
@@ -640,57 +672,35 @@ const Header: React.FC = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="overflow-hidden mt-2 pl-4 space-y-2 border-t border-gray-200"
+                        className="overflow-hidden mt-2 pl-4 space-y-2"
                       >
-                        {Array.isArray(item.items)
-                          ? item.items.map((link) => (
-                              <Link
-                                key={link}
-                                href={safeLink(
-                                  `/component/${item.href}/${link
-                                    .replace(/\s+/g, "")
-                                    .toLowerCase()}`,
-                                  availablePages
-                                )}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className=" text-base flex flex-col items-center justify-center bg-white/60 backdrop-blur-3xl font-extrabold font-sans rounded-2xl p-1 text-gray-700  hover:text-gray-900"
-                              >
-                                {link}
-                              </Link>
-                            ))
-                          : (() => {
-                              const entries =
-                                !item.items || Array.isArray(item.items)
-                                  ? []
-                                  : Object.entries(
-                                      item.items as unknown as Record<
-                                        string,
-                                        string[]
-                                      >
-                                    );
-                              return entries.map(([cat, links]) => (
-                                <div key={cat}>
-                                  <h4 className="font-bold text-orange-500 mb-1">
-                                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                                  </h4>
-                                  {links.map((link) => (
-                                    <Link
-                                      key={link}
-                                      href={safeLink(
-                                        `/component/${item.href}/${link
-                                          .replace(/\s+/g, "")
-                                          .toLowerCase()}`,
-                                        availablePages
-                                      )}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                      className="block text-sm text-gray-700 hover:text-gray-900 pl-2"
-                                    >
-                                      {link}
-                                    </Link>
-                                  ))}
-                                </div>
-                              ));
-                            })()}
+                        {Array.isArray(item.items) ? (
+                          item.items.map((link) => (
+                            <Link
+                              key={link}
+                              href={safeLink(
+                                `/component/${item.href}/${link
+                                  .replace(/\s+/g, "")
+                                  .toLowerCase()}`,
+                                availablePages
+                              )}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block text-sm text-gray-700 hover:text-gray-900 p-2"
+                            >
+                              {link}
+                            </Link>
+                          ))
+                        ) : (
+                          <MobileDropdown
+                            item={
+                              item as {
+                                href: string;
+                                items: Record<string, string[]>;
+                              }
+                            }
+                            setMobileMenuOpen={setMobileMenuOpen}
+                          />
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
