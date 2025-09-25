@@ -343,8 +343,8 @@ const DesktopDropdown = React.memo(
                                 <Image
                                   src="/Homepage/aboutus_image.png"
                                   alt="Technology"
-                                  width={200}
-                                  height={200}
+                                  width={256}
+                                  height={274}
                                   className="object-cover rounded-lg"
                                 />
                               </div>
@@ -376,7 +376,7 @@ const DesktopDropdown = React.memo(
                                   autoPlay
                                   loop
                                   muted
-                                  className="object-cover rounded-lg w-full h-full"
+                                  className="object-cover rounded-lg w-full h-54"
                                 />
                               </div>
                             </div>
@@ -405,8 +405,8 @@ const DesktopDropdown = React.memo(
                                 <Image
                                   src="/Homepage/home_about.jpg"
                                   alt="Mobile"
-                                  width={400}
-                                  height={400}
+                                  width={380}
+                                  height={380}
                                   className=" object-contain rounded-lg"
                                 />
                               </div>

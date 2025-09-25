@@ -68,12 +68,20 @@ const ItSolution = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-xl overflow-hidden md:col-span-2 lg:col-span-2">
-            <Image
+            {/* <Image
               src="/Homepage/itsolution/about.jpg"
               alt="Team Working"
               width={1200}
               height={200}
               className="w-full h-[200px] object-cover "
+            /> */}
+
+            <video
+              src="/Homepage/itsolution/test.mp4"
+              autoPlay
+              loop
+              muted
+              className="object-cover rounded-lg w-full h-54"
             />
           </div>
 
