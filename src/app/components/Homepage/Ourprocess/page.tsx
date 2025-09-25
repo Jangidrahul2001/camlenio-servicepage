@@ -115,8 +115,11 @@ const OurProcess = () => {
         </h6>
 
         <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
-          We craft scalable web and mobile solutions through a well-defined
-          process that ensures quality, efficiency, and client satisfaction.
+          At Camlenio, we follow a structured and methodical approach to
+          software development that ensures every project is delivered with
+          precision and quality. From initial planning and design to
+          development, testing, and deployment, each step is carefully executed
+          to create smarter, scalable, and future-ready solutions.
         </p>
 
         <motion.div

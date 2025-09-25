@@ -18,9 +18,9 @@ const ItSolution = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+          className="text-3xl sm:text-4xl font-bold text-gray-900  y-900 mb-4"
         >
-          Essential IT Solutions for{" "}
+          Excellence – Our foundation for every project{" "}
           <span
             className="text-orange-500"
             style={{
@@ -28,7 +28,7 @@ const ItSolution = () => {
                 "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
             }}
           >
-            Modern Businesses
+            We Deliver
           </span>
         </motion.h2>
         <motion.p
@@ -38,15 +38,17 @@ const ItSolution = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans"
         >
-          Camlenio is an established software development company in India that
-          is committed to helping businesses thrive through innovative digital
-          solutions. Our expert team Blends creativity, technology, and strategy
-          to build custom websites, mobile apps, and fintech platforms that
-          actually transact business.
+          Our journey at Camlenio Software is a testament to what can be
+          achieved when people are genuinely committed to making a meaningful
+          impact. We are driven by a team of experienced and passionate
+          professionals who bring creativity, innovation, and dedication to
+          every project.
           <br />
-          We believe in transparency, collaboration, and innovation—ensuring
-          every project aligns with your vision. We transform ideas into great
-          digital realities, from startups to enterprises a like.
+          Each member of our team is focused on delivering high-quality digital
+          solutions that empower businesses to grow, adapt, and succeed in an
+          ever-evolving technological landscape. From developing cutting-edge
+          software to creating seamless user experiences, our story is built on
+          innovation, collaboration, and a relentless pursuit of excellence.
           <br />
           👉 Let&apos;s Come and Build Your Future Business!
         </motion.p>

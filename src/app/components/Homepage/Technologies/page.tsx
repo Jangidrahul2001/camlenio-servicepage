@@ -82,15 +82,11 @@ const TechnologiesTabs = () => {
             </span>
           </h6>
           <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-left break-words sm:text-base mb-12 font-sans">
-            In today’s fast-paced digital world, businesses need modern,
-            scalable, and efficient web solutions to stay ahead. At Camlenio
-            Software, we harness the{" "}
-            <span className="font-bold text-orange-500">
-              {" "}
-              latest and smartest technologies in web development
-            </span>{" "}
-            to create powerful, user-friendly, and secure web applications
-            tailored to your business needs.
+            At Camlenio, we aim to deliver high-quality, beautifully crafted web
+            and mobile applications using the latest technologies and
+            frameworks. Our focus is on building scalable, durable, and
+            future-ready solutions that ensure long-term success for your
+            business.
           </p>
         </div>
         <div className="flex justify-center space-x-6 border-b border-gray-500 mb-8">

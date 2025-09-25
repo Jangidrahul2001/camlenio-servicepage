@@ -8,24 +8,30 @@ const BlogSection = () => {
   const blogs = [
     {
       id: 1,
-      img: "/Homepage/blog_img.jpg",
+      img: "/Homepage/blog/BBPS.png",
       date: "02 Apr 2023",
       comments: 23,
-      title: "Providing solutions for Industrial men restoration.",
+      title:
+        "Grocery Delivery App Development Company in India: Build Your Blinkit Style App",
+      href: "https://camlenio.com/blogs/grocery-delivery-app-development-company/",
     },
     {
       id: 2,
-      img: "/Homepage/blog_img.jpg",
+      img: "/Homepage/blog/BBPS.png",
       date: "02 Apr 2023",
-      comments: 25,
-      title: "Occaecat nisi cupidatat deserunt culpa sit..",
+      comments: 23,
+      title:
+        "M-ATM Software Development in India: Secure Banking Solutions for Rural Areas 2025",
+      href: "https://camlenio.com/blogs/m-atm-software-development-in-india/",
     },
     {
       id: 3,
-      img: "/Homepage/blog_img.jpg",
+      img: "/Homepage/blog/BBPS.png",
       date: "02 Apr 2023",
-      comments: 33,
-      title: "Do do tempor deserunt ullamco. Voluptate sunt..",
+      comments: 23,
+      title:
+        "SaaS Product Development Services in India: A Complete 2025 Guide",
+      href: "https://camlenio.com/blogs/saas-product-development-services-in-india/",
     },
   ];
 
@@ -72,11 +78,11 @@ const BlogSection = () => {
                   alt={blog.title}
                   width={500}
                   height={300}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-75 object-cover object-center"
                 />
               </div>
               <div className="p-4 flex flex-col flex-grow">
-                <div className="flex items-center gap-3 text-gray-500 text-sm mb-3">
+                <div className="flex items-center gap-3 text-gray-500 text-sm mb-1">
                   <span className="flex items-center gap-1">
                     <FaCalendarAlt /> {blog.date}
                   </span>
@@ -86,13 +92,13 @@ const BlogSection = () => {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-4 text-gray-900 text-left transition-colors duration-500 ease-in-out">
-                  {blog.title}
+                <h3 className="text-base font-semibold mb-1 text-gray-800 text-left transition-colors duration-500 ease-in-out">
+                  <a href={blog.href}>{blog.title}</a>
                 </h3>
 
                 <div className="mt-auto flex items-center justify-between">
                   <a
-                    href="#"
+                    href={blog.href}
                     className="flex items-center gap-2 text-orange-500 font-medium hover:gap-3 transition-all duration-300 group-hover:scale-x-110 group-hover:tracking-wider origin-left"
                   >
                     Read More →

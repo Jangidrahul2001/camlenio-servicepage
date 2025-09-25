@@ -196,8 +196,7 @@ const DevServices = () => {
             Innovating the Future Together
           </span>
           <h4 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4">
-            From software to apps, we build digital solutions that tackle
-            <br />
+            Essential IT Solutions for {""}
             <span
               className="text-orange-500"
               style={{
@@ -205,13 +204,19 @@ const DevServices = () => {
                   "-1px -1px 0px #da5f00, 3px 3px 0px #161e2e, 4px 6px 0px #ff582336",
               }}
             >
-              today and prepare you for tomorrow.
+              Modern Businesses
             </span>
           </h4>
           <p className="max-w-5xl mx-auto text-gray-50 text-sm text-left md:text-base mb-12 font-sans">
-            Our mission is to simplify technology and build secure, scalable
-            solutions that empower businesses to innovate, transform, and
-            achieve measurable growth.
+            In today’s fast-paced digital world, businesses need reliable,
+            scalable, and innovative IT solutions to stay competitive. At
+            Camlenio Software, we provide a comprehensive range of services—from
+            custom software development and web applications to digital
+            marketing and cloud solutions—designed to meet the evolving needs of
+            modern enterprises. Our goal is to streamline operations, enhance
+            efficiency, and drive sustainable growth, enabling businesses to
+            focus on what they do best while we take care of their technology
+            needs.
           </p>
         </div>
         <div className="relative pb-10 text-gray-800">

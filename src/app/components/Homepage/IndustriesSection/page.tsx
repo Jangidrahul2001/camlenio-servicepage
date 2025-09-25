@@ -20,7 +20,7 @@ const IndustriesSection = () => {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
         >
-          Empowering Businesses Through{" "}
+          Creating Value by Innovating More, and{" "}
           <span
             className="text-orange-500"
             style={{
@@ -28,7 +28,7 @@ const IndustriesSection = () => {
                 "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
             }}
           >
-            Digital Innovation
+            Experience More
           </span>
         </motion.h3>
 
@@ -39,9 +39,12 @@ const IndustriesSection = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base mb-12 font-sans"
         >
-          We provide scalable technology solutions built to work such that it
-          simplifies operations; improves customer engagement; and ensures a
-          sustainable growth.
+          At Camlenio, we firmly believe that living by our core values allows
+          us to create a bigger impact in the world—more innovation, more
+          growth, more opportunities, and more support for businesses. In the
+          realm of software development, this philosophy translates to
+          empowering companies with solutions that help them achieve their
+          goals, scale efficiently, and lead confidently in their industry.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           {[

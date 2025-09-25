@@ -125,7 +125,7 @@ export default function WeServe() {
           Solutions That Scale
         </span>
         <h6 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          Industries{" "}
+          Serving a Diverse Range of{" "}
           <span
             className="text-orange-500"
             style={{
@@ -133,13 +133,15 @@ export default function WeServe() {
                 "-1px -1px 0px #da5f00, 3px 3px 0px #F3F4F6, 4px 6px 0px #ff582336",
             }}
           >
-            We Serve
+            Industries
           </span>
         </h6>
 
         <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
-          Tailored digital solutions for unique challenges and growth
-          opportunities across industries.
+          We serve and collaborate with a diverse range of industries. Over the
+          years, Camlenio Software has broadened its portfolio by partnering
+          with businesses across sectors and empowering them to scale in today’s
+          fast-evolving digital world.
         </p>
       </div>
       <Track items={INDUSTRIES} reverse={false} speed={66} />

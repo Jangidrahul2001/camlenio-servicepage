@@ -32,7 +32,7 @@ export default function MakeUsUnique() {
           Solutions That Scale
         </span>
         <h6 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4">
-          Why Businesses Choose{" "}
+          See how we show up for{" "}
           <span
             className="text-orange-500"
             style={{
@@ -41,15 +41,19 @@ export default function MakeUsUnique() {
             }}
           >
             {" "}
-            Camlenio
+            our customers
           </span>
         </h6>
 
         <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-left break-words sm:text-base mb-12 font-sans">
-          At Camlenio, we don’t just deliver software — we create solutions that
-          drive measurable growth for businesses. What makes us unique is the
-          way we blend innovation, technical expertise, and long-term trust to
-          empower companies of every size.
+          At Camlenio Software, our customers are at the heart of everything we
+          do. We go beyond just providing solutions—we listen, understand, and
+          actively collaborate to ensure their unique needs are met. From
+          onboarding and training to ongoing support and innovation, we are
+          committed to delivering reliable, high-quality services that help our
+          clients achieve their business goals. Our approach is proactive,
+          transparent, and customer-focused, ensuring that every interaction
+          adds value and strengthens the partnership.
         </p>
       </div>
       <div className=" max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
