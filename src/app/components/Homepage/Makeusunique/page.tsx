@@ -25,8 +25,8 @@ const cards = [
 
 export default function MakeUsUnique() {
   return (
-    <div className="overflow-hidden  py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className="overflow-hidden  py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
         <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-400 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           Solutions That Scale
@@ -52,7 +52,7 @@ export default function MakeUsUnique() {
           empower companies of every size.
         </p>
       </div>
-      <div className=" max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+      <div className=" max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
         {cards.map((card, index) => (
           <div
             key={index}

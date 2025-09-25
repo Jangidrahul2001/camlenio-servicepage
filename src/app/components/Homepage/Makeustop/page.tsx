@@ -6,27 +6,27 @@ import { motion } from "framer-motion";
 const cardsData = [
   {
     icon: "/Homepage/mbi/API.svg",
-    title: "On-Demand Resources",
+    title: "B2B Fintech Software",
     description:
-      "We have a flexible, and salable workforce of resources to allow you to hire the professionals to adapt to your ongoing requirements without long-term commitment.",
+      "Our B2B Fintech Solution is a one-stop platform meant to provide all the key digital financial services. .",
   },
   {
     icon: "/Homepage/mbi/fintech-1.svg",
-    title: "Agile Methodology",
+    title: "B2C Software",
     description:
-      "We’re a strong advocate of agile development methodologies enabling us to deliver iterative improvements to meet client expectations and market demands.",
+      "Our B2C Software is a complete digital platform crafted to simplify financial and travel services for end users who directly interact with the software.",
   },
   {
     icon: "/Homepage/mbi/fintech-2.svg",
-    title: "Security-First",
+    title: "Reseller Fintech Software",
     description:
-      "Our development process strongly embeds comprehensive threat modeling, periodic security audits, and penetration testing to develop highly secure mobile applications for your business.",
+      "Camlenio Reseller Fintech Software is a robust Scalable and growth-oriented, the Reseller Admin has total authority to generate several White Label Admins, each with its own branding and management system.",
   },
   {
     icon: "/Homepage/mbi/fintech-3.svg",
-    title: "Post-Launch Support",
+    title: "API Panel",
     description:
-      "From bug fixing to performance monitoring, we offer comprehensive support after deployment to ensure your app can adapt to the evolving market conditions.",
+      "Our API Panel is the core platform that drives and controls all fintech solutions, such as B2B Fintech Software, B2C Software, and Reseller Software. ",
   },
 ];
 
@@ -58,14 +58,18 @@ const MakeUsTop = () => {
           </span>
         </h5>
         <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
-          Camlenio is a trusted software development company based in India,
-          dedicated to helping businesses succeed with innovative digital
-          solutions. Our expert team blends creativity, technology, and strategy
-          to build custom websites, mobile apps, and fintech platforms that
-          deliver real business impact.
+          Our Fintech Software is a comprehensive, secure, and user-friendly
+          solution that provides all financial services under one roof. We
+          facilitates quicker, secure and seamless transactions for businesses.
+          Designed for B2B, B2C and Reseller models, the platform accommodates
+          multiple levels (Admin, Master Distributor, Distributor, and
+          Retailer). The software provides real-time processing, advanced
+          security, and product interface to become the ultimate all-in-one
+          solution to grow and operate your digital financial business with
+          ease.
         </p>
         <div className="  grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="relative  group rounded-2xl  hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
+          <div className="relative group rounded-2xl  hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
             <Image
               src="/Homepage/bg_shape.png"
               alt="Background"
@@ -98,11 +102,12 @@ const MakeUsTop = () => {
               transition={{ duration: 0.8 }}
               className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans"
             >
-              We are at the front line of leveraging cutting-edge technologies
-              and adhering to best industry practices to deliver secure and
-              optimized digital solutions. Experience the difference of working
-              with an IT company that has a single vision of positioning you as
-              the leader in your industry.
+              Our Fintech Software is a comprehensive, secure, and user-friendly
+              solution that provides all financial services under one roof. We
+              facilitates quicker, secure and seamless transactions for
+              businesses. Designed for B2B, B2C and Reseller models, the
+              platform accommodates multiple levels (Admin, Master Distributor,
+              Distributor, and Retailer).
             </motion.p>
           </div>
           {cardsData.map((card, index) => (

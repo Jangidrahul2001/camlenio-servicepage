@@ -76,7 +76,7 @@ function Track({
         {doubled.map((card, idx) => (
           <article
             key={`${card.id}-${idx}`}
-            className="relative  min-w-[40rem]  h-[18rem] md:h-[22rem] rounded-[2rem] overflow-hidden shadow-lg transform transition-transform duration-500 hover:-translate-y-1 px-6"
+            className="relative  min-w-[40rem]  h-[18rem] md:h-[20rem] rounded-[2rem] overflow-hidden shadow-lg transform transition-transform duration-500 hover:-translate-y-1 px-6"
           >
             <Image
               src={card.img}
@@ -93,7 +93,7 @@ function Track({
                   height={50}
                   className="w-8 h-8 md:w-12  md:h-12 object-contain bg-white p-2 rounded-full"
                 />
-                <span className="text-gray-900 font-medium text-xs md:text-base">
+                <span className="text-gray-50 font-medium text-xs md:text-base">
                   {card.title}
                 </span>
               </div>

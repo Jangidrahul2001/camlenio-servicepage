@@ -13,17 +13,6 @@ import {
   XMarkIcon,
 } from "@heroicons/react/20/solid";
 import { MobileDropdown } from "./MobileDropdown";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaPinterest,
-  FaBlog,
-  FaCircleInfo,
-  FaEnvelope,
-  FaBriefcase,
-  FaTwitter,
-} from "react-icons/fa6";
 
 const availablePages = [
   "/portfolio",
@@ -136,12 +125,12 @@ const navItems = [
     href: "fintechsoftware",
     dropdown: true,
     items: [
-      "Healthcare",
-      "Finance",
-      "Retail",
-      "Education",
-      "Logistics",
-      "Real Estate",
+      "Payment Solutions",
+      "Digital Banking",
+      "Wealth Management",
+      "Lending Platforms",
+      "InsurTech",
+      "Blockchain Solutions",
     ],
   },
   {
@@ -157,26 +146,30 @@ const navItems = [
       "Real Estate",
     ],
   },
+
   { title: "Portfolio", href: "/portfolio", dropdown: false },
 ];
 
 const socialIcons = [
   {
+    title: " Facebook",
     href: "https://www.facebook.com/camleniosoftware/mentions/?_rdr",
-    icon: <FaFacebook size={28} />,
   },
-  { href: "https://x.com/camlenio", icon: <FaTwitter size={28} /> },
   {
+    title: "Twitter",
+    href: "https://x.com/camlenio",
+  },
+  {
+    title: "Instagram",
     href: "https://www.instagram.com/camleniosoftware/",
-    icon: <FaInstagram size={28} />,
   },
   {
+    title: "Linkedin",
     href: "https://www.linkedin.com/posts/camlenio_camlenio-softwaredevelopment-businessgrowth-activity-7202183467239972864-Cepc",
-    icon: <FaLinkedin size={28} />,
   },
   {
+    title: "Pinterest",
     href: "https://mx.pinterest.com/camlenio/",
-    icon: <FaPinterest size={28} />,
   },
 ];
 
@@ -200,23 +193,6 @@ const DesktopDropdown = React.memo(
       }
       return "";
     });
-
-    // const getCompanyIcon = (name: string): React.ReactNode => {
-    //   const key = (name || "").toString().toLowerCase();
-    //   const iconPath = "/Homepage/web_design_orange.png";
-    //   const className = key.includes("career")
-    //     ? "h-10 w-12 object-contain"
-    //     : "h-10 w-14 object-contain";
-    //   return (
-    //     <Image
-    //       src={iconPath}
-    //       alt={`${name} icon`}
-    //       width={100}
-    //       height={100}
-    //       className={className}
-    //     />
-    //   );
-    // };
 
     const getCompanyIcon = (name: string): React.ReactNode => {
       const key = (name || "").toLowerCase();
@@ -245,16 +221,18 @@ const DesktopDropdown = React.memo(
         />
       );
     };
-
     return (
       <AnimatePresence>
         {openDropdown === item.title && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.3 }}
-            className="fixed left-1/2 top-[5.25rem] -translate-x-1/2 w-[900px]  max-w-[90vw] bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove rounded-b-2xl shadow-lg p-6 z-50 max-h-[80vh] overflow-auto"
+            initial={{ opacity: 0, y: -20, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.98 }}
+            transition={{
+              duration: 0.45,
+              ease: [0.25, 0.8, 0.25, 1],
+            }}
+            className="fixed left-1/2 top-[5rem] -translate-x-1/2 w-[900px]  max-w-[90vw] bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove rounded-b-2xl shadow-lg p-6 z-50 max-h-[80vh] overflow-auto"
             onMouseEnter={() => openDropdownImmediate(item.title)}
             onMouseLeave={closeDropdownWithDelay}
           >
@@ -266,6 +244,10 @@ const DesktopDropdown = React.memo(
                     : (item.items as unknown as Record<string, string[]>);
                 const tabs = Object.keys(servicesObj);
                 const current = activeTab || tabs[0] || "";
+
+                {
+                  /*for company */
+                }
 
                 return (
                   <div className="flex w-full max-w-[900px] h-auto gap-4">
@@ -335,31 +317,128 @@ const DesktopDropdown = React.memo(
                             </button>
                           ))}
                         </div>
-                        <div
-                          className={clsx(
-                            "flex-1 min-w-0 pl-4",
-                            current === "software"
-                              ? "grid grid-cols-3 gap-3"
-                              : "grid grid-cols-2 gap-3"
-                          )}
-                        >
-                          {(servicesObj[current] || []).map((link) => (
-                            <Link
-                              key={link}
-                              href={safeLink(
-                                `/component/${item.href}/${link
-                                  .replace(/\s+/g, "")
-                                  .toLowerCase()}`,
-                                availablePages
+                        <div className="flex-1 min-w-0 pl-4">
+                          {current === "technology" ? ( //technology
+                            <div className="flex">
+                              <div className="w-1/2 grid grid-cols-2 gap-2">
+                                {(servicesObj[current] || []).map((link) => (
+                                  <Link
+                                    key={link}
+                                    href={safeLink(
+                                      `/component/${item.href}/${link
+                                        .replace(/\s+/g, "")
+                                        .toLowerCase()}`,
+                                      availablePages
+                                    )}
+                                    onMouseEnter={() =>
+                                      openDropdownImmediate(item.title)
+                                    }
+                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                                  >
+                                    {link}
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="w-1/2 flex items-center justify-center">
+                                <Image
+                                  src="/Homepage/aboutus_image.png"
+                                  alt="Technology"
+                                  width={200}
+                                  height={200}
+                                  className="object-cover rounded-lg"
+                                />
+                              </div>
+                            </div>
+                          ) : current === "design" ? ( //design
+                            <div className="flex">
+                              <div className="w-1/2 grid grid-cols-1 gap-2">
+                                {(servicesObj[current] || []).map((link) => (
+                                  <Link
+                                    key={link}
+                                    href={safeLink(
+                                      `/component/${item.href}/${link
+                                        .replace(/\s+/g, "")
+                                        .toLowerCase()}`,
+                                      availablePages
+                                    )}
+                                    onMouseEnter={() =>
+                                      openDropdownImmediate(item.title)
+                                    }
+                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                                  >
+                                    {link}
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="w-1/2 flex items-center justify-center">
+                                <video
+                                  src="/crmsoftware/crm-bg-video.mp4"
+                                  autoPlay
+                                  loop
+                                  muted
+                                  className="object-cover rounded-lg w-full h-full"
+                                />
+                              </div>
+                            </div>
+                          ) : current === "Mobile" ? ( //For Mobile
+                            <div className="flex">
+                              <div className="w-1/2 grid grid-cols-1 gap-2">
+                                {(servicesObj[current] || []).map((link) => (
+                                  <Link
+                                    key={link}
+                                    href={safeLink(
+                                      `/component/${item.href}/${link
+                                        .replace(/\s+/g, "")
+                                        .toLowerCase()}`,
+                                      availablePages
+                                    )}
+                                    onMouseEnter={() =>
+                                      openDropdownImmediate(item.title)
+                                    }
+                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                                  >
+                                    {link}
+                                  </Link>
+                                ))}
+                              </div>
+                              <div className="w-1/2 flex items-center justify-center">
+                                <Image
+                                  src="/Homepage/home_about.jpg"
+                                  alt="Mobile"
+                                  width={400}
+                                  height={400}
+                                  className=" object-contain rounded-lg"
+                                />
+                              </div>
+                            </div>
+                          ) : (
+                            <div
+                              className={clsx(
+                                "grid gap-3",
+                                current === "software" //For Software
+                                  ? "grid-cols-3"
+                                  : "grid-cols-2"
                               )}
-                              onMouseEnter={() =>
-                                openDropdownImmediate(item.title)
-                              }
-                              className="block text-gray-700 text-sm hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
                             >
-                              {link}
-                            </Link>
-                          ))}
+                              {(servicesObj[current] || []).map((link) => (
+                                <Link
+                                  key={link}
+                                  href={safeLink(
+                                    `/component/${item.href}/${link
+                                      .replace(/\s+/g, "")
+                                      .toLowerCase()}`,
+                                    availablePages
+                                  )}
+                                  onMouseEnter={() =>
+                                    openDropdownImmediate(item.title)
+                                  }
+                                  className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                                >
+                                  {link}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </>
                     )}
@@ -381,7 +460,7 @@ const DesktopDropdown = React.memo(
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2">
                 {Object.entries(
                   item.items as unknown as Record<string, string[]>
                 ).map(([cat, links]) => (
@@ -404,16 +483,16 @@ const DesktopDropdown = React.memo(
                 ))}
               </div>
             )}
-            <div className="mt-4 flex justify-center gap-4">
+            <div className="hidden md:flex justify-start items-center gap-4 border-t-1 border-gray-800 mt-2 pw-full p-2 rounded ">
               {socialIcons.map((s, idx) => (
                 <a
                   key={idx}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-600 hover:text-orange-500 transition"
+                  className="text-gray-600 text-xs hover:text-orange-500 mt-2 transition-all duration-500"
                 >
-                  {s.icon}
+                  {s.title}
                 </a>
               ))}
             </div>
@@ -624,7 +703,7 @@ const Header: React.FC = () => {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 right-0 z-50  bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-lg rounded-b-2xl p-6 md:hidden overflow-y-auto max-h-screen"
+            className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-lg rounded-b-2xl p-6 md:hidden overflow-y-auto max-h-screen"
           >
             <div className="flex justify-between">
               <Link
@@ -704,7 +783,7 @@ const Header: React.FC = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="overflow-hidden mt-2 pl-4"
+                        className="overflow-hidden mt-2 pl-4 "
                       >
                         {Array.isArray(item.items) ? (
                           item.items.map((link) => (
@@ -748,6 +827,19 @@ const Header: React.FC = () => {
                 </Link>
               )
             )}
+            <div className="hidden md:flex justify-start items-center gap-4 border-t-1 border-gray-800  mt-2 pw-full p-2 rounded ">
+              {socialIcons.map((s, idx) => (
+                <a
+                  key={idx}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-600 text-xs hover:text-orange-500 transition-all duration-300 "
+                >
+                  {s.title}
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
