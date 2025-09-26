@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FaCalendarAlt, FaComments, FaHeart } from "react-icons/fa";
 
 const Blogs = () => {
+  const words = ["Blogs"];
   const blogs = [
     {
       id: 1,
@@ -51,36 +52,31 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="relative py-20 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
-      <div className="max-w-7xl mx-auto  text-center py-20 px-8 md:px-16">
-        <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
-          <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-          Camlenio Software Development Company
-        </span>
-        <h2
-          className="text-3xl sm:text-4xl font-bold text-orange-500 mb-4"
-          style={{
-            textShadow:
-              "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
-          }}
-        >
-          Blogs
-        </h2>
-
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans"
-        >
-          Camlenio is an established software development company in India that
-          is committed to helping businesses thrive through innovative digital
-          solutions. Our expert team Blends creativity, technology, and strategy
-          to build custom websites, mobile apps, and fintech platforms that
-          actually transact business.
-        </motion.p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+    <div className="relative py-14 sm:py-16 md:py-18 lg:py-18 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
+      <div className="relative py-4 px-2 sm:px-4 md:px-6 lg:px-8">
+        <Image
+          src="/blog/blogs-bg-3.jpg"
+          alt="blogs"
+          width={1000}
+          height={900}
+          className="w-full h-48 sm:h-55 md:h-65 lg:h-68 xl:h-70 object-cover object-top rounded-[1.5rem]"
+        />
+        <motion.h1 className="absolute inset-0 flex items-center justify-center text-gray-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+          {words[0].split("").map((l, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, filter: "blur(10px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: i * 0.08 }}
+            >
+              {l}
+            </motion.span>
+          ))}
+        </motion.h1>
+      </div>
+      <div className="text-center px-2 sm:px-4 md:px-6 lg:px-8">
+       
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
           {blogs.map((blog) => (
             <div
               key={blog.id}

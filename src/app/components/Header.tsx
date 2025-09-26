@@ -37,6 +37,7 @@ const navItems = [
     href: "company",
     dropdown: true,
     items: ["Blog", "About", "Career", "Contact"],
+    dropdownClassName: "left-1/2 -translate-x-[45%]", // Align to the left of the menu item
   },
   {
     title: "Services",
@@ -76,7 +77,8 @@ const navItems = [
         "Android",
         "Python",
         "MySQL",
-        ".Net Java Script",
+        ".Net",
+        "Java Script",
         "Node JS",
         "Java",
         "SQL Server",
@@ -87,7 +89,6 @@ const navItems = [
         "Adobe XD",
         "Photoshop",
         "Figma",
-        "Firebase",
       ],
       design: [
         "UI_UX Designing",
@@ -106,6 +107,7 @@ const navItems = [
         "App Maintenance",
       ],
     },
+    dropdownClassName: "left-1/2 md:-translate-x-[55%] lg:-translate-x-[60%]", // Center align
   },
   {
     title: "Hire Developer",
@@ -119,6 +121,8 @@ const navItems = [
       "Hire UI/UX Designers",
       "Hire Dedicated Teams",
     ],
+    dropdownClassName:
+      "left-1/2 md:-translate-x-[70%] lg:-translate-x-[70%] xl:-translate-x-[80%]", // Align to the right
   },
   {
     title: "Fintech Software",
@@ -132,6 +136,7 @@ const navItems = [
       "InsurTech",
       "Blockchain Solutions",
     ],
+    dropdownClassName: " left-1/2 md:-translate-x-[80%] lg:-translate-x-[90%]", // Align to the right
   },
   {
     title: "Industries",
@@ -145,6 +150,7 @@ const navItems = [
       "Logistics",
       "Real Estate",
     ],
+    dropdownClassName: "md:-translate-x-[80%] lg:-translate-x-[95%]", // Align to the right
   },
 
   { title: "Portfolio", href: "/portfolio", dropdown: false },
@@ -173,6 +179,373 @@ const socialIcons = [
   },
 ];
 
+const HireDeveloperDropdown = ({
+  item,
+  openDropdownImmediate,
+}: {
+  item: (typeof navItems)[number];
+  openDropdownImmediate: (title?: string | null) => void;
+  closeDropdown: () => void;
+  toggleDropdown: (title: string) => void;
+}) => (
+  <div className="flex w-[700px] h-auto">
+    <div className="w-1/2 grid grid-cols-1 gap-2 pl-6 pt-4">
+      {(item.items as string[]).map((link) => (
+        <Link
+          key={link}
+          href={safeLink(
+            `/component/${item.href}/${link.replace(/\s+/g, "").toLowerCase()}`,
+            availablePages
+          )}
+          onMouseEnter={() => openDropdownImmediate(item.title)}
+          onClick={() => openDropdownImmediate(item.title)}
+          className="block text-gray-700 text-sm hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+        >
+          {link}
+        </Link>
+      ))}
+    </div>
+    <div className="w-1/2 bg-orange-50 rounded-r-lg  -mb-[3.08rem]">
+      <Image
+        src="/header/hire-developer.jpg"
+        alt="Hire Developer"
+        width={380}
+        height={300}
+        className="object-cover w-full h-full rounded-r-lg"
+      />
+    </div>
+  </div>
+);
+
+const FintechDropdown = ({
+  item,
+  openDropdownImmediate,
+}: {
+  item: (typeof navItems)[number];
+  openDropdownImmediate: (title?: string | null) => void;
+  closeDropdown: () => void;
+  toggleDropdown: (title: string) => void;
+}) => (
+  <div className="flex w-[700px] h-auto">
+    <div className="w-1/2 grid grid-cols-1 gap-2 pl-6 pt-4">
+      {(item.items as string[]).map((link) => (
+        <Link
+          key={link}
+          href={safeLink(
+            `/component/${item.href}/${link.replace(/\s+/g, "").toLowerCase()}`,
+            availablePages
+          )}
+          onMouseEnter={() => openDropdownImmediate(item.title)}
+          onClick={() => openDropdownImmediate(item.title)}
+          className="block text-gray-700 text-sm hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+        >
+          {link}
+        </Link>
+      ))}
+    </div>
+    <div className="w-1/2 bg-indigo-50 rounded-r-lg  -mb-[3.08rem]">
+      <Image
+        src="/header/hire-developer.jpg"
+        alt="Fintech"
+        width={400}
+        height={300}
+        className="object-cover w-full h-full rounded-r-lg"
+      />
+    </div>
+  </div>
+);
+
+const IndustriesDropdown = ({
+  item,
+  openDropdownImmediate,
+}: {
+  item: (typeof navItems)[number];
+  openDropdownImmediate: (title?: string | null) => void;
+  closeDropdown: () => void;
+  toggleDropdown: (title: string) => void;
+}) => (
+  <div className="flex w-[700px] h-auto">
+    <div className="w-1/2 grid grid-cols-1 gap-2 pl-6 pt-4 justify-center items-center">
+      {(item.items as string[]).map((link) => (
+        <Link
+          key={link}
+          href={safeLink(
+            `/component/${item.href}/${link.replace(/\s+/g, "").toLowerCase()}`,
+            availablePages
+          )}
+          onMouseEnter={() => openDropdownImmediate(item.title)}
+          onClick={() => openDropdownImmediate(item.title)}
+          className="block text-gray-700 text-sm hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+        >
+          {link}
+        </Link>
+      ))}
+    </div>
+    <div className="w-1/2 bg-orange-50 rounded-r-lg  -mb-[3.08rem]">
+      <Image
+        src="/header/hire-developer.jpg"
+        alt="Industries"
+        width={450}
+        height={350}
+        className="object-cover object-top w-full h-full rounded-r-lg"
+      />
+    </div>
+  </div>
+);
+
+const CompanyDropdown = ({
+  item,
+  openDropdownImmediate,
+  pathname,
+  activeTab,
+  setActiveTab,
+  closeDropdown,
+}: {
+  item: (typeof navItems)[number];
+  openDropdownImmediate: (title?: string | null) => void;
+  pathname: string;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+  closeDropdown: () => void;
+  toggleDropdown: (title: string) => void;
+}) => {
+  const getCompanyIcon = (name: string): React.ReactNode => {
+    const key = (name || "").toLowerCase();
+    const iconMap: Record<string, string> = {
+      blog: "/header/aboutus/blog.svg",
+      about: "/header/aboutus/about-us.svg",
+      career: "/header/aboutus/career-2.svg",
+      contact: "/header/aboutus/contact.svg",
+    };
+    const iconPath = iconMap[key] || "/header/aboutus/about-us.svg";
+    const className =
+      key === "career" ? "h-10 w-14 object-contain" : "h-8 w-14 object-contain";
+    return (
+      <Image
+        src={iconPath}
+        alt={`${name} icon`}
+        width={100}
+        height={100}
+        className={className}
+      />
+    );
+  };
+
+  return (
+    <div className="w-[700px] h-auto">
+      <div className="pl-6 pt-6">
+        <div className="flex">
+          <div className="w-1/3  flex flex-col justify-center items-start border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
+            {(item.items as string[]).map((tab) => {
+              const href = `/component/${item.href}/${tab
+                .replace(/\s+/g, "")
+                .toLowerCase()}`;
+              const isActive = pathname === href || activeTab === tab;
+              return (
+                <Link
+                  key={tab}
+                  href={href}
+                  onMouseEnter={() => {
+                    openDropdownImmediate(item.title);
+                    setActiveTab(tab);
+                  }}
+                  onClick={closeDropdown}
+                  className={clsx(
+                    "max-w-sm p-2 rounded text-base transition-transform duration-100 hover:translate-x-1 flex items-center justify-center",
+                    isActive
+                      ? "text-orange-600 font-semibold"
+                      : "text-gray-700 hover:text-orange-500"
+                  )}
+                >
+                  {getCompanyIcon(tab)}
+                  <span className="flex justify-center items-center mb-2 text-center">
+                    {tab}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+          <div className="w-2/3 flex items-center justify-center">
+            <div className="w-full max-w-xs">
+              <Image
+                src="/Homepage/aboutus_image.png"
+                alt="Company"
+                width={420}
+                height={320}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ServicesDropdown = ({
+  item,
+  openDropdownImmediate,
+  activeTab,
+  setActiveTab,
+  closeDropdown,
+}: {
+  item: (typeof navItems)[number];
+  openDropdownImmediate: (title?: string | null) => void;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+  closeDropdown: () => void;
+  toggleDropdown: (title: string) => void;
+}) => {
+  const servicesObj: Record<string, string[]> =
+    !item.items || Array.isArray(item.items)
+      ? {}
+      : (item.items as unknown as Record<string, string[]>);
+  const tabs = Object.keys(servicesObj);
+  const current = activeTab || tabs[0] || "";
+
+  return (
+    <div className="flex w-[800px] h-auto gap-4 pl-4 pt-4">
+      <div className="min-w-[80px] sm:min-w-[90px] md:min-w-[110px] lg:min-w-[140px] max-w-[220px] border-r-2 border-gray-300">
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            type="button"
+            onMouseEnter={() => {
+              openDropdownImmediate(item.title);
+              setActiveTab(tab);
+            }}
+            className={clsx(
+              "block w-full text-left p-2 rounded text-sm md:text-base",
+              current === tab
+                ? "text-orange-600 font-semibold bg-orange-100 rounded-l-full"
+                : "text-gray-700 hover:text-orange-500"
+            )}
+          >
+            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+          </button>
+        ))}
+      </div>
+      <div className="flex-1 min-w-0 ">
+        {current === "technology" ? ( //technology
+          <div className="flex">
+            <div className="w-1/2 grid grid-cols-3 gap-2">
+              {(servicesObj[current] || []).map((link) => (
+                <Link
+                  key={link}
+                  href={safeLink(
+                    `/component/${item.href}/${link
+                      .replace(/\s+/g, "")
+                      .toLowerCase()}`,
+                    availablePages
+                  )}
+                  onMouseEnter={() => openDropdownImmediate(item.title)}
+                  onClick={closeDropdown}
+                  className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                >
+                  {link}
+                </Link>
+              ))}
+            </div>
+            <div className="w-1/2">
+              <Image
+                src="/header/hire-developer.jpg"
+                alt="Technology"
+                width={280}
+                height={350}
+                className="object-cover"
+              />
+            </div>
+          </div>
+        ) : current === "design" ? ( //design
+          <div className="flex">
+            <div className="w-1/2 grid grid-cols-1 gap-2">
+              {(servicesObj[current] || []).map((link) => (
+                <Link
+                  key={link}
+                  href={safeLink(
+                    `/component/${item.href}/${link
+                      .replace(/\s+/g, "")
+                      .toLowerCase()}`,
+                    availablePages
+                  )}
+                  onMouseEnter={() => openDropdownImmediate(item.title)}
+                  onClick={closeDropdown}
+                  className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                >
+                  {link}
+                </Link>
+              ))}
+            </div>
+            <div className="w-1/2">
+              <video
+                src="/crmsoftware/crm-bg-video.mp4"
+                autoPlay
+                loop
+                muted
+                className="object-cover w-full h-47"
+              />
+            </div>
+          </div>
+        ) : current === "Mobile" ? ( //For Mobile
+          <div className="flex h-full">
+            <div className="w-1/2 grid grid-cols-1 gap-2">
+              {(servicesObj[current] || []).map((link) => (
+                <Link
+                  key={link}
+                  href={safeLink(
+                    `/component/${item.href}/${link
+                      .replace(/\s+/g, "")
+                      .toLowerCase()}`,
+                    availablePages
+                  )}
+                  onMouseEnter={() => openDropdownImmediate(item.title)}
+                  onClick={closeDropdown}
+                  className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                >
+                  {link}
+                </Link>
+              ))}
+            </div>
+            <div className="w-1/2">
+              <Image
+                src="/header/hire-developer.jpg"
+                alt="Technology"
+                width={280}
+                height={350}
+                className="object-cover"
+              />
+            </div>
+          </div>
+        ) : (
+          <div
+            className={clsx(
+              "grid gap-3",
+              current === "software" ? "grid-cols-3" : "grid-cols-2" //For Software
+            )}
+          >
+            {(servicesObj[current] || []).map((link) => (
+              <Link
+                key={link}
+                href={safeLink(
+                  `/component/${item.href}/${link
+                    .replace(/\s+/g, "")
+                    .toLowerCase()}`,
+                  availablePages
+                )}
+                onMouseEnter={() => openDropdownImmediate(item.title)}
+                onClick={closeDropdown}
+                className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+              >
+                {link}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const DesktopDropdown = React.memo(
   ({
     item,
@@ -180,12 +553,16 @@ const DesktopDropdown = React.memo(
     closeDropdownWithDelay,
     openDropdownImmediate,
     pathname,
+    closeDropdown,
+    toggleDropdown,
   }: {
-    item: (typeof navItems)[0];
+    item: (typeof navItems)[number];
     openDropdown: string | null;
     closeDropdownWithDelay: () => void;
     openDropdownImmediate: (title?: string | null) => void;
     pathname: string;
+    closeDropdown: () => void;
+    toggleDropdown: (title: string) => void;
   }) => {
     const [activeTab, setActiveTab] = useState<string>(() => {
       if (item.items && !Array.isArray(item.items)) {
@@ -194,257 +571,68 @@ const DesktopDropdown = React.memo(
       return "";
     });
 
-    const getCompanyIcon = (name: string): React.ReactNode => {
-      const key = (name || "").toLowerCase();
-
-      const iconMap: Record<string, string> = {
-        blog: "/header/aboutus/blog.svg",
-        about: "/header/aboutus/about-us.svg",
-        career: "/header/aboutus/career-2.svg",
-        contact: "/header/aboutus/contact.svg",
-      };
-
-      const iconPath = iconMap[key] || "/header/aboutus/about-us.svg";
-
-      const className =
-        key === "career"
-          ? "h-10 w-14 object-contain"
-          : "h-8 w-14 object-contain";
-
-      return (
-        <Image
-          src={iconPath}
-          alt={`${name} icon`}
-          width={100}
-          height={100}
-          className={className}
-        />
-      );
-    };
     return (
       <AnimatePresence>
         {openDropdown === item.title && (
           <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.98 }}
+            initial={{ opacity: 0, y: -1, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.98 }}
+            exit={{ opacity: 0, y: -1, scale: 0.95 }}
             transition={{
-              duration: 0.45,
-              ease: [0.25, 0.8, 0.25, 1],
+              type: "spring",
+              stiffness: 400,
+              damping: 25,
+              duration: 0.3,
             }}
-            className="fixed left-1/2 top-[5rem] -translate-x-1/2 w-[900px]  max-w-[90vw] bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove rounded-b-2xl shadow-lg p-6 z-50 max-h-[80vh] overflow-auto"
+            className={clsx(
+              "absolute top-full mt-6 w-auto max-w-[90vw] bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove rounded-b-xl shadow-lg z-50 max-h-[80vh] overflow-auto",
+              item.dropdownClassName
+            )}
             onMouseEnter={() => openDropdownImmediate(item.title)}
             onMouseLeave={closeDropdownWithDelay}
           >
-            {item.title === "Services" || item.title === "Company" ? (
-              (() => {
-                const servicesObj: Record<string, string[]> =
-                  !item.items || Array.isArray(item.items)
-                    ? {}
-                    : (item.items as unknown as Record<string, string[]>);
-                const tabs = Object.keys(servicesObj);
-                const current = activeTab || tabs[0] || "";
-
-                {
-                  /*for company */
-                }
-
-                return (
-                  <div className="flex w-full max-w-[900px] h-auto gap-4">
-                    {item.title === "Company" ? (
-                      <>
-                        <div className="w-1/3 pr-4 flex flex-col justify-center items-start ml-10 border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl  shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
-                          {(item.items as string[]).map((tab) => {
-                            const href = `/component/${item.href}/${tab
-                              .replace(/\s+/g, "")
-                              .toLowerCase()}`;
-                            const isActive =
-                              pathname === href || activeTab === tab;
-                            return (
-                              <Link
-                                key={tab}
-                                href={href}
-                                onMouseEnter={() => {
-                                  openDropdownImmediate(item.title);
-                                  setActiveTab(tab);
-                                }}
-                                className={clsx(
-                                  "max-w-sm p-2 rounded text-xl transition-transform duration-100 hover:translate-x-1 flex items-center justify-center",
-                                  isActive
-                                    ? "text-orange-600 font-semibold"
-                                    : "text-gray-700 hover:text-orange-500"
-                                )}
-                              >
-                                {getCompanyIcon(tab)}
-                                <span className="flex justify-center items-center mb-2 text-center">
-                                  {tab}
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-                        <div className="w-2/3 flex items-center justify-center">
-                          <div className="w-full max-w-xs">
-                            <Image
-                              src="/Homepage/aboutus_image.png"
-                              alt="Company"
-                              width={420}
-                              height={320}
-                              className="object-cover rounded-lg"
-                            />
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="min-w-[140px] max-w-[220px]  border-r-2 border-gray-600">
-                          {tabs.map((tab) => (
-                            <button
-                              key={tab}
-                              type="button"
-                              onMouseEnter={() => {
-                                openDropdownImmediate(item.title);
-                                setActiveTab(tab);
-                              }}
-                              className={clsx(
-                                "block w-full text-left p-2 rounded",
-                                current === tab
-                                  ? "text-orange-600 font-semibold bg-orange-100 rounded-l-full"
-                                  : "text-gray-700 hover:text-orange-500"
-                              )}
-                            >
-                              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                            </button>
-                          ))}
-                        </div>
-                        <div className="flex-1 min-w-0 pl-4">
-                          {current === "technology" ? ( //technology
-                            <div className="flex">
-                              <div className="w-1/2 grid grid-cols-2 gap-2">
-                                {(servicesObj[current] || []).map((link) => (
-                                  <Link
-                                    key={link}
-                                    href={safeLink(
-                                      `/component/${item.href}/${link
-                                        .replace(/\s+/g, "")
-                                        .toLowerCase()}`,
-                                      availablePages
-                                    )}
-                                    onMouseEnter={() =>
-                                      openDropdownImmediate(item.title)
-                                    }
-                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
-                                  >
-                                    {link}
-                                  </Link>
-                                ))}
-                              </div>
-                              <div className="w-1/2 flex items-center justify-center">
-                                <Image
-                                  src="/Homepage/aboutus_image.png"
-                                  alt="Technology"
-                                  width={256}
-                                  height={274}
-                                  className="object-cover rounded-lg"
-                                />
-                              </div>
-                            </div>
-                          ) : current === "design" ? ( //design
-                            <div className="flex">
-                              <div className="w-1/2 grid grid-cols-1 gap-2">
-                                {(servicesObj[current] || []).map((link) => (
-                                  <Link
-                                    key={link}
-                                    href={safeLink(
-                                      `/component/${item.href}/${link
-                                        .replace(/\s+/g, "")
-                                        .toLowerCase()}`,
-                                      availablePages
-                                    )}
-                                    onMouseEnter={() =>
-                                      openDropdownImmediate(item.title)
-                                    }
-                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
-                                  >
-                                    {link}
-                                  </Link>
-                                ))}
-                              </div>
-                              <div className="w-1/2 flex items-center justify-center">
-                                <video
-                                  src="/crmsoftware/crm-bg-video.mp4"
-                                  autoPlay
-                                  loop
-                                  muted
-                                  className="object-cover rounded-lg w-full h-54"
-                                />
-                              </div>
-                            </div>
-                          ) : current === "Mobile" ? ( //For Mobile
-                            <div className="flex">
-                              <div className="w-1/2 grid grid-cols-1 gap-2">
-                                {(servicesObj[current] || []).map((link) => (
-                                  <Link
-                                    key={link}
-                                    href={safeLink(
-                                      `/component/${item.href}/${link
-                                        .replace(/\s+/g, "")
-                                        .toLowerCase()}`,
-                                      availablePages
-                                    )}
-                                    onMouseEnter={() =>
-                                      openDropdownImmediate(item.title)
-                                    }
-                                    className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
-                                  >
-                                    {link}
-                                  </Link>
-                                ))}
-                              </div>
-                              <div className="w-1/2 flex items-center justify-center">
-                                <Image
-                                  src="/Homepage/home_about.jpg"
-                                  alt="Mobile"
-                                  width={380}
-                                  height={380}
-                                  className=" object-contain rounded-lg"
-                                />
-                              </div>
-                            </div>
-                          ) : (
-                            <div
-                              className={clsx(
-                                "grid gap-3",
-                                current === "software" //For Software
-                                  ? "grid-cols-3"
-                                  : "grid-cols-2"
-                              )}
-                            >
-                              {(servicesObj[current] || []).map((link) => (
-                                <Link
-                                  key={link}
-                                  href={safeLink(
-                                    `/component/${item.href}/${link
-                                      .replace(/\s+/g, "")
-                                      .toLowerCase()}`,
-                                    availablePages
-                                  )}
-                                  onMouseEnter={() =>
-                                    openDropdownImmediate(item.title)
-                                  }
-                                  className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
-                                >
-                                  {link}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      </>
-                    )}
-                  </div>
-                );
-              })()
+            {item.title === "Hire Developer" ? (
+              <HireDeveloperDropdown
+                item={item}
+                openDropdownImmediate={openDropdownImmediate}
+                closeDropdown={closeDropdown}
+                toggleDropdown={toggleDropdown}
+              />
+            ) : item.title === "Fintech Software" ? (
+              <FintechDropdown
+                item={item}
+                openDropdownImmediate={openDropdownImmediate}
+                closeDropdown={closeDropdown}
+                toggleDropdown={toggleDropdown}
+              />
+            ) : item.title === "Industries" ? (
+              <IndustriesDropdown
+                item={item}
+                openDropdownImmediate={openDropdownImmediate}
+                closeDropdown={closeDropdown}
+                toggleDropdown={toggleDropdown}
+              />
+            ) : item.title === "Services" || item.title === "Company" ? (
+              item.title === "Company" ? (
+                <CompanyDropdown
+                  item={item}
+                  openDropdownImmediate={openDropdownImmediate}
+                  pathname={pathname}
+                  activeTab={activeTab}
+                  setActiveTab={setActiveTab}
+                  closeDropdown={closeDropdown}
+                  toggleDropdown={toggleDropdown}
+                />
+              ) : (
+                <ServicesDropdown
+                  item={item}
+                  openDropdownImmediate={openDropdownImmediate}
+                  activeTab={activeTab}
+                  setActiveTab={setActiveTab}
+                  closeDropdown={closeDropdown}
+                  toggleDropdown={toggleDropdown}
+                />
+              )
             ) : Array.isArray(item.items) ? (
               <div className="grid grid-cols-2 gap-3">
                 {item.items.map((link) => (
@@ -453,7 +641,8 @@ const DesktopDropdown = React.memo(
                     href={`/component/${item.href}/${link
                       .replace(/\s+/g, "")
                       .toLowerCase()}`}
-                    className="block text-gray-700 text-base p-2 hover:text-orange-500"
+                    className="block text-gray-700 text-sm p-2 hover:text-orange-500"
+                    onClick={closeDropdown}
                   >
                     {link}
                   </Link>
@@ -474,7 +663,8 @@ const DesktopDropdown = React.memo(
                         href={`/component/${item.href}/${link
                           .replace(/\s+/g, "")
                           .toLowerCase()}`}
-                        className="block text-gray-700 text-base p-2 hover:text-orange-500"
+                        className="block text-gray-700 text-sm p-2 hover:text-orange-500"
+                        onClick={closeDropdown}
                       >
                         {link}
                       </Link>
@@ -483,14 +673,23 @@ const DesktopDropdown = React.memo(
                 ))}
               </div>
             )}
-            <div className="hidden md:flex justify-start items-center gap-4 border-t-1 border-gray-800 mt-2 pw-full p-2 rounded ">
+            <div
+              className={clsx(
+                "hidden md:flex justify-center items-center gap-4 border-t-1 border-gray-800 mt-2 p-2 rounded",
+                item.title === "Hire Developer" ||
+                  item.title === "Fintech Software" ||
+                  item.title === "Industries"
+                  ? "w-1/2"
+                  : "w-full"
+              )}
+            >
               {socialIcons.map((s, idx) => (
                 <a
                   key={idx}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-600 text-xs hover:text-orange-500 mt-2 transition-all duration-500"
+                  className="text-gray-600 text-[.70rem] hover:text-orange-500 my-1 transition-all duration-500"
                 >
                   {s.title}
                 </a>
@@ -522,6 +721,10 @@ const Header: React.FC = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setOpenDropdown(title);
   }, []);
+
+  const toggleDropdown = (title: string) => {
+    setOpenDropdown(openDropdown === title ? null : title);
+  };
 
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", mobileMenuOpen);
@@ -597,17 +800,17 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-md overflow-hidden">
+    <header className="fixed top-0 left-0 right-0 z-[1000]  bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4 ">
-        <Link href="/" className="flex items-center space-x-1 tracking-tight ">
+        <Link href="/" className="flex items-center justify-center space-x-1  ">
           <Image
             src="/logo-icon.png"
             alt="Camlenio"
             width={200}
             height={80}
-            className="w-8 md:w-13 h-auto object-contain"
+            className="w-8 sm:w-8 md:w-9 lg:w-11 xl:w-11 h-auto object-contain"
           />
-          <span className="text-2xl md:text-4xl font-bold text-black">
+          <span className="text-2xl md:text-[1.8rem] lg:text-3xl xl:text-[1.8rem] 2xl:text-4xl font-bold text-black mt-1 -ml-1">
             <span id="c" className="inline-block">
               C
             </span>
@@ -634,7 +837,7 @@ const Header: React.FC = () => {
             </span>
           </span>
         </Link>
-        <nav className="hidden md:flex md:space-x-4 lg:space-x-6 items-center relative font-normal">
+        <nav className="hidden md:flex  md:space-x-2 lg:space-x-4 items-center relative font-normal">
           {navItems.map((item, idx) =>
             item.dropdown ? (
               <div
@@ -646,8 +849,9 @@ const Header: React.FC = () => {
               >
                 <motion.button
                   whileHover={{ scale: 1.05 }}
+                  onClick={() => toggleDropdown(item.title)}
                   className={clsx(
-                    "inline-flex items-center text-gray-900 md:text-xs lg:text-base font-medium hover:text-orange-500",
+                    "inline-flex items-center text-gray-900 text-xs lg:text-sm font-medium hover:text-orange-500",
                     openDropdown === item.title && "text-orange-500"
                   )}
                 >
@@ -660,13 +864,15 @@ const Header: React.FC = () => {
                   closeDropdownWithDelay={handleMouseLeave}
                   openDropdownImmediate={handleMouseEnter}
                   pathname={pathname}
+                  closeDropdown={() => setOpenDropdown(null)}
+                  toggleDropdown={toggleDropdown}
                 />
               </div>
             ) : (
               <Link
                 key={idx}
                 href={item.href}
-                className="text-gray-900 hover:text-orange-500 font-medium"
+                className="text-xs md:text-sm mt-1 text-gray-900 hover:text-orange-500 font-medium"
               >
                 {item.title}
               </Link>
@@ -674,7 +880,7 @@ const Header: React.FC = () => {
           )}
         </nav>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? (
               <XMarkIcon className="w-8 h-8 text-gray-800" />

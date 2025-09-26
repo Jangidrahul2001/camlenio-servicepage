@@ -50,12 +50,12 @@ const IndustriesSection = () => {
           {[
             {
               title: "Who We Are?",
-              img: "/Homepage/IndustriesSection/who-we-are.jpg",
+              img: "/Homepage/IndustriesSection/who-we-are.webp",
               text: "We are passionate and innovative developers, designers, and strategists. Camlenio has been founded to promise to deliver solutions that really transform businesses digitally. With quality, creativity, and problem-solving attributes, we give ideas life and make technology simple, effective, and ready for the future for every client we serve.",
             },
             {
               title: "Where Do We Come From?",
-              img: "/Homepage/home_about.jpg",
+              img: "/Homepage/IndustriesSection/come-from.webp",
               text: "Founded in Jaipur, India, Camlenio was born with the vision of bridging the gap between technology and business. Starting as a small team with big dreams, we have grown into a trusted IT solutions provider. By combining local insights with global expertise, we deliver world-class software, fintech platforms, and digital solutions tailored to modern business needs.",
             },
             {

@@ -47,7 +47,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-20 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-18 overflow-hidden">
       <div className="flex flex-col md:flex-row pt-16 md:py-0">
         <FormPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
         <motion.div
@@ -108,7 +108,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove min-h-[28rem] sm:min-h-[28rem] md:h-[36rem] flex-grow flex flex-col items-center justify-center px-2 py-10 rounded-[0rem] md:rounded-bl-[3rem] md:w-2/5 overflow-hidden"
+          className="bg-gradient-to-r from-orange-500 via-orange-600 to-orange-500 bg-[length:200%_200%] animate-gradientMove min-h-[28rem] sm:min-h-[28rem] md:h-[36rem] flex-grow flex flex-col items-center justify-center px-2 py-10 md:rounded-bl-[3rem] md:w-2/5 overflow-hidden"
         >
           <div
             className="relative flex justify-center items-center w-full h-full [perspective:1000px]"

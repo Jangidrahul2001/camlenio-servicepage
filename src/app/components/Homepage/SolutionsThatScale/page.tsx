@@ -15,42 +15,42 @@ const INDUSTRIES: Industry[] = [
     title: "Education",
     text: "We build e-learning software, a student-manager system, apps, interactive software, and other solutions to meet the needs of the modern-day learners and institutions.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627310/education_focdoj.jpg",
-    icon: "/Homepage/svg/industry_icon_finance.svg",
+    icon: "/Homepage/Industries/svg/Education.svg",
   },
   {
     id: 2,
     title: "Food & Restaurants",
     text: "From restaurant software to delivery applications, we help businesses streamline the smooth operations for seamless dining experiences.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627727/food-restaurants_j8sl3s.jpg",
-    icon: "/Homepage/svg/industry_icon_health.svg",
+    icon: "/Homepage/Industries/svg/food-safety.svg",
   },
   {
     id: 3,
     title: "Healthcare",
     text: "We architect telemedicine software, patient management applications, and health platforms while making care delivery simpler and secure.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627727/healthcare_drftbk.jpg",
-    icon: "/Homepage/svg/industry_icon_education.svg",
+    icon: "/Homepage/Industries/svg/healthcare.svg",
   },
   {
     id: 4,
     title: "Fintech",
     text: "Payment gateways, e-wallets, platforms for lending, built for speed and security, and to establish trust in finance are in our purvey.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627726/fintech_l4mial.jpg",
-    icon: "/Homepage/svg/industry_icon_restaurant.svg",
+    icon: "/Homepage/Industries/svg/fintech.svg",
   },
   {
     id: 5,
     title: "Retail & Ecommerce",
     text: "We create online shopping, ecommerce platforms that increase sales, enhance engagement, and simplify the customer's journey.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627727/retail-ecommerce_phngbh.jpg",
-    icon: "/Homepage/svg/industry_icon_property.svg",
+    icon: "/Homepage/Industries/svg/Retail-Ecommerce.svg",
   },
   {
     id: 6,
     title: "Travel & Hospitality",
     text: "Our solutions, from booking engines to travel apps, focus on improvements of the user experience and automation of manual processes, thus growing revenues.",
     img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1758627727/travel_z5e0tn.jpg",
-    icon: "/Homepage/industry_icon_manufacturing.webp",
+    icon: "/Homepage/Industries/svg/Travel-Hospitality.svg",
   },
 ];
 
@@ -76,7 +76,7 @@ function Track({
         {doubled.map((card, idx) => (
           <article
             key={`${card.id}-${idx}`}
-            className="relative  min-w-[40rem]  h-[18rem] md:h-[20rem] rounded-[2rem] overflow-hidden shadow-lg transform transition-transform duration-500 hover:-translate-y-1 px-6"
+            className="relative group min-w-[40rem]  h-[18rem] md:h-[20rem] rounded-[2rem] overflow-hidden shadow-lg transform transition-transform duration-500 hover:-translate-y-1 px-6"
           >
             <Image
               src={card.img}
@@ -93,12 +93,11 @@ function Track({
                   height={50}
                   className="w-8 h-8 md:w-12  md:h-12 object-contain bg-white p-2 rounded-full"
                 />
-                <span className="text-gray-50 font-medium text-xs md:text-base">
+                <span className="text-gray-50 font-medium text-xs md:text-base group-hover:tracking-wider transition-all duration-500">
                   {card.title}
                 </span>
               </div>
 
-              {/* Sub text */}
               <p className="text-gray-200 text-xs md:text-base mt-3 font-sans">
                 {card.text}
               </p>
@@ -116,7 +115,7 @@ function Track({
   );
 }
 
-export default function WeServe() {
+export default function SolutionsThatScale() {
   return (
     <div className="grid gap-6 p-6 py-20 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">

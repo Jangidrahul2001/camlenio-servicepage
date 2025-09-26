@@ -8,7 +8,7 @@ const BlogSection = () => {
   const blogs = [
     {
       id: 1,
-      img: "/Homepage/blog/BBPS.png",
+      img: "/blog/BBPS.png",
       date: "02 Apr 2023",
       comments: 23,
       title:
@@ -17,7 +17,7 @@ const BlogSection = () => {
     },
     {
       id: 2,
-      img: "/Homepage/blog/BBPS.png",
+      img: "/blog/BBPS.png",
       date: "02 Apr 2023",
       comments: 23,
       title:
@@ -26,7 +26,7 @@ const BlogSection = () => {
     },
     {
       id: 3,
-      img: "/Homepage/blog/BBPS.png",
+      img: "/blog/BBPS.png",
       date: "02 Apr 2023",
       comments: 23,
       title:

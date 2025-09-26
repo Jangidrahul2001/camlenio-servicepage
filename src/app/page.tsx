@@ -4,7 +4,7 @@ import IndustriesSection from "./components/Homepage/IndustriesSection/page";
 import DevServices from "./components/Homepage/DevServices/page";
 import MakeUsTop from "./components/Homepage/Makeustop/page";
 import MakeUsUnique from "./components/Homepage/Makeusunique/page";
-import WeServe from "./components/Homepage/WeServe/page";
+import SolutionsThatScale from "./components/Homepage/SolutionsThatScale/page";
 import OurProcess from "./components/Homepage/Ourprocess/page";
 import Technologies from "./components/Homepage/Technologies/page";
 import Testimonials from "./components/Homepage/Testimonials/page";
@@ -21,7 +21,7 @@ const Home = () => {
       <DevServices />
       <MakeUsTop />
       <MakeUsUnique />
-      <WeServe />
+      <SolutionsThatScale />
       <OurProcess />
       <Technologies />
       <Testimonials />

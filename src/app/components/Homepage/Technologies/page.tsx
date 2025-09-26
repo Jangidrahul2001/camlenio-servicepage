@@ -29,7 +29,7 @@ const content = {
     { name: "Bootstrap", icon: "/Homepage/bootstrap.webp" },
     { name: "jquery", icon: "/Homepage/jquery.webp" },
     { name: "Angular JS", icon: "/Homepage/angular.webp" },
-    { name: "React JS", icon: "/Homepage/svg/react_native.svg" },
+    { name: "React JS", icon: "/Homepage/svg/react.svg" },
     { name: "Next js", icon: "/Homepage/svg/Next.svg" },
     { name: "Php", icon: "/Homepage/php.webp" },
   ],
