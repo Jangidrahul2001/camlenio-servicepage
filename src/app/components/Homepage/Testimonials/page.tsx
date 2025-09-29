@@ -59,7 +59,7 @@ export default function Testimonials() {
             Inspire Us
           </span>
         </h6>
-        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans">
           Camlenio Software, we take pride in being a trusted partner for our
           clients. Our commitment lies in delivering innovative, secure, and
           user-friendly solutions that truly make a difference. We believe in
@@ -72,7 +72,7 @@ export default function Testimonials() {
               <h2 className="text-3xl md:text-4xl font-bold mt-4 text-orange-500">
                 Testimonials
               </h2>
-              <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-sans">
+              <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-sans text-justify">
                 We are dedicated to providing excellence through every project
                 we deliver. By combining the latest technology with a
                 customer-first approach, we ensure our clients get solutions
@@ -110,7 +110,7 @@ export default function Testimonials() {
                     )
                   )}
                 </div>
-                <p className="text-sm md:text-base font-sans">
+                <p className="text-sm md:text-base font-sans text-justify">
                   {testimonials[index].review}
                 </p>
               </motion.div>

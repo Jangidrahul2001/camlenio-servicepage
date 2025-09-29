@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lufga: ["var(--font-lufga)", "sans-serif"],
-        itc: ["AvantGardeGothicITC W05 Bold", "sans-serif"],
+        avant: ['"ITC Avant Garde Pro"', "sans-serif"],
       },
       keyframes: {
         spin: {

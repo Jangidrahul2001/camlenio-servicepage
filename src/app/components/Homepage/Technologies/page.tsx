@@ -81,7 +81,7 @@ const TechnologiesTabs = () => {
               Technologies
             </span>
           </h6>
-          <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-left break-words sm:text-base mb-12 font-sans">
+          <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-justify break-words sm:text-base mb-12 font-sans">
             At Camlenio, we aim to deliver high-quality, beautifully crafted web
             and mobile applications using the latest technologies and
             frameworks. Our focus is on building scalable, durable, and
@@ -109,7 +109,7 @@ const TechnologiesTabs = () => {
             (item: { name: string; icon: string }, idx: number) => (
               <div
                 key={idx}
-                className="bg-white group text-gray-800 rounded-xl shadow-md flex flex-col items-center justify-center p-6  transition cursor-pointer text-center "
+                className="bg-gray-100 group text-gray-800 rounded-xl shadow-md flex flex-col items-center justify-center p-6  transition cursor-pointer text-center "
               >
                 <Image
                   src={item.icon}

@@ -98,7 +98,7 @@ function Track({
                 </span>
               </div>
 
-              <p className="text-gray-200 text-xs md:text-base mt-3 font-sans">
+              <p className="text-gray-200 text-xs md:text-base mt-3 font-sans text-justify">
                 {card.text}
               </p>
               <a
@@ -136,7 +136,7 @@ export default function SolutionsThatScale() {
           </span>
         </h6>
 
-        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans ">
           We serve and collaborate with a diverse range of industries. Over the
           years, Camlenio Software has broadened its portfolio by partnering
           with businesses across sectors and empowering them to scale in today’s

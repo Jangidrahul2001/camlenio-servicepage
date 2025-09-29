@@ -37,7 +37,7 @@ const navItems = [
     href: "company",
     dropdown: true,
     items: ["Blog", "About", "Career", "Contact"],
-    dropdownClassName: "left-1/2 -translate-x-[45%]", // Align to the left of the menu item
+    dropdownClassName: "left-1/2 md: -translate-x-[35%]  lg:-translate-x-[45%]", // Align to the left of the menu item
   },
   {
     title: "Services",
@@ -107,7 +107,7 @@ const navItems = [
         "App Maintenance",
       ],
     },
-    dropdownClassName: "left-1/2 md:-translate-x-[55%] lg:-translate-x-[60%]", // Center align
+    dropdownClassName: "left-1/2 md:-translate-x-[44%] lg:-translate-x-[60%]", // Center align
   },
   {
     title: "Hire Developer",
@@ -122,7 +122,7 @@ const navItems = [
       "Hire Dedicated Teams",
     ],
     dropdownClassName:
-      "left-1/2 md:-translate-x-[70%] lg:-translate-x-[70%] xl:-translate-x-[80%]", // Align to the right
+      "left-1/2 md:-translate-x-[68%] lg:-translate-x-[70%] xl:-translate-x-[80%]", // Align to the right
   },
   {
     title: "Fintech Software",
@@ -205,13 +205,13 @@ const HireDeveloperDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-orange-50 rounded-r-lg  -mb-[3.08rem]">
+    <div className="w-1/2 bg-orange-50 -mb-[3.08rem]">
       <Image
         src="/header/hire-developer.jpg"
         alt="Hire Developer"
         width={380}
         height={300}
-        className="object-cover w-full h-full rounded-r-lg"
+        className="object-cover w-full h-full "
       />
     </div>
   </div>
@@ -243,13 +243,13 @@ const FintechDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-indigo-50 rounded-r-lg  -mb-[3.08rem]">
+    <div className="w-1/2 bg-indigo-50  -mb-[3.08rem]">
       <Image
-        src="/header/hire-developer.jpg"
+        src="/header/fintech-software.jpg"
         alt="Fintech"
         width={400}
         height={300}
-        className="object-cover w-full h-full rounded-r-lg"
+        className="object-cover w-full h-full "
       />
     </div>
   </div>
@@ -281,13 +281,13 @@ const IndustriesDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-orange-50 rounded-r-lg  -mb-[3.08rem]">
+    <div className="w-1/2 bg-orange-50 -mb-[3.08rem]">
       <Image
         src="/header/hire-developer.jpg"
         alt="Industries"
         width={450}
         height={350}
-        className="object-cover object-top w-full h-full rounded-r-lg"
+        className="object-cover object-top w-full h-full"
       />
     </div>
   </div>
@@ -415,7 +415,7 @@ const ServicesDropdown = ({
               setActiveTab(tab);
             }}
             className={clsx(
-              "block w-full text-left p-2 rounded text-sm md:text-base",
+              "block w-full text-left p-1 rounded  text-xs sm:text-sm md:text-base",
               current === tab
                 ? "text-orange-600 font-semibold bg-orange-100 rounded-l-full"
                 : "text-gray-700 hover:text-orange-500"
@@ -446,13 +446,13 @@ const ServicesDropdown = ({
                 </Link>
               ))}
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 -my-2">
               <Image
                 src="/header/hire-developer.jpg"
                 alt="Technology"
-                width={280}
-                height={350}
-                className="object-cover"
+                width={260}
+                height={300}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
@@ -476,13 +476,13 @@ const ServicesDropdown = ({
                 </Link>
               ))}
             </div>
-            <div className="w-1/2">
-              <video
-                src="/crmsoftware/crm-bg-video.mp4"
-                autoPlay
-                loop
-                muted
-                className="object-cover w-full h-47"
+            <div className="w-1/2 -my-2">
+              <Image
+                src="/header/hire-developer.jpg"
+                alt="Technology"
+                width={260}
+                height={300}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
@@ -506,20 +506,20 @@ const ServicesDropdown = ({
                 </Link>
               ))}
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 -my-2">
               <Image
                 src="/header/hire-developer.jpg"
                 alt="Technology"
-                width={280}
-                height={350}
-                className="object-cover"
+                width={260}
+                height={300}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
         ) : (
           <div
             className={clsx(
-              "grid gap-3",
+              "grid gap-2",
               current === "software" ? "grid-cols-3" : "grid-cols-2" //For Software
             )}
           >
@@ -534,7 +534,7 @@ const ServicesDropdown = ({
                 )}
                 onMouseEnter={() => openDropdownImmediate(item.title)}
                 onClick={closeDropdown}
-                className="block text-gray-700 text-xs hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
+                className="block text-gray-700  text-xs  hover:text-orange-500 whitespace-nowrap transition-transform duration-150 hover:translate-x-1"
               >
                 {link}
               </Link>

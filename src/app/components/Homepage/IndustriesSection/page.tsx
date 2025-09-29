@@ -37,7 +37,7 @@ const IndustriesSection = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base mb-12 font-sans"
+          className="max-w-5xl mx-auto text-gray-600 text-sm  md:text-base mb-12 font-sans text-justify"
         >
           At Camlenio, we firmly believe that living by our core values allows
           us to create a bigger impact in the world—more innovation, more
@@ -93,7 +93,7 @@ const IndustriesSection = () => {
                   <h2>{card.title}</h2>
                 </div>
                 <div className="text-gray-700 text-sm font-sans">
-                  <p className=" ">{card.text}</p>
+                  <p className="text-justify ">{card.text}</p>
                 </div>
               </div>
             </div>

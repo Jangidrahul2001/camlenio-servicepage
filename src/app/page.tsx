@@ -14,7 +14,7 @@ import LogoSlider from "./components/Homepage/Logoslider/page";
 
 const Home = () => {
   return (
-    <div className=" relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className=" relative bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <Hero />
       <ItSolution />
       <IndustriesSection />

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Divider from "../../devider";
 
 const features = [
   {
@@ -189,6 +190,7 @@ const DevServices = () => {
   const activeFeature = features.find((f) => f.id === active);
   return (
     <div className="relative py-16 overflow-hidden bg-gradient-to-r from-gray-800 via-gray-800 to-gray-900 bg-[length:200%_200%] animate-gradientMove">
+      <Divider />
       <div className="mx-auto px-8 md:px-16 relative">
         <div className="max-w-6xl mx-auto text-center mb-4">
           <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-100 shadow-sm text-xs md:text-sm font-medium text-black mb-4 z-20">
@@ -207,7 +209,7 @@ const DevServices = () => {
               Modern Businesses
             </span>
           </h4>
-          <p className="max-w-5xl mx-auto text-gray-50 text-sm text-left md:text-base mb-12 font-sans">
+          <p className="max-w-5xl mx-auto text-gray-50 text-sm md:text-base mb-12 font-sans text-justify">
             In today’s fast-paced digital world, businesses need reliable,
             scalable, and innovative IT solutions to stay competitive. At
             Camlenio Software, we provide a comprehensive range of services—from
@@ -268,7 +270,7 @@ const DevServices = () => {
                   <h3 className="text-[1.3rem] md:text-2xl lg:text-4xl font-bold mb-2 text-orange-500">
                     {activeFeature?.cardtitle}
                   </h3>
-                  <p className="text-gray-300 text-[.85rem] md:text-base mb-4 font-sans">
+                  <p className="text-gray-300 text-[.85rem] md:text-base mb-4 font-sans text-justify">
                     {activeFeature?.desc}
                   </p>
 

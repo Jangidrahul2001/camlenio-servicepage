@@ -36,7 +36,7 @@ const ItSolution = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans"
+          className="max-w-5xl mx-auto text-gray-600 text-sm md:text-base mb-12 font-sans text-justify"
         >
           Our journey at Camlenio Software is a testament to what can be
           achieved when people are genuinely committed to making a meaningful

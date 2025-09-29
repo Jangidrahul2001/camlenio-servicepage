@@ -38,7 +38,7 @@ interface FeatureCardProps {
 
 const MakeUsTop = () => {
   return (
-    <div className="overflow-hidden bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove py-20">
+    <div className="overflow-hidden py-20">
       <div className="max-w-7xl mx-auto text-center px-4">
         {" "}
         <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
@@ -57,7 +57,7 @@ const MakeUsTop = () => {
             Finance categories
           </span>
         </h5>
-        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans">
           We provide end-to-end solutions for banking and all finance
           categories, catering to the diverse needs of financial institutions,
           fintech companies, and payment service providers. Our offerings
@@ -99,7 +99,7 @@ const MakeUsTop = () => {
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans"
+              className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans text-justify"
             >
               Our Fintech Software is a comprehensive, secure, and user-friendly
               solution that provides all financial services under one roof. We
@@ -153,7 +153,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-gray-500 text-base font-normal font-sans"
+        className="text-gray-500 text-base font-normal font-sans text-justify"
       >
         {description}
       </motion.p>

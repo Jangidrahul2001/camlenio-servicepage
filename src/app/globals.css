@@ -1,5 +1,7 @@
 @import "tailwindcss";
-/* @import url(https://db.onlinewebfonts.com/c/a29ad04aae062e207c8d7a8dd84f8983?family=AvantGardeGothicITC+W05+Bold); */
+@layer base {
+  @import url("https://fonts.cdnfonts.com/css/itc-avant-garde-pro-md");
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;

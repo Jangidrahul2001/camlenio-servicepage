@@ -114,7 +114,7 @@ const OurProcess = () => {
           </span>
         </h6>
 
-        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-left break-words sm:text-base mb-12 font-sans">
+        <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans ">
           At Camlenio, we follow a structured and methodical approach to
           software development that ensures every project is delivered with
           precision and quality. From initial planning and design to
@@ -191,7 +191,7 @@ const OurProcess = () => {
                   <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
                     {sections[activeIndex].title}
                   </h3>
-                  <p className="text-gray-700 mb-8 font-sans">
+                  <p className="text-gray-700 mb-8 font-sans text-justify">
                     {sections[activeIndex].desc}
                   </p>
 
@@ -201,7 +201,9 @@ const OurProcess = () => {
                         <span className="text-orange-500 mb-1 text-xl ">
                           <GiCheckMark />
                         </span>
-                        <p className="text-gray-800 font-sans">{item}</p>
+                        <p className="text-gray-800 font-sans text-justify">
+                          {item}
+                        </p>
                       </div>
                     ))}
                   </div>
