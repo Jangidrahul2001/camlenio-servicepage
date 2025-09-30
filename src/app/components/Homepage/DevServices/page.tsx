@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import Divider from "../../devider";
+// import Divider from "../../devider";
 
 const features = [
   {
@@ -151,7 +151,7 @@ const features = [
   },
   {
     id: 5,
-    title: "Dedicated Resources",
+    title: "Digital Marketing",
     cardtitle: "Dedicated Resources Services",
     desc: "We have a pool of dedicated resources having expertise across mobile apps, and web development. Our team is available to work with you on a full-time, part-time, and hourly basis, allowing you to select the best engagement model that caters to your needs. With us, you can expect seamless communication, consistent project updates, and a commitment to delivering high-quality results.",
     icon: (
@@ -189,9 +189,8 @@ const DevServices = () => {
   const [active, setActive] = useState(1);
   const activeFeature = features.find((f) => f.id === active);
   return (
-    <div className="relative py-16 overflow-hidden bg-gradient-to-r from-gray-800 via-gray-800 to-gray-900 bg-[length:200%_200%] animate-gradientMove">
-      <Divider />
-      <div className="mx-auto px-8 md:px-16 relative">
+    <div className="relative py-16 overflow-hidden bg-transparent">
+      <div className="mx-auto px-8 md:px-16 relative -mb-[60px]">
         <div className="max-w-6xl mx-auto text-center mb-4">
           <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-200 bg-gray-100 shadow-sm text-xs md:text-sm font-medium text-black mb-4 z-20">
             <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
@@ -215,10 +214,7 @@ const DevServices = () => {
             Camlenio Software, we provide a comprehensive range of services—from
             custom software development and web applications to digital
             marketing and cloud solutions—designed to meet the evolving needs of
-            modern enterprises. Our goal is to streamline operations, enhance
-            efficiency, and drive sustainable growth, enabling businesses to
-            focus on what they do best while we take care of their technology
-            needs.
+            modern enterprises. 
           </p>
         </div>
         <div className="relative pb-10 text-gray-800">

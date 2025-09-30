@@ -50,17 +50,14 @@ const navItems = [
         "Full Stack Development",
         "HRMS Software",
         "Fintech Software",
-        "Inventory management software",
-        "Loan Management Software",
-        "Hotel management Software",
-        "Library Management Software",
-        "Lead management software",
         "Billing Software",
         "MLM Software",
         "ecommerce portel",
         "online education",
         "travel booking software",
+        "Hotel management Software",
         "Banking Software",
+        "Loan Management Software",
         "Accounting software",
         "employee tracking",
         "Real estate Software",
@@ -318,8 +315,7 @@ const CompanyDropdown = ({
       contact: "/header/aboutus/contact.svg",
     };
     const iconPath = iconMap[key] || "/header/aboutus/about-us.svg";
-    const className =
-      key === "career" ? "h-10 w-14 object-contain" : "h-8 w-14 object-contain";
+    const className = "h-8 w-14 object-contain ";
     return (
       <Image
         src={iconPath}
@@ -333,9 +329,9 @@ const CompanyDropdown = ({
 
   return (
     <div className="w-[700px] h-auto">
-      <div className="pl-6 pt-6">
+      <div className="pl-6 pt-4">
         <div className="flex">
-          <div className="w-1/3  flex flex-col justify-center items-start border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
+          <div className="w-1/3  flex flex-col justify-center items-start  border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
             {(item.items as string[]).map((tab) => {
               const href = `/component/${item.href}/${tab
                 .replace(/\s+/g, "")
@@ -351,14 +347,14 @@ const CompanyDropdown = ({
                   }}
                   onClick={closeDropdown}
                   className={clsx(
-                    "max-w-sm p-2 rounded text-base transition-transform duration-100 hover:translate-x-1 flex items-center justify-center",
+                    "max-w-sm p-2 rounded text-base transition-transform duration-100 hover:translate-x-1 flex items-center justify-center ",
                     isActive
                       ? "text-orange-600 font-semibold"
                       : "text-gray-700 hover:text-orange-500"
                   )}
                 >
                   {getCompanyIcon(tab)}
-                  <span className="flex justify-center items-center mb-2 text-center">
+                  <span className="flex justify-center items-center text-center">
                     {tab}
                   </span>
                 </Link>
@@ -404,7 +400,7 @@ const ServicesDropdown = ({
   const current = activeTab || tabs[0] || "";
 
   return (
-    <div className="flex w-[800px] h-auto gap-4 pl-4 pt-4">
+    <div className="flex w-[820px] h-auto gap-4 pl-4 pt-4 overflow-hidden">
       <div className="min-w-[80px] sm:min-w-[90px] md:min-w-[110px] lg:min-w-[140px] max-w-[220px] border-r-2 border-gray-300">
         {tabs.map((tab) => (
           <button
@@ -519,7 +515,7 @@ const ServicesDropdown = ({
         ) : (
           <div
             className={clsx(
-              "grid gap-2",
+              "grid gap-2 space-y-1",
               current === "software" ? "grid-cols-3" : "grid-cols-2" //For Software
             )}
           >
@@ -1040,7 +1036,7 @@ const Header: React.FC = () => {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-600 text-xs hover:text-orange-500 transition-all duration-300 "
+                  className="text-gray-600 text-xs hover:text-orange-500 transition-all duration-150 "
                 >
                   {s.title}
                 </a>

@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import { RiScrollToBottomLine } from "react-icons/ri";
 
 interface ScrollDownButtonProps {
   targetId: string;
@@ -20,17 +21,10 @@ const ScrollDownButton: React.FC<ScrollDownButtonProps> = ({
   return (
     <button
       onClick={handleScroll}
-      className={`absolute bottom-10 left-1/2 -translate-x-1/2 z-20 cursor-pointer hidden md:block ${className}`}
+      className={`absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-3xl text-gray-700  cursor-pointer hidden md:block animate-bounce [animation-duration:10s] ${className}`}
       aria-label="Scroll down"
     >
-      <Image
-        src="/Scrolldown.png"
-        alt="alternative"
-        width={50}
-        height={20}
-        priority
-        className="w-full h-full object-cover invert"
-      />
+      <RiScrollToBottomLine />
     </button>
   );
 };

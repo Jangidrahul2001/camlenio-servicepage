@@ -98,7 +98,7 @@ const OurValues = () => {
           </div>
         </GsapReveal>
         <GsapReveal>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4 ">
             We Are Incomparable, Given Our{" "}
             <span
               className="text-orange-500"

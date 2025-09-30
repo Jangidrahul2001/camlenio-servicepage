@@ -4,14 +4,17 @@ import { motion } from "framer-motion";
 
 export default function WhoWeAre() {
   return (
-    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-50 bg-[length:200%_200%] animate-gradientMove py-16 ">
+    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-50 bg-[length:200%_200%] animate-gradientMove py-16">
+      <div className="text-center">
+
+      <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-300 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
+        <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
+        Who We Are
+      </span>
+      </div>
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div>
-            <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-300 bg-white shadow-sm text-sm font-medium text-gray-950 mb-4">
-              <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
-              Who We Are
-            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
               End-to-end{" "}
               <span
@@ -25,7 +28,7 @@ export default function WhoWeAre() {
               Delivering Bespoke IT Solutions That Add to the Ease of Business
               Execution.
             </h3>
-            <p className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
+            <p className="max-w-5xl mx-auto text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans ">
               Company is not an entity, it’s a family that represents
               togetherness for over two decades of a successful journey. For
               company, the definition of success is to transcend innovative

@@ -14,7 +14,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopupOpen(true);
-    }, 2500); // 2.5-second delay
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);

@@ -44,13 +44,13 @@ const footerData = [
     ],
   },
   {
-    title: "Fintech Services",
+    title: "Fintech Software",
     links: [
-      "Aeps",
-      "Bill Payment & Recharge",
-      "Money Transfer",
-      "Pan Card",
-      "Travel Booking",
+      "API Panel",
+      "B2C Software",
+      "B2B Fintech Software",
+      "Reseller Fintech Software",
+      "Custom Finance Software",
     ],
   },
 ];
@@ -106,7 +106,7 @@ export default function Footer() {
               <span className="text-gray-800 text-2xl md:text-3xl">
                 <ImLocation2 />
               </span>
-              <div className="text-gray-950 text-center md:text-left  md:border-l pl-2 md:pl-2 border-gray-800">
+              <div className="text-gray-950 text-center md:text-left  md:border-l pl-2 md:pl-2 border-gray-800 ">
                 <p className="text-sm">
                   Ground Floor, Gopi Tower, Ajmer Rd,
                   <br /> Near Kamla Devi Govt. School,

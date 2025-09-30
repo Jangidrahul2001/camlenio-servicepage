@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Divider from "../../devider";
 
 const cardsData = [
   {
@@ -38,7 +39,8 @@ interface FeatureCardProps {
 
 const MakeUsTop = () => {
   return (
-    <div className="overflow-hidden py-20">
+    <div className="relative bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden py-22">
+      <Divider />
       <div className="max-w-7xl mx-auto text-center px-4">
         {" "}
         <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
@@ -61,11 +63,9 @@ const MakeUsTop = () => {
           We provide end-to-end solutions for banking and all finance
           categories, catering to the diverse needs of financial institutions,
           fintech companies, and payment service providers. Our offerings
-          include customized software, secure payment gateways, digital wallets
+          include customized software, payment gateways integration, digital wallets
           solutions, and more, all designed to ensure seamless financial
-          operations. With a focus on security, scalability, and compliance, we
-          empower businesses to enhance efficiency, expand their reach, and
-          deliver superior financial services to their customers.
+          operations.
         </p>
         <div className="  grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
           <div className="relative group rounded-2xl  hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
@@ -128,7 +128,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   description,
 }) => (
-  <div className="bg-transparent border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left leading-tight">
+  <div className="border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left leading-tight">
     <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
       <Image
         src={icon}

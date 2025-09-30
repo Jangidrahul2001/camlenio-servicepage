@@ -15,7 +15,7 @@ const Hero = () => {
       <div className=" relative px-4 sm:px-6 py-20 md:py-26 overflow-hidden">
         <div className="max-w-[90rem] md:min-h-[45rem] mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-12 my-6">
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
+            initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

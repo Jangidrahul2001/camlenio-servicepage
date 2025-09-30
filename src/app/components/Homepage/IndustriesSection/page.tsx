@@ -7,7 +7,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 const IndustriesSection = () => {
   return (
-    <div className="relative py-20 bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
+    <div className="relative py-20 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
       <div className="max-w-7xl mx-auto px-8 md:px-16 relative text-center">
         <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
@@ -39,7 +39,7 @@ const IndustriesSection = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-gray-600 text-sm  md:text-base mb-12 font-sans text-justify"
         >
-          At Camlenio, we firmly believe that living by our core values allows
+          We firmly believe that living by our core values allows
           us to create a bigger impact in the world—more innovation, more
           growth, more opportunities, and more support for businesses. In the
           realm of software development, this philosophy translates to
@@ -54,7 +54,7 @@ const IndustriesSection = () => {
               text: "We are passionate and innovative developers, designers, and strategists. Camlenio has been founded to promise to deliver solutions that really transform businesses digitally. With quality, creativity, and problem-solving attributes, we give ideas life and make technology simple, effective, and ready for the future for every client we serve.",
             },
             {
-              title: "Where Do We Come From?",
+              title: "The origin of smart solutions",
               img: "/Homepage/IndustriesSection/come-from.webp",
               text: "Founded in Jaipur, India, Camlenio was born with the vision of bridging the gap between technology and business. Starting as a small team with big dreams, we have grown into a trusted IT solutions provider. By combining local insights with global expertise, we deliver world-class software, fintech platforms, and digital solutions tailored to modern business needs.",
             },

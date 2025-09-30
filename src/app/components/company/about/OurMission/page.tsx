@@ -22,7 +22,7 @@ const OurMission = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Mission
             </h2>
-            <p className="text-gray-600 text-sm text-left md:text-right md:text-base flex-wrap break-words mb-12 font-sans">
+            <p className="text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans ">
               Our mission is to provide result-oriented and competitive
               solutions to our clients and help them gain a winning edge over
               their competitors. We offer cost-effective, robust, and
@@ -51,11 +51,12 @@ const OurMission = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Our Vision
             </h2>
-            <p className=" text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
+            <p className=" text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans">
               Our vision is to become a leading and top-ranked software
               development company both nationally and globally. We believe in
               our excellent and innovative services to make this vision come
-              true in the coming future.
+              true in the coming future.At Camlenio, we focus on customer
+              satisfaction and quality of services.
             </p>
           </div>
         </div>

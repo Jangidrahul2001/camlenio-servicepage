@@ -1,20 +1,42 @@
+import dynamic from "next/dynamic";
 import Hero from "./components/Homepage/Hero/page";
-import ItSolution from "./components/Homepage/Itsolution/page";
-import IndustriesSection from "./components/Homepage/IndustriesSection/page";
-import DevServices from "./components/Homepage/DevServices/page";
-import MakeUsTop from "./components/Homepage/Makeustop/page";
-import MakeUsUnique from "./components/Homepage/Makeusunique/page";
-import SolutionsThatScale from "./components/Homepage/SolutionsThatScale/page";
-import OurProcess from "./components/Homepage/Ourprocess/page";
-import Technologies from "./components/Homepage/Technologies/page";
-import Testimonials from "./components/Homepage/Testimonials/page";
-import FreeDemo from "./components/Homepage/Makeustop/FreeDemo/page";
-import BlogSection from "./components/Homepage/Blogsection/page";
-import LogoSlider from "./components/Homepage/Logoslider/page";
+
+const ItSolution = dynamic(
+  () => import("./components/Homepage/Itsolution/page")
+);
+const IndustriesSection = dynamic(
+  () => import("./components/Homepage/IndustriesSection/page")
+);
+const DevServices = dynamic(
+  () => import("./components/Homepage/DevServices/page")
+);
+const MakeUsTop = dynamic(() => import("./components/Homepage/Makeustop/page"));
+const MakeUsUnique = dynamic(
+  () => import("./components/Homepage/Makeusunique/page")
+);
+const SolutionsThatScale = dynamic(
+  () => import("./components/Homepage/SolutionsThatScale/page")
+);
+const OurProcess = dynamic(
+  () => import("./components/Homepage/Ourprocess/page")
+);
+const Technologies = dynamic(
+  () => import("./components/Homepage/Technologies/page")
+);
+const Testimonials = dynamic(
+  () => import("./components/Homepage/Testimonials/page")
+);
+const FreeDemo = dynamic(() => import("./components/Homepage/FreeDemo/page"));
+const BlogSection = dynamic(
+  () => import("./components/Homepage/Blogsection/page")
+);
+const LogoSlider = dynamic(
+  () => import("./components/Homepage/Logoslider/page")
+);
 
 const Home = () => {
   return (
-    <div className=" relative bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className=" relative bg-gray-800">
       <Hero />
       <ItSolution />
       <IndustriesSection />

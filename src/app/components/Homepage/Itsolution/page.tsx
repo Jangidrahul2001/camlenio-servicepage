@@ -6,7 +6,7 @@ import { FaStar, FaStarHalf } from "react-icons/fa";
 
 const ItSolution = () => {
   return (
-    <div className="relative py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className="relative scroll-mt-10 py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
         <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
@@ -49,8 +49,6 @@ const ItSolution = () => {
           ever-evolving technological landscape. From developing cutting-edge
           software to creating seamless user experiences, our story is built on
           innovation, collaboration, and a relentless pursuit of excellence.
-          <br />
-          👉 Let&apos;s Come and Build Your Future Business!
         </motion.p>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
           <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">

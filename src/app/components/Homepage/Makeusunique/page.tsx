@@ -25,7 +25,7 @@ const cards = [
 
 export default function MakeUsUnique() {
   return (
-    <div className="relative overflow-hidden  py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
+    <div className="relative overflow-hidden py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
         <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-400 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
@@ -51,9 +51,7 @@ export default function MakeUsUnique() {
           actively collaborate to ensure their unique needs are met. From
           onboarding and training to ongoing support and innovation, we are
           committed to delivering reliable, high-quality services that help our
-          clients achieve their business goals. Our approach is proactive,
-          transparent, and customer-focused, ensuring that every interaction
-          adds value and strengthens the partnership.
+          clients achieve their business goals.
         </p>
       </div>
       <div className=" max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
@@ -72,13 +70,12 @@ export default function MakeUsUnique() {
             <h2 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-gray-50 transition-all duration-500">
               {card.title}
             </h2>
-            <p className="mt-2 text-gray-600 text-base group-hover:text-gray-50 transition-all duration-500 font-sans text-justify">
+            <p className="mt-2 text-gray-600 text-base group-hover:text-gray-50 transition-all duration-500 font-sans text-center">
               {card.desc}
             </p>
           </div>
         ))}
       </div>
-      <div className="absolute -top-10 w-full h-20 bg-gray-50 [clip-path:polygon(0_0,80%_0,85%_100%,100%_100%,100%_0,0_0)]"></div>
     </div>
   );
 }

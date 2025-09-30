@@ -41,7 +41,7 @@ const AboutTheCompany = () => {
             About the Company
           </span>
         </div>
-        <h1 className="max-w-6xl mx-auto text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-left ">
+        <h1 className="max-w-6xl mx-auto text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center ">
           One stop for all of your{" "}
           <span
             className="text-orange-500"
@@ -51,7 +51,7 @@ const AboutTheCompany = () => {
           </span>
           needs
         </h1>
-        <p className="max-w-6xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
+        <p className="max-w-6xl mx-auto text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans ">
           Emizen tech Pvt Ltd began as a Web Development Company in the year
           2013, in Jaipur, Rajasthan, with the vision to help clients grow, we
           started incorporating modern technology solutions in their businesses.
@@ -85,7 +85,7 @@ const AboutTheCompany = () => {
                 <h2 className="text-2xl font-bold mb-2 text-gray-950 group-hover:-translate-y-1 transition-transform duration-500">
                   {card.number}
                 </h2>
-                <p className="text-gray-600 cursor-pointer group-hover:-translate-y-1 transition-transform duration-500">
+                <p className="text-gray-600 cursor-pointer group-hover:-translate-y-1 transition-transform duration-500 ">
                   {card.text}
                 </p>
               </div>

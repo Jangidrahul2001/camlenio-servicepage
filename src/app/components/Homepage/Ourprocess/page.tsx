@@ -115,7 +115,7 @@ const OurProcess = () => {
         </h6>
 
         <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans ">
-          At Camlenio, we follow a structured and methodical approach to
+          We follow a structured and methodical approach to
           software development that ensures every project is delivered with
           precision and quality. From initial planning and design to
           development, testing, and deployment, each step is carefully executed

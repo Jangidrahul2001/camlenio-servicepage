@@ -84,12 +84,12 @@ export const AnimatedTestimonials = ({ autoplay = true }: Props) => {
           </span>
         </div>
         <h1
-          className="max-w-6xl mx-auto text-2xl sm:text-4xl md:text-5xl font-bold text-orange-500 mb-4 text-left md:text-center"
+          className="text-3xl sm:text-4xl font-bold text-orange-500 text-center mb-4 "
           style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB266" }}
         >
           What Our Clients Say
         </h1>
-        <p className="text-gray-600 text-base sm:text-lg mb-12 text-left">
+        <p className="max-w-5xl mx-auto text-gray-600 text-sm  md:text-base mb-12 font-sans text-justify">
           Emizen tech Pvt Ltd began as a Web Development Company in the year
           2013, in Jaipur, Rajasthan, with the vision to help clients grow, we
           started incorporating modern technology solutions in their businesses.

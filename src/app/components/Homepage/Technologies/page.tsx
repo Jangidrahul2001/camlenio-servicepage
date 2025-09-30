@@ -82,7 +82,7 @@ const TechnologiesTabs = () => {
             </span>
           </h6>
           <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-justify break-words sm:text-base mb-12 font-sans">
-            At Camlenio, we aim to deliver high-quality, beautifully crafted web
+            We aim to deliver high-quality, beautifully crafted web
             and mobile applications using the latest technologies and
             frameworks. Our focus is on building scalable, durable, and
             future-ready solutions that ensure long-term success for your
