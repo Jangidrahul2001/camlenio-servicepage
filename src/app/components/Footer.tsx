@@ -80,7 +80,7 @@ export default function Footer() {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto"
       >
-        <div className="w-full bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove flex items-center justify-start md:justify-center rounded-[2rem] mb-8 p-4">
+        <div className="w-full bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove flex items-center justify-start md:justify-center rounded-[1.5rem] mb-8 p-4">
           <div className="flex flex-col md:flex-row md:justify-around w-full gap-6">
             <div className="flex flex-col md:flex-row items-center justify-start  md:gap-6 gap-3">
               <span className="text-gray-800 text-2xl md:text-3xl">

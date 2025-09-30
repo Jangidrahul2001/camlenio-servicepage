@@ -26,7 +26,7 @@ const Hero = () => {
       tagColor: "bg-blue-100 text-blue-600",
       title: "Customized Software Tailored to Your Growth",
       decs: "We develop software solutions that adapt to your unique business needs. Our customized technology evolves as your business grows.",
-      image: "/Homepage/home_about.jpg",
+      image: "/Homepage/hero/hero-customized.png",
     },
     {
       id: 2,

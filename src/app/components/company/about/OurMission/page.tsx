@@ -7,7 +7,7 @@ const OurMission = () => {
   return (
     <div className="relative py-16 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto text-left md:text-center px-8 md:px-16">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
           Our Mission &{" "}
           <span
             className="text-orange-500"
@@ -23,11 +23,11 @@ const OurMission = () => {
               Our Mission
             </h2>
             <p className="text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans ">
-              Our mission is to provide result-oriented and competitive
-              solutions to our clients and help them gain a winning edge over
-              their competitors. We offer cost-effective, robust, and
-              growth-centric software development services. At Camlenio, we
-              focus on customer satisfaction and quality of services.
+              To build and implement end-to-end fintech and custom software
+              products that make things easier. To provide secure and seamless
+              technology that is scalable for both businesse and individuals. To
+              drive technological innovation to remain ahead of the curve, so we
+              can offer our clients a distinct competitive advantage.
             </p>
           </div>
 
@@ -52,11 +52,11 @@ const OurMission = () => {
               Our Vision
             </h2>
             <p className=" text-gray-600 text-sm text-justify md:text-base flex-wrap break-words mb-12 font-sans">
-              Our vision is to become a leading and top-ranked software
-              development company both nationally and globally. We believe in
-              our excellent and innovative services to make this vision come
-              true in the coming future.At Camlenio, we focus on customer
-              satisfaction and quality of services.
+              To be a global leader in Fintech and Custom Software Development,
+              and user-friendly solutions that help businesses of all sizes
+              thrive in the digital age.Continue improving our product and
+              service offerings to maintain our standing as the leading trusted
+              software development company in the industry.
             </p>
           </div>
         </div>

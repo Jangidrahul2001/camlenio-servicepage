@@ -21,7 +21,7 @@ const cards = [
       </div>
     ),
     title: "In-house Team",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions..",
+    desc: "At Camlenio Software, our differentiator is our dedicated team of developers, designers, and strategists. Our team possesses high levels of experience, creativity, and commitment to every project. By keeping our processes internal, we fully control quality, communication, and timing, allowing us to build a team culture where everyone collaborates to always learn. ",
   },
   {
     icon: (
@@ -33,7 +33,7 @@ const cards = [
       </div>
     ),
     title: "Innovation",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions.",
+    desc: "Innovation is the driving force behind everything we do at Camlenio. We are always experimenting with new technologies, tools, and methodologies, delivering solutions that are always ahead of the curve. From custom software development to innovative apps, our approach is rooted in creativeness, efficiency, and meaningful impact. Ultimately, every solution we build is based on making ideas become reality.",
   },
   {
     icon: (
@@ -45,7 +45,7 @@ const cards = [
       </div>
     ),
     title: "Client-Centric",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions..",
+    desc: "Our customers are at the core of what we do. Camlenio believes that, before developing a solution, it is important to understand the client’s goals, vision, and challenges. We keep the lines of communication open, we provide regular updates, and we can pivot when there are changes. Your success is our success, and our goal is to create long-term relationships.",
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const cards = [
       </div>
     ),
     title: "Integrity",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions..",
+    desc: "Integrity is at the foundation of Camlenio Software. We believe in being transparent, ethical, and accountable in every encounter and with each project. From pricing to timeline projects, we place a high value on honesty and trust. Our commitment to integrity is the reassurance that clients feel confident and safe working with us.",
   },
   {
     icon: (
@@ -69,7 +69,7 @@ const cards = [
       </div>
     ),
     title: "Quality",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions..",
+    desc: "At Camlenio, we continuously strive for quality. Each product we create goes through extensive testing, evaluation and revisions. We follow industry best practices and standards to deliver scalable, secure, and high-performance solutions. Quality is not a goal, it is our expectation.",
   },
   {
     icon: (
@@ -81,7 +81,7 @@ const cards = [
       </div>
     ),
     title: "Focus",
-    desc: "Dedicated and hard working are some of the characteristics that define our In-House Team. Our experts, including in finance, marketing, operations, engineering, human resources, and customer services, come together as a team for various works. Together, every team member is diverse in different experiences and skills to ensure that we surpass our objectives. In solving the issues that affect our organization, we do so with a collaborative approach to achieve innovative solutions..",
+    desc: "Focus is the foundation of our efficiency and our success. Camlenio dedicates all its energy and focus to understanding the client's needs and delivering the result there are no distractions. By focusing on the most important tasks, we are able to deliver projects on time, on budget, and beyond expectations. Our focus leads to measurable results.",
   },
 ];
 
@@ -98,8 +98,8 @@ const OurValues = () => {
           </div>
         </GsapReveal>
         <GsapReveal>
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-4 ">
-            We Are Incomparable, Given Our{" "}
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-50 mb-8 mt-4 text-center">
+            Given Our Knowledge{" "}
             <span
               className="text-orange-500"
               style={{
@@ -108,13 +108,10 @@ const OurValues = () => {
               }}
             >
               {" "}
-              Knowledge Expertise And Solutions
+              Expertise And Solutions
             </span>
           </h1>
         </GsapReveal>
-        <p className=" text-gray-50 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans">
-          Our core values describe who we actually are
-        </p>
 
         <div className="w-full">
           <GsapReveal>

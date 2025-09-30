@@ -152,8 +152,8 @@ const features = [
   {
     id: 5,
     title: "Digital Marketing",
-    cardtitle: "Dedicated Resources Services",
-    desc: "We have a pool of dedicated resources having expertise across mobile apps, and web development. Our team is available to work with you on a full-time, part-time, and hourly basis, allowing you to select the best engagement model that caters to your needs. With us, you can expect seamless communication, consistent project updates, and a commitment to delivering high-quality results.",
+    cardtitle: "Creative Digital Excellence",
+    desc: "We specialize in result-driven digital marketing solutions designed to help businesses grow in today’s competitive online world. From SEO, SEM, and social media marketing to content marketing, email campaigns, and paid ads, we provide a complete suite of services tailored to your business goals. Our team ensures better visibility, lead generation, and ROI by combining creativity with the latest digital tools.",
     icon: (
       <Image
         src="/Homepage/svg/custom-development.svg"
@@ -214,7 +214,7 @@ const DevServices = () => {
             Camlenio Software, we provide a comprehensive range of services—from
             custom software development and web applications to digital
             marketing and cloud solutions—designed to meet the evolving needs of
-            modern enterprises. 
+            modern enterprises.
           </p>
         </div>
         <div className="relative pb-10 text-gray-800">

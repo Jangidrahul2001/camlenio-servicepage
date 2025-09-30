@@ -27,7 +27,7 @@ const FormPopup: React.FC<FormPopupProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 30 }}
             transition={{ type: "spring", stiffness: 400, damping: 40 }}
-            className="relative bg-white rounded-2xl shadow-xl w-80 md:w-full max-w-4xl overflow-hidden"
+            className="relative bg-white rounded-2xl shadow-xl w-95 h-auto md:w-full max-w-4xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -35,7 +35,7 @@ const FormPopup: React.FC<FormPopupProps> = ({ isOpen, onClose }) => {
               className="absolute top-2 right-2 text-white hover:text-white/70 transition-colors z-10 rounded-full"
               aria-label="Close popup"
             >
-              <XMarkIcon className="w-4 h-4 " />
+              <XMarkIcon className="w-4 h-4" />
             </button>
 
             <div className="flex flex-col-reverse md:flex-row bg-white">

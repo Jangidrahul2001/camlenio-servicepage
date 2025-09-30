@@ -16,8 +16,8 @@ import { MobileDropdown } from "./MobileDropdown";
 
 const availablePages = [
   "/portfolio",
-  "/component/services/crmsoftware",
   "/component/services/customizedsoftware",
+  "/component/services/crmsoftware",
   "/component/services/ecommerceportel",
   "/component/services/fintechsoftware",
   "/component/services/fullstackdevelopment",
@@ -27,7 +27,7 @@ const availablePages = [
   "/component/services/webdevelopment",
   "/component/company/blog",
   "/component/company/about",
-  "/component/company/career",
+  // "/component/company/career",
   "/component/company/contact",
 ];
 
@@ -37,7 +37,7 @@ const navItems = [
     href: "company",
     dropdown: true,
     items: ["Blog", "About", "Career", "Contact"],
-    dropdownClassName: "left-1/2 md: -translate-x-[35%]  lg:-translate-x-[45%]", // Align to the left of the menu item
+    dropdownClassName: "left-1/2 md: -translate-x-[35%]  lg:-translate-x-[45%]",
   },
   {
     title: "Services",
@@ -104,7 +104,7 @@ const navItems = [
         "App Maintenance",
       ],
     },
-    dropdownClassName: "left-1/2 md:-translate-x-[44%] lg:-translate-x-[60%]", // Center align
+    dropdownClassName: "left-1/2 md:-translate-x-[44%] lg:-translate-x-[60%]",
   },
   {
     title: "Hire Developer",
@@ -119,7 +119,7 @@ const navItems = [
       "Hire Dedicated Teams",
     ],
     dropdownClassName:
-      "left-1/2 md:-translate-x-[68%] lg:-translate-x-[70%] xl:-translate-x-[80%]", // Align to the right
+      "left-1/2 md:-translate-x-[68%] lg:-translate-x-[70%] xl:-translate-x-[80%]",
   },
   {
     title: "Fintech Software",
@@ -133,7 +133,7 @@ const navItems = [
       "InsurTech",
       "Blockchain Solutions",
     ],
-    dropdownClassName: " left-1/2 md:-translate-x-[80%] lg:-translate-x-[90%]", // Align to the right
+    dropdownClassName: " left-1/2 md:-translate-x-[80%] lg:-translate-x-[90%]",
   },
   {
     title: "Industries",
@@ -147,7 +147,7 @@ const navItems = [
       "Logistics",
       "Real Estate",
     ],
-    dropdownClassName: "md:-translate-x-[80%] lg:-translate-x-[95%]", // Align to the right
+    dropdownClassName: "md:-translate-x-[80%] lg:-translate-x-[95%]",
   },
 
   { title: "Portfolio", href: "/portfolio", dropdown: false },
@@ -202,7 +202,7 @@ const HireDeveloperDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-orange-50 -mb-[3.08rem]">
+    <div className="w-1/2 bg-orange-50 -mb-[2.64rem]">
       <Image
         src="/header/hire-developer.jpg"
         alt="Hire Developer"
@@ -240,7 +240,7 @@ const FintechDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-indigo-50  -mb-[3.08rem]">
+    <div className="w-1/2 bg-indigo-50 -mb-[2.64rem]">
       <Image
         src="/header/fintech-software.jpg"
         alt="Fintech"
@@ -278,7 +278,7 @@ const IndustriesDropdown = ({
         </Link>
       ))}
     </div>
-    <div className="w-1/2 bg-orange-50 -mb-[3.08rem]">
+    <div className="w-1/2 bg-orange-50 -mb-[2.6rem]">
       <Image
         src="/header/hire-developer.jpg"
         alt="Industries"
@@ -340,7 +340,7 @@ const CompanyDropdown = ({
               return (
                 <Link
                   key={tab}
-                  href={href}
+                  href={safeLink(href, availablePages)}
                   onMouseEnter={() => {
                     openDropdownImmediate(item.title);
                     setActiveTab(tab);
@@ -400,7 +400,7 @@ const ServicesDropdown = ({
   const current = activeTab || tabs[0] || "";
 
   return (
-    <div className="flex w-[820px] h-auto gap-4 pl-4 pt-4 overflow-hidden">
+    <div className="flex w-[820px] h-auto gap-4 pl-4 pt-2 overflow-hidden">
       <div className="min-w-[80px] sm:min-w-[90px] md:min-w-[110px] lg:min-w-[140px] max-w-[220px] border-r-2 border-gray-300">
         {tabs.map((tab) => (
           <button
@@ -671,7 +671,7 @@ const DesktopDropdown = React.memo(
             )}
             <div
               className={clsx(
-                "hidden md:flex justify-center items-center gap-4 border-t-1 border-gray-800 mt-2 p-2 rounded",
+                "hidden md:flex justify-center items-center gap-4 border-t-1 border-gray-800  p-2 rounded",
                 item.title === "Hire Developer" ||
                   item.title === "Fintech Software" ||
                   item.title === "Industries"
@@ -998,7 +998,7 @@ const Header: React.FC = () => {
                                 availablePages
                               )}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block text-xl p-2 text-gray-700 hover:text-orange-900 space-y-2"
+                              className="block text-base p-2 text-gray-700 hover:text-orange-900 space-y-2"
                             >
                               {link}
                             </Link>

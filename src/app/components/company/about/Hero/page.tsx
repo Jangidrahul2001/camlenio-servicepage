@@ -9,9 +9,9 @@ const Hero = () => {
     <div className="relative pt-18 pb-1 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-start bg-[length:200%_200%] animate-gradientMove">
       <div className="relative">
         <Image
-          src="/about/aboutus-bg.jpg"
+          src="/about/about-bg.jpg"
           alt="blogs"
-          width={1000}
+          width={1900}
           height={900}
           className="w-full h-48 sm:h-55 md:h-65 lg:h-68 xl:h-70 object-cover object-top"
         />

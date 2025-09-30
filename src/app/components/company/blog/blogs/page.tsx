@@ -52,7 +52,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="relative py-14 sm:py-16 md:py-18 lg:py-18 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
+    <div className="relative py-16 sm:py-16 md:py-18 lg:py-18 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-50 bg-[length:200%_200%] animate-gradientMove overflow-hidden ">
       <div className="relative py-4 px-2 sm:px-4 md:px-6 lg:px-8">
         <Image
           src="/blog/blogs-bg-3.jpg"
