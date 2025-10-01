@@ -6,9 +6,13 @@ import localFont from "next/font/local";
 import LenisWrapper from "./LenisWrapper";
 
 export const metadata = {
-  title: "Camlenio - Digital Solutions",
-  description:
-    "Camlenio delivers tailored digital solutions that drive business growth, efficiency, and long-term value.",
+  title: "Camlenio | Digital Solutions",
+  description: "Customized software and fintech solutions tailored for growth.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 const lufgaFont = localFont({

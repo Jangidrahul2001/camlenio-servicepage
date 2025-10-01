@@ -191,7 +191,7 @@ const OurProcess = () => {
                   <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
                     {sections[activeIndex].title}
                   </h3>
-                  <p className="text-gray-700 mb-8 font-sans text-justify">
+                  <p className="text-gray-700 mb-8 font-sans ">
                     {sections[activeIndex].desc}
                   </p>
 
@@ -201,7 +201,7 @@ const OurProcess = () => {
                         <span className="text-orange-500 mb-1 text-xl ">
                           <GiCheckMark />
                         </span>
-                        <p className="text-gray-800 font-sans text-justify">
+                        <p className="text-gray-800 text-sm font-sans">
                           {item}
                         </p>
                       </div>

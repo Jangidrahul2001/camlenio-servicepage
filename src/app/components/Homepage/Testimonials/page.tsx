@@ -12,7 +12,7 @@ const testimonials = [
     text: "EskyDecode recognizes the importance of developing IT solutions for our clients. We assess our clients regularly to ensure we consistently provide the best value available. By doing so, we established ourselves as the global choice of the world.",
     highlight: "Looking for Digital Solution?",
     client: "Neelpe",
-    companyLogo: "/Homepage/logo.png",
+    companyLogo: "/Homepage/testimonials/neelpe.png",
     review:
       "Partnering with Camlenio Software has been a great experience for us at Neelpe.The team’s professionalism, timely support, and innovative approach have truly helped us scale our services and build more trust with our customers.",
     stars: 5,
@@ -23,7 +23,7 @@ const testimonials = [
     text: "Working with EskyDecode was seamless. Their dedication and expertise made our project successful beyond expectations.",
     highlight: "Your success is our mission!",
     client: "Kailash Seed",
-    companyLogo: "/Homepage/logo.png",
+    companyLogo: "/Homepage/testimonials/kailash-seed.png",
     review:
       "Camlenio Software delivered exactly what we needed for our E-commerce project at Kailash Seed. The platform they developed is fast, user-friendly, and highly secure, making it easy for us to manage products.",
     stars: 5,
@@ -34,7 +34,7 @@ const testimonials = [
     text: "Working with EskyDecode was seamless. Their dedication and expertise made our project successful beyond expectations.",
     highlight: "Your success is our mission!",
     client: "AKMS Insurance Surveyors & Loss Assessors",
-    companyLogo: "/Homepage/logo.png",
+    companyLogo: "/Homepage/testimonials/akms.png",
     review:
       " They provided us with a reliable and efficient platform to manage claim services and streamline our operations. Their professional approach, timely delivery, and constant support have added great value to our business.",
     stars: 5,
@@ -102,16 +102,20 @@ export default function Testimonials() {
                 transition={{ duration: 0.6 }}
                 className="absolute inset-0 flex flex-col items-center justify-center p-8"
               >
-                <Image
-                  src={testimonials[index].companyLogo}
-                  alt={testimonials[index].client}
-                  width={100}
-                  height={100}
-                  className="rounded-full mb-4 bg-white p-4"
-                />
+                <div className="mb-4 overflow-hidden rounded-full bg-white flex items-center justify-center">
+                  <Image
+                    src={testimonials[index].companyLogo}
+                    alt={testimonials[index].client}
+                    width={100}
+                    height={100}
+                    className="object-contain object-center w-26 h-16 p-2"
+                  />
+                </div>
+
                 <h4 className="font-bold text-lg">
                   {testimonials[index].client}
                 </h4>
+
                 <div className="flex justify-center my-2">
                   {Array.from({ length: testimonials[index].stars }).map(
                     (_, i) => (
@@ -121,6 +125,7 @@ export default function Testimonials() {
                     )
                   )}
                 </div>
+
                 <p className="text-sm md:text-base font-sans text-justify">
                   {testimonials[index].review}
                 </p>

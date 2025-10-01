@@ -6,26 +6,26 @@ import Divider from "../../devider";
 
 const cardsData = [
   {
-    icon: "/Homepage/mbi/API.svg",
+    icon: "/Homepage/makeustop/B2B.svg",
     title: "B2B Fintech Software",
     description:
       "Our B2B Fintech Solution is a one-stop platform meant to provide all the key digital financial services. .",
   },
   {
-    icon: "/Homepage/mbi/fintech-1.svg",
+    icon: "/Homepage/makeustop/B2C.svg",
     title: "B2C Software",
     description:
       "Our B2C Software is a complete digital platform crafted to simplify financial and travel services for end users who directly interact with the software.",
   },
   {
-    icon: "/Homepage/mbi/fintech-2.svg",
+    icon: "/Homepage/makeustop/Reseller.svg",
     title: "Reseller Fintech Software",
     description:
       "Camlenio Reseller Fintech Software is a robust Scalable and growth-oriented, the Reseller Admin has total authority to generate several White Label Admins, each with its own branding and management system.",
   },
   {
-    icon: "/Homepage/mbi/fintech-3.svg",
-    title: "API Panel",
+    icon: "/Homepage/makeustop/Travel.svg",
+    title: "Travel Software",
     description:
       "Our API Panel is the core platform that drives and controls all fintech solutions, such as B2B Fintech Software, B2C Software, and Reseller Software. ",
   },
@@ -63,8 +63,8 @@ const MakeUsTop = () => {
           We provide end-to-end solutions for banking and all finance
           categories, catering to the diverse needs of financial institutions,
           fintech companies, and payment service providers. Our offerings
-          include customized software, payment gateways integration, digital wallets
-          solutions, and more, all designed to ensure seamless financial
+          include customized software, payment gateways integration, digital
+          wallets solutions, and more, all designed to ensure seamless financial
           operations.
         </p>
         <div className="  grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
@@ -128,8 +128,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   description,
 }) => (
-  <div className="border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left leading-tight">
-    <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-8 transition-all duration-300">
+  <div className="border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left ">
+    <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-6 transition-all duration-300">
       <Image
         src={icon}
         alt={title}
@@ -138,7 +138,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         className="object-contain"
       />
     </div>
-    <div className="transition-all duration-500 group-hover:-translate-y-8">
+    <div className="transition-all duration-500 group-hover:-translate-y-6">
       <motion.h3
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

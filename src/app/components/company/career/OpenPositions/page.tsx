@@ -2,63 +2,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Filter } from "lucide-react";
+import { jobs } from "../../../../../../lib/jobs"
+import Link from "next/link";
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // har child ke beech 0.3s ka gap
-      delayChildren: 0.2, // container ke baad pehla child start
+      staggerChildren: 0.3,
+      delayChildren: 0.2,
     },
   },
 };
 
 const OpenPositions = () => {
-  const openPositions = [
-    {
-      title: "Senior Full Stack Developer",
-      description:
-        "Lead development of scalable web applications using modern technologies",
-      location: "Remote",
-      type: "Full-time",
-    },
-    {
-      title: "DevOps Engineer",
-      description:
-        "Build and maintain CI/CD pipelines and cloud infrastructure",
-      location: "Hybrid",
-      type: "Full-time",
-    },
-    {
-      title: "UI/UX Designer",
-      description:
-        "Create intuitive and beautiful user experiences for our products",
-      location: "Remote",
-      type: "Full-time",
-    },
-    {
-      title: "Product Manager",
-      description:
-        "Drive product strategy and work closely with engineering teams",
-      location: "On-site",
-      type: "Full-time",
-    },
-    {
-      title: "Frontend Developer",
-      description:
-        "Build responsive and performant user interfaces with React and TypeScript",
-      location: "Remote",
-      type: "Contract",
-    },
-    {
-      title: "Data Scientist",
-      description: "Analyze complex datasets and build machine learning models",
-      location: "Hybrid",
-      type: "Full-time",
-    },
-  ];
-
   return (
     <div className="py-20  bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-8 md:px-16 ">
@@ -95,7 +53,7 @@ const OpenPositions = () => {
         </div>
 
         <div className="grid gap-6">
-          {openPositions.map((position, index) => (
+          {jobs.map((position, index) => (
             <div
               key={index}
               className="rounded-xl border bg-orange-100 hover:scale-101 transition-transform duration-300 p-6"
@@ -128,9 +86,12 @@ const OpenPositions = () => {
                     </span>
                   </motion.div>
                 </div>
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg font-medium transition shrink-0">
+                <Link
+                  href={`/Jobs/${position.slug}`}
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg font-medium transition shrink-0"
+                >
                   Apply Now
-                </button>
+                </Link>
               </motion.div>
             </div>
           ))}

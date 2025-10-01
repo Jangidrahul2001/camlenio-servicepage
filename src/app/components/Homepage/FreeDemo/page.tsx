@@ -8,9 +8,18 @@ const FreeQuotation = () => {
     <div className="relative py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
-          <p className="text-2xl md:text-3xl font-bold text-orange-500 font-sans">
-            “Every Great, Big thing starts with a decision that you take today”
-          </p>
+          <h6 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">
+            “Every Great, Big thing starts with a decision {""}
+            <span
+              className="text-orange-500"
+              style={{
+                textShadow:
+                  "-1px -1px 0px #da5f00, 3px 3px 0px #161e2e, 4px 6px 0px #ff582336",
+              }}
+            >
+              that you take today”
+            </span>
+          </h6>
         </div>
         <div className="relative text-center border-2 border-blue-400 p-8 rounded-2xl bg-transparent">
           <div className="mb-6">

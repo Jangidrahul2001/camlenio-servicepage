@@ -331,7 +331,7 @@ const CompanyDropdown = ({
     <div className="w-[700px] h-auto">
       <div className="pl-6 pt-4">
         <div className="flex">
-          <div className="w-1/3  flex flex-col justify-center items-start  border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2">
+          <div className="w-1/3  flex flex-col justify-center items-start  border-r-2 border-l-2 border-r-gray-300 border-l-orange-500 rounded-3xl shadow-[-8px_0_15px_-3px_rgba(0,0,0,0.2)] mr-2 my-2">
             {(item.items as string[]).map((tab) => {
               const href = `/component/${item.href}/${tab
                 .replace(/\s+/g, "")
@@ -366,8 +366,8 @@ const CompanyDropdown = ({
               <Image
                 src="/Homepage/aboutus_image.png"
                 alt="Company"
-                width={420}
-                height={320}
+                width={400}
+                height={300}
                 className="object-cover rounded-lg"
               />
             </div>
