@@ -27,7 +27,7 @@ const availablePages = [
   "/component/services/webdevelopment",
   "/component/company/blog",
   "/component/company/about",
-  // "/component/company/career",
+  "/component/company/career",
   "/component/company/contact",
 ];
 

@@ -18,7 +18,7 @@ const ItSolution = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold text-gray-900  y-900 mb-4"
+          className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
         >
           Excellence – Our foundation for every project{" "}
           <span
