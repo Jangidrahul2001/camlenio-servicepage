@@ -9,7 +9,7 @@ const sections = [
   {
     title: "Discovery and Planning",
     desc: "The first step of building an application begins with understanding client requirements and analyzing market dynamics to lay the foundation for successful execution.",
-    img: "/Homepage/process-planning-img.webp",
+    img: "/Homepage/ourprocess/discovery-planning.webp",
     checklist: [
       "In-depth Client Consultation",
       "Market Research",
@@ -115,11 +115,11 @@ const OurProcess = () => {
         </h6>
 
         <p className="max-w-5xl mx-auto flex-wrap text-gray-600 text-sm text-justify break-words sm:text-base mb-12 font-sans ">
-          We follow a structured and methodical approach to
-          software development that ensures every project is delivered with
-          precision and quality. From initial planning and design to
-          development, testing, and deployment, each step is carefully executed
-          to create smarter, scalable, and future-ready solutions.
+          We follow a structured and methodical approach to software development
+          that ensures every project is delivered with precision and quality.
+          From initial planning and design to development, testing, and
+          deployment, each step is carefully executed to create smarter,
+          scalable, and future-ready solutions.
         </p>
 
         <motion.div

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
@@ -91,9 +92,7 @@ const LifeAtCamlenio = () => {
               Take the next step in your career and become part of our
               innovative team.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg px-8 py-3 text-lg transition">
-              Apply Now
-            </button>
+           
           </div>
         </div>
       </div>

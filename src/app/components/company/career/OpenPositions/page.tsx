@@ -1,24 +1,12 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { MapPin, Clock, Filter } from "lucide-react";
-import { jobs } from "../../../../../../lib/jobs"
+import { jobs } from "../../../../../../lib/jobs";
 import Link from "next/link";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
-    },
-  },
-};
 
 const OpenPositions = () => {
   return (
-    <div className="py-20  bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+    <div className="py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-8 md:px-16 ">
         <h2
           className="text-3xl sm:text-4xl font-bold mb-4 text-orange-500 text-center"
@@ -58,24 +46,13 @@ const OpenPositions = () => {
               key={index}
               className="rounded-xl border bg-orange-100 hover:scale-101 transition-transform duration-300 p-6"
             >
-              <motion.div
-                variants={container}
-                initial="hidden"
-                animate="show"
-                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-              >
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-2 text-gray-900">
                     {position.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{position.description}</p>
-                  <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="flex flex-wrap gap-2 cursor-pointer"
-                  >
+                  <div className="flex flex-wrap gap-2 cursor-pointer">
                     <span className="inline-flex items-center gap-1 bg-orange-200 text-gray-700 px-3 py-1 rounded-md text-sm">
                       <MapPin className="h-3 w-3" />
                       {position.location}
@@ -84,7 +61,7 @@ const OpenPositions = () => {
                       <Clock className="h-3 w-3" />
                       {position.type}
                     </span>
-                  </motion.div>
+                  </div>
                 </div>
                 <Link
                   href={`/Jobs/${position.slug}`}
@@ -92,7 +69,7 @@ const OpenPositions = () => {
                 >
                   Apply Now
                 </Link>
-              </motion.div>
+              </div>
             </div>
           ))}
         </div>

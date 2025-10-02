@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { GiRotaryPhone } from "react-icons/gi";
 import { ImLocation2 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
+import CookieSettings from "@/app/components/CookieSettings";
 const footerData = [
   {
     title: "Mobile App Development",
@@ -199,28 +200,29 @@ export default function Footer() {
           <div className="flex space-x-2 md:mt-0">
             <Link
               className="hover:text-orange-500 transition-color duration-500"
-              href="#"
+              href="/privacy-policy"
             >
               Privacy Policy
             </Link>
             <Link
               className="hover:text-orange-500 transition-color duration-500"
-              href="#"
+              href="/Terms-of-use"
             >
               Terms of Use
             </Link>
             <Link
               className="hover:text-orange-500 transition-color duration-500"
-              href="#"
+              href="/Cookie-policy"
             >
               Cookie policy
             </Link>{" "}
-            <Link
+            {/* <Link
               className="hover:text-orange-500 transition-color duration-500"
               href="#"
             >
               Cookie Settings
-            </Link>
+            </Link> */}
+            <CookieSettings />
           </div>
         </div>
         <div className="relative overflow-hidden">
