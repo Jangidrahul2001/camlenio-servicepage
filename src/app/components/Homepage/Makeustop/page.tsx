@@ -93,7 +93,7 @@ const MakeUsTop = () => {
               transition={{ duration: 0.8 }}
               className=" w-full  z-20 text-xl  md:text-2xl font-semibold text-gray-50 mb-2"
             >
-              CWhat Makes Us a Top App Development Company?
+              Financial’s Approach to AI-Driven Software Development
             </motion.h1>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
