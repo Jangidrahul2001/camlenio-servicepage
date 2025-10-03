@@ -9,7 +9,7 @@ const sections = [
   {
     title: "Discovery and Planning",
     desc: "The first step of building an application begins with understanding client requirements and analyzing market dynamics to lay the foundation for successful execution.",
-    img: "/Homepage/ourprocess/discovery-planning.webp",
+    img: "/Homepage/ourprocess/discovery-planning1.webp",
     checklist: [
       "In-depth Client Consultation",
       "Market Research",
@@ -96,7 +96,7 @@ const OurProcess = () => {
 
   return (
     <div className="py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 lg:h-[85vh] text-center">
         <span className=" relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100  shadow-sm text-sm font-medium text-orange-600 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
           Custom Software Development
@@ -130,7 +130,7 @@ const OurProcess = () => {
         >
           <ul
             ref={sliderRef}
-            className="flex gap-4 py-4 overflow-x-auto scroll-smooth px-2 no-scrollbar overflow-scroll scrollbar-hide"
+            className="flex gap-4 py-4 mb-4 overflow-x-auto scroll-smooth px-2 no-scrollbar overflow-scroll scrollbar-hide"
           >
             {steps.map((step, index) => (
               <li
@@ -177,17 +177,17 @@ const OurProcess = () => {
               transition={{ duration: 0.4 }}
             >
               <div className={`flex flex-col md:flex-row items-center gap-12`}>
-                <div className="w-full md:w-1/2">
+                <div className="w-full md:w-sm">
                   <Image
                     src={sections[activeIndex].img}
                     alt={sections[activeIndex].title}
-                    width={800}
-                    height={600}
+                    width={600}
+                    height={400}
                     className="rounded-3xl w-full h-auto object-cover hover:scale-101 transition-all duration-500 ease-in-out"
                   />
                 </div>
 
-                <div className="w-full md:w-1/2 text-left">
+                <div className="w-full md:w-xl text-left">
                   <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
                     {sections[activeIndex].title}
                   </h3>

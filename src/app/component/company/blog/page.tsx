@@ -1,8 +1,7 @@
 import Blogs from "@/app/components/company/blog/blogs/page";
 import React from "react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Blog | Camlenio",
   description:
     "Read the latest insights on digital solutions, fintech, and technology trends.",

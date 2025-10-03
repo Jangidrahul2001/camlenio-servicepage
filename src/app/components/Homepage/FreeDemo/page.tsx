@@ -14,7 +14,7 @@ const FreeQuotation = () => {
               className="text-orange-500"
               style={{
                 textShadow:
-                  "-1px -1px 0px #da5f00, 3px 3px 0px #161e2e, 4px 6px 0px #ff582336",
+                  "-1px -1px 0px #da5f00, 3px 3px 0px #323d4e, 4px 6px 0px #ff582336",
               }}
             >
               that you take today”

@@ -1,8 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function CookieSettings() {
+  // State for checkbox values
+  const [analytics, setAnalytics] = useState(true);
+  const [marketing, setMarketing] = useState(true);
   const [open, setOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleEsc);
+      modalRef.current?.focus();
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [open]);
 
   return (
     <div>
@@ -14,8 +36,15 @@ export default function CookieSettings() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-orange-100 p-6 rounded-lg w-96">
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+          onClick={() => setOpen(false)} // Close on overlay click
+        >
+          <div
+            ref={modalRef}
+            className="bg-orange-100 p-6 rounded-lg w-96"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+          >
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Cookie Preferences
             </h2>
@@ -25,11 +54,22 @@ export default function CookieSettings() {
                 <span>Necessary Cookies</span>
               </label>
               <label className="flex items-center text-gray-800 space-x-2">
-                <input type="checkbox" className="bg-orange-500" />
+                <input
+                  type="checkbox"
+                  checked={analytics}
+                  onChange={(e) => setAnalytics(e.target.checked)}
+                  className="accent-orange-500"
+                />
                 <span>Analytics Cookies</span>
               </label>
+
               <label className="flex items-center text-gray-800 space-x-2">
-                <input type="checkbox" className="bg-orange-500" />
+                <input
+                  type="checkbox"
+                  checked={marketing}
+                  onChange={(e) => setMarketing(e.target.checked)}
+                  className="accent-orange-500"
+                />
                 <span>Marketing Cookies</span>
               </label>
             </div>
@@ -42,6 +82,8 @@ export default function CookieSettings() {
               </button>
               <button
                 onClick={() => {
+                  // You can now use the 'analytics' and 'marketing' state
+                  console.log({ analytics, marketing });
                   alert("Your cookie preferences have been saved.");
                   setOpen(false);
                 }}

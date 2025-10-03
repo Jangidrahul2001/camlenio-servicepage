@@ -64,7 +64,7 @@ const OpenPositions = () => {
                   </div>
                 </div>
                 <Link
-                  href={`/Jobs/${position.slug}`}
+                  href={`/jobs/${position.slug}`}
                   className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg font-medium transition shrink-0"
                 >
                   Apply Now

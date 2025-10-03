@@ -1,7 +1,7 @@
 export default function CookiePolicyPage() {
   return (
     <main className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove py-20">
-      <div className="max-w-3xl mx-auto p-6 text-gray-800 border-1 border-orange-200 rounded-xl">
+      <div className="max-w-3xl mx-auto p-6 text-gray-800 border border-orange-200 rounded-xl">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Cookie Policy</h1>
         <p className="mb-4 text-lg">
           This Cookie Policy explains how we use cookies and similar
