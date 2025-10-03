@@ -9,7 +9,7 @@ const FreeQuotation = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
           <h6 className="text-3xl sm:text-4xl font-bold text-gray-100 mb-4">
-            “Every Great, Big thing starts with a decision {""}
+            Every Great, Big thing starts with a decision {""}
             <span
               className="text-orange-500"
               style={{
@@ -17,7 +17,7 @@ const FreeQuotation = () => {
                   "-1px -1px 0px #da5f00, 3px 3px 0px #323d4e, 4px 6px 0px #ff582336",
               }}
             >
-              that you take today”
+              that you take today
             </span>
           </h6>
         </div>

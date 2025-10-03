@@ -92,7 +92,7 @@ export default function Testimonials() {
               </p>
             </div>
           </div>
-          <div className="relative p-8 bg-orange-500 text-white text-center flex flex-col items-center justify-center rounded-r-2xl overflow-hidden min-h-[300px] sm:min-h-[400px]">
+          <div className="relative bg-orange-500 text-white text-center flex flex-col items-center justify-center overflow-hidden min-h-[350px] sm:min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -102,13 +102,13 @@ export default function Testimonials() {
                 transition={{ duration: 0.6 }}
                 className="absolute inset-0 flex flex-col items-center justify-center p-8"
               >
-                <div className="mb-4 overflow-hidden rounded-full bg-white flex items-center justify-center">
+                <div className="mb-4 overflow-hidden backdrop-blur-2xl flex items-center justify-center">
                   <Image
                     src={testimonials[index].companyLogo}
                     alt={testimonials[index].client}
                     width={100}
                     height={100}
-                    className="object-contain object-center w-26 h-16 p-2"
+                    className="object-contain object-center w-30 h-16"
                   />
                 </div>
 
@@ -126,7 +126,7 @@ export default function Testimonials() {
                   )}
                 </div>
 
-                <p className="text-sm md:text-base font-sans text-justify">
+                <p className="text-sm md:text-base font-sans text-justify mt-1">
                   {testimonials[index].review}
                 </p>
               </motion.div>
@@ -137,7 +137,7 @@ export default function Testimonials() {
                   prev === 0 ? testimonials.length - 1 : prev - 1
                 )
               }
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white text-orange-500 p-2 w-10 rounded-full shadow-md"
+              className="absolute left-2 top-[48%] -translate-y-1/2 bg-white text-orange-500 p-2 w-10 rounded-full shadow-md"
             >
               ❮
             </button>
@@ -145,7 +145,7 @@ export default function Testimonials() {
               onClick={() =>
                 setIndex((prev) => (prev + 1) % testimonials.length)
               }
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white text-orange-500 p-2 w-10 rounded-full shadow-md"
+              className="absolute right-2 top-[48%] -translate-y-1/2 bg-white text-orange-500 p-2 w-10 rounded-full shadow-md"
             >
               ❯
             </button>

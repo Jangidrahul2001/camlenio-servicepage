@@ -60,9 +60,13 @@ const Hero = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight ">
               Camlenio is a Leading Software
               <br />
-              Development in Fintech{" "}
+              Development in{" "}
               <HeroTextAnimate
-                words={["Custom Solutions", "Digital Transformation"]}
+                words={[
+                  "Custom Solutions",
+                  "Fintech Software",
+                  "Digital Solutions",
+                ]}
               />
             </h1>
 

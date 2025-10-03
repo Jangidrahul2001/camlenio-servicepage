@@ -171,16 +171,16 @@ const features = [
       />
     ),
     subImages: [
-      { src: "/Homepage/svg/mern_development-o.svg", name: "MERN Development" },
       {
-        src: "/Homepage/svg/nodejs_development-o.svg",
-        name: "Node JS Development",
+        src: "/Homepage/devServices/smo.svg",
+        name: "Social Media Optimization",
       },
-      { src: "/Homepage/svg/react1-o.svg", name: "React JS Development" },
+      { src: "/Homepage/devServices/smm.svg", name: "Social Media Marketing" },
       {
-        src: "/Homepage/svg/laravel_development-w.svg",
-        name: "Laravel Development",
+        src: "/Homepage/devServices/ppc.svg",
+        name: "Pay Per Click",
       },
+      { src: "/Homepage/devServices/seo.svg", name: "SEO" },
     ],
   },
 ];
