@@ -9,13 +9,13 @@ const cardsData = [
     icon: "/Homepage/makeustop/B2B.svg",
     title: "B2B Fintech Software",
     description:
-      "Our B2B Fintech Solution is a one-stop platform meant to provide all the key digital financial services. .",
+      "Our B2B Fintech Solution is a one-stop platform meant to provide all the key digital financial services.",
   },
   {
     icon: "/Homepage/makeustop/B2C.svg",
     title: "B2C Software",
     description:
-      "Our B2C Software is a complete digital platform crafted to simplify financial and travel services for end users who directly interact with the software.",
+      "Our B2C Software is a complete digital platform crafted to simplify financial, customize and travel software for end users who directly interact with the software.",
   },
   {
     icon: "/Homepage/makeustop/Reseller.svg",
@@ -67,39 +67,35 @@ const MakeUsTop = () => {
           wallets solutions, and more, all designed to ensure seamless financial
           operations.
         </p>
-        <div className="  grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="relative group rounded-2xl  hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug">
-            <Image
-              src="/Homepage/bg_shape.png"
-              alt="Background"
-              fill
-              className=" object-fill absolute inset-0 z-0 rounded-2xl"
-              priority
-            />
-
-            <div className="w-20 h-20 z-20  py-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="relative group rounded-2xl hover:scale-101 transition-transform duration-500 ease-in p-6 text-left overflow-hidden flex flex-col justify-center md:col-span-2 lg:col-span-2 leading-snug border-2  bg-orange-200/30 backdrop-blur-lg border-orange-200">
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-orange-500 rounded-full opacity-20 blur-3xl animate-glow-slow -z-10"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-orange-500 rounded-full opacity-20 blur-3xl animate-glow-slow -z-10"></div>
+            <div className="w-20 h-20 z-20 py-4 mb-6 ">
+              {" "}
               <Image
-                src="/Homepage/secting_icon.png"
-                alt="Award"
+                src="/Homepage/makeustop/settings.svg"
+                alt="setting svg"
                 height={60}
                 width={60}
-                className="object-contain absolute top-10 left-10 animate-spin  group-hover:scale-102 transition-transform duration-500 ease-in "
+                className="object-contain absolute top-10 left-10 animate-spin group-hover:scale-102 transition-transform duration-500 ease-in "
                 style={{ animationDuration: "10s" }}
-              />
+              />{" "}
             </div>
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className=" w-full  z-20 text-xl  md:text-2xl font-semibold text-gray-50 mb-2"
+              className="w-full z-20 text-xl md:text-2xl font-semibold text-gray-900 mb-2"
             >
               Financial’s Approach to AI-Driven Software Development
             </motion.h1>
+
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative z-20 text-base font-medium break-words flex-wrap text-gray-50 font-sans text-justify"
+              className="relative z-20 text-base  break-words flex-wrap text-gray-500 font-sans text-justify"
             >
               Our Fintech Software is a comprehensive, secure, and user-friendly
               solution that provides all financial services under one roof. We
@@ -109,6 +105,7 @@ const MakeUsTop = () => {
               Distributor, and Retailer).
             </motion.p>
           </div>
+
           {cardsData.map((card, index) => (
             <FeatureCard
               key={index}
@@ -128,7 +125,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   description,
 }) => (
-  <div className="border-2 border-gray-300 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left ">
+  <div className="border-2 border-orange-200 bg-orange-200/30 shadow-md group rounded-2xl hover:shadow-3xl p-6 flex flex-col text-left">
     <div className="w-20 h-20 z-20 group-hover:scale-80 py-4 mb-6 transition-all duration-300">
       <Image
         src={icon}
@@ -138,7 +135,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         className="object-contain"
       />
     </div>
-    <div className="transition-all duration-500 group-hover:-translate-y-6">
+    <div className="transition-all duration-500 group-hover:-translate-y-6 ">
       <motion.h3
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

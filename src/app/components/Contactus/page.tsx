@@ -88,7 +88,10 @@ export default function ContactUs() {
             <div className=" max-w-full relative z-10 space-y-4 text-center">
               <h2
                 className=" text-3xl md:text-6xl font-bold  text-orange-500 "
-                style={{ textShadow: "2px 2px 0 #FAF9F6, 4px 4px 0 #FFB266" }}
+                style={{
+                  textShadow:
+                    "-1px -1px 0px #da5f00, 3px 3px 0px #3f4653, 4px 6px 0px #ff582336",
+                }}
               >
                 Get in Touch
               </h2>

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import localFont from "next/font/local";
 import LenisWrapper from "./LenisWrapper";
+import AnimatedChatBot from "./AnimatedChatBot";
 
 export const metadata = {
   title: "Camlenio | Digital Solutions",
@@ -43,6 +44,7 @@ export default function RootLayout({
           <LenisWrapper>{children}</LenisWrapper>
           <Analytics />
         </main>
+        <AnimatedChatBot />
         <Footer />
       </body>
     </html>

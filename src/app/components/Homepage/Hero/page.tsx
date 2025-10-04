@@ -40,8 +40,8 @@ const Hero = () => {
       id: 3,
       tag: "Innovation",
       tagColor: "bg-orange-100 text-orange-600",
-      title: "Innovating Technology, Simplifying Success",
-      decs: "We turn complex technologies into simple, powerful solutions that drive your business forward.",
+      title: "Artificial Intelligence Solutions by Camlenio Software",
+      decs: "We harness the power of Artificial Intelligence (AI) to help businesses automate processes, analyze data intelligently.",
       image: "/Homepage/home_about.jpg",
     },
   ];
@@ -163,7 +163,7 @@ const Hero = () => {
                   <h3 className="mt-3 font-semibold text-gray-900 text-[.70rem]">
                     {card.title}
                   </h3>
-                  <p className="mt-3 text-gray-900 text-[.60rem]">
+                  <p className="mt-3 text-gray-900 text-[.60rem] text-justify">
                     {card.decs}
                   </p>
                   {card.image && (

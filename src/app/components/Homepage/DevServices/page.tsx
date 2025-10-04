@@ -4,7 +4,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
-// import Divider from "../../devider";
 
 const features = [
   {

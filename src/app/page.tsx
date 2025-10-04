@@ -28,7 +28,7 @@ const Testimonials = dynamic(
 );
 const FreeDemo = dynamic(() => import("./components/Homepage/FreeDemo/page"));
 const BlogSection = dynamic(
-  () => import("./components/Homepage/Blogsection/page")
+  () => import("./components/Homepage/Blogsection/page")  
 );
 const LogoSlider = dynamic(
   () => import("./components/Homepage/Logoslider/page")
@@ -42,7 +42,7 @@ const Home = () => {
       <IndustriesSection />
       <DevServices />
       <MakeUsTop />
-      <MakeUsUnique />
+      <MakeUsUnique />  
       <SolutionsThatScale />
       <OurProcess />
       <Technologies />

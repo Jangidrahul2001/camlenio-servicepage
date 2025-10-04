@@ -2,9 +2,28 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import awardAnimation from "@/animations/award.json";
 
 const ItSolution = () => {
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
+
+  useEffect(() => {
+    // Initial slow one-time play
+    if (lottieRef.current) {
+      lottieRef.current.setSpeed(0.2); // slow
+      lottieRef.current.play(); // one-time play
+    }
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (lottieRef.current) {
+      lottieRef.current.setSpeed(0.2); // fast speed
+      lottieRef.current.goToAndPlay(0); // play from start
+    }
+  };
+
   return (
     <div className="relative scroll-mt-10 py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
@@ -52,7 +71,7 @@ const ItSolution = () => {
         </motion.p>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
           <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">
-            <h3 className="text-5xl font-extrabold text-orange-600">2005</h3>
+            <h3 className="text-5xl font-extrabold text-orange-600">2022</h3>
             <p className="text-gray-800 text-xl font-bold font-sans">
               We&apos;re epic since
             </p>
@@ -79,7 +98,7 @@ const ItSolution = () => {
           </div>
 
           <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
-            <h3 className="text-5xl font-extrabold text-orange-600">210+</h3>
+            <h3 className="text-5xl font-extrabold text-orange-600">115+</h3>
             <p className="text-gray-800 text-xl font-bold font-sans">
               Clients around the globe
             </p>
@@ -93,30 +112,40 @@ const ItSolution = () => {
             </div>
           </div>
 
-          <div className="relative bg-white rounded-xl shadow-md p-6 text-center overflow-hidden flex items-center justify-center">
-            <Image
-              src="/Homepage/home_about_bg.jpg"
-              alt="Background"
-              fill
-              className="object-cover object-center absolute inset-0 z-0 rounded-xl"
-              priority
-            />
-            <div className="absolute inset-0 bg-blue-700/60 rounded-xl z-10" />
-            <div className="relative z-20 text-xl text-gray-100 leading-tight">
-              <span className="flex items-center justify-center gap-1 text-orange-500 ">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStarHalf />
-              </span>
-              <br />
-              <p className="font-sans text-base">
-                {" "}
-                Rated 4.80 out of 5
-                <br /> based on over 1000 reviews
-              </p>
+          <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
+            <h3 className="text-3xl font-extrabold text-orange-600">150+</h3>
+            <p className="mt-2 text-gray-800 font-medium font-sans">
+              Successfully completed projects
+            </p>
+          </div>
+
+          <div
+            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center"
+            onMouseEnter={handleMouseEnter}
+          >
+            <h3 className="text-gray-700 font-semibold font-sans">
+              Award-winning solution
+            </h3>
+            <div className="w-20 h-20">
+              {/* <Image
+                src="/Homepage/svg/award.svg"
+                alt="Award"
+                height={90}
+                width={90}
+                className="object-contain"
+              /> */}
+
+              <Lottie
+                lottieRef={lottieRef}
+                animationData={awardAnimation}
+                loop={false}
+                autoplay
+                className="w-20 h-20"
+              />
             </div>
+            <p className="mt-3 text-gray-800 font-medium font-sans">
+              We&apos;ve got a few awards thanks to our amazing clients.
+            </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center">
@@ -137,15 +166,8 @@ const ItSolution = () => {
             </p>
           </div>
 
-          <div className="relative bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center">
-            <h3 className="text-3xl font-extrabold text-orange-600">600+</h3>
-            <p className="mt-2 text-gray-800 font-medium font-sans">
-              Successfully completed projects
-            </p>
-          </div>
-
           <div className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">
-            <h3 className="text-3xl font-extrabold text-orange-600">500+</h3>
+            <h3 className="text-3xl font-extrabold text-orange-600">20+</h3>
             <p className="mt-2 text-gray-800 font-medium font-sans">
               Business Partners
             </p>

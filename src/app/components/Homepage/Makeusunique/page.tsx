@@ -25,7 +25,10 @@ const cards = [
 
 export default function MakeUsUnique() {
   return (
-    <div className="relative overflow-hidden py-16 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_200%] animate-gradientMove">
+    <div className="relative overflow-hidden py-16 bg-gray-800/30 ">
+
+        <div className="absolute -top-10 -right-10 w-64 h-64 bg-orange-500 rounded-full opacity-100 blur-3xl -z-10"></div>
+  <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-orange-500 rounded-full opacity-100 blur-3xl -z-10"></div>
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
         <span className="relative inline-block px-4 py-1.5 rounded-full border border-orange-400 bg-gray-50 shadow-sm text-sm font-medium text-gray-950 mb-4">
           <span className="absolute w-7 h-[6px] rounded-full bg-orange-500 left-[-1.2rem] top-1/2 -translate-y-1/2"></span>
@@ -44,7 +47,6 @@ export default function MakeUsUnique() {
             our customers
           </span>
         </h6>
-
         <p className="max-w-5xl mx-auto flex-wrap text-gray-50 text-sm text-justify break-words sm:text-base mb-12 font-sans">
           At Camlenio Software, our customers are at the heart of everything we
           do. We go beyond just providing solutions—we listen, understand, and
@@ -58,14 +60,14 @@ export default function MakeUsUnique() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-50 group rounded-2xl  p-6 flex flex-col items-center text-center hover:shadow-xl transition-colors duration-700 hover:bg-orange-500 "
+            className="bg-orange-100 group rounded-2xl  p-6 flex flex-col items-center text-center hover:shadow-xl transition-colors duration-700 hover:bg-orange-500 "
           >
             <Image
               src={card.icon}
               alt={card.title}
               width={500}
               height={300}
-              className="w-20 h-20 bg-white shadow-2xl rounded-full  object-cover transition-transform duration-700 group-hover:rotate-y-360 p-4 "
+              className="w-20 h-20 bg-orange-200  shadow-2xl rounded-full  object-cover transition-transform duration-700 group-hover:rotate-y-360 p-4 "
             />
             <h2 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-gray-50 transition-all duration-500">
               {card.title}
