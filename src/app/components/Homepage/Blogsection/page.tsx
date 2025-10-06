@@ -8,8 +8,8 @@ const BlogSection = () => {
   const blogs = [
     {
       id: 1,
-      img: "/blog/BBPS.png",
-      date: "02 Apr 2023",
+      img: "/Homepage/blogs/Grocery-Delivery.png",
+      date: "September 9, 2025",
       comments: 23,
       title:
         "Grocery Delivery App Development Company in India: Build Your Blinkit Style App",
@@ -17,8 +17,8 @@ const BlogSection = () => {
     },
     {
       id: 2,
-      img: "/blog/BBPS.png",
-      date: "02 Apr 2023",
+      img: "/Homepage/blogs/M-ATM-Software-Image.png",
+      date: "September 4, 2025",
       comments: 23,
       title:
         "M-ATM Software Development in India: Secure Banking Solutions for Rural Areas 2025",
@@ -26,8 +26,8 @@ const BlogSection = () => {
     },
     {
       id: 3,
-      img: "/blog/BBPS.png",
-      date: "02 Apr 2023",
+      img: "/Homepage/blogs/SaaS-Product.png",
+      date: "August 27, 2025",
       comments: 23,
       title:
         "SaaS Product Development Services in India: A Complete 2025 Guide",
@@ -70,15 +70,15 @@ const BlogSection = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="rounded-xl shadow-md overflow-hidden flex flex-col h-full bg-white group"
+              className="rounded-xl shadow-md overflow-hidden flex flex-col h-full bg-orange-100 border-1 border-gray-300 group"
             >
-              <div className="relative glare-img">
+              <div className="relative glare-img hover:scale-102 transition-all duration-300">
                 <Image
                   src={blog.img}
                   alt={blog.title}
                   width={500}
                   height={300}
-                  className="w-full h-75 object-cover object-center"
+                  className="w-full h-85 object-cover object-center "
                 />
               </div>
               <div className="p-4 flex flex-col flex-grow">

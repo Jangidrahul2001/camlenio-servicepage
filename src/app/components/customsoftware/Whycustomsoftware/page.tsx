@@ -55,7 +55,7 @@ export default function WhyCustomSoftware() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto text-gray-600 text-sm text-left md:text-base flex-wrap break-words mb-12 font-sans"
+          className="max-w-5xl mx-auto text-gray-600 text-sm md:text-base flex-wrap break-words mb-12 font-sans text-justify"
         >
           Camlenio is an established software development company in India that
           is committed to helping businesses thrive through innovative digital
@@ -77,7 +77,7 @@ export default function WhyCustomSoftware() {
                 delay: index * 0.1,
               }}
               viewport={{ once: true, amount: 0.3 }}
-              className="p-6 bg-transparent border-1 border-orange-200 rounded-2xl shadow-lg  transition-shadow duration-300"
+              className="p-6 bg-transparent border-1 border-orange-200 rounded-2xl shadow-lg  transition-all duration-150"
             >
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
@@ -90,7 +90,7 @@ export default function WhyCustomSoftware() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-700 text-base font-sans">{item.desc}</p>
+              <p className="text-gray-700 text-base font-sans text-justify">{item.desc}</p>
             </motion.div>
           ))}
         </div>

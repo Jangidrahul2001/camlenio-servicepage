@@ -71,7 +71,7 @@ export default function OurServicesCarousel() {
           className="text-3xl sm:text-4xl font-bold mb-4 text-orange-500"
           style={{
             textShadow:
-              "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
+              "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336", 
           }}
         >
           Our Services
@@ -103,7 +103,7 @@ export default function OurServicesCarousel() {
                 className="w-72 flex-shrink-0 p-6 mb-4 rounded-2xl border border-orange-200 bg-transparent shadow-md "
               >
                 <div className="flex flex-col items-start gap-4">
-                  <div className="rounded-2xl p-3 bg-gray-100 border border-gray-200 shadow-sm">
+                  <div className="rounded-2xl p-3 bg-orange-100 border border-gray-200 shadow-sm">
                     <s.icon className="w-6 h-6 text-orange-500" />
                   </div>
                   <div>

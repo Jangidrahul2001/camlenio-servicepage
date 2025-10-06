@@ -3,13 +3,18 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const logoCount = 8;
-const logos = Array.from(
-  { length: logoCount },
-  (_, i) => `/coursel/logo${i + 1}.png`
-);
+const DEFAULT_LOGO_COUNT = 8;
 
-const LogoSlider = () => {
+type LogoSliderProps = {
+  logos?: string[];
+};
+
+const LogoSlider = ({ logos }: LogoSliderProps) => {
+  const defaultLogos = Array.from(
+    { length: DEFAULT_LOGO_COUNT },
+    (_, i) => `/coursel/logo${i + 1}.png`
+  );
+  const useLogos = logos && logos.length ? logos : defaultLogos;
   return (
     <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="relative w-full bg-transparent overflow-hidden py-4">
@@ -26,7 +31,7 @@ const LogoSlider = () => {
             ease: "linear",
           }}
         >
-          {[...logos, ...logos].map((logo, idx) => (
+          {[...useLogos, ...useLogos].map((logo, idx) => (
             <div
               key={idx}
               className="relative w-28 h-10 flex items-center justify-center"
@@ -45,3 +50,4 @@ const LogoSlider = () => {
   );
 };
 export default LogoSlider;
+

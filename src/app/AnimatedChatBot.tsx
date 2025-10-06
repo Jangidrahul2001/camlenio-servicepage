@@ -66,7 +66,6 @@ export default function AnimatedChatBot() {
 
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as Node;
-      // chatContainerRef should be attached to chatbox div
       if (
         chatContainerRef.current &&
         !chatContainerRef.current.contains(target)
@@ -151,11 +150,8 @@ export default function AnimatedChatBot() {
 
       {!open && (
         <div className="relative">
-          {/* Glow effect */}
-          <div className="absolute -inset-5 bg-orange-500 blur-xl opacity-30 animate-pulse rounded-full"></div>
 
           <div className="flex items-center">
-            {/* Lottie button wrapped in a relative container so the dismiss X can overlay it */}
             <div className="relative">
               <button
                 onClick={() => setOpen(true)}
@@ -166,18 +162,17 @@ export default function AnimatedChatBot() {
                   animationData={chatAnimation}
                   loop
                   autoplay
-                  className="w-20 h-20"
+                  className="w-16 lg:w-20 h-16 lg:h-20"
                 />
               </button>
 
-              {/* Overlay dismiss button at top-right of the animated bot */}
               <button
                 onClick={() => setDismissed(true)}
                 className="absolute -top-2 -right-2 bg-gray-100 rounded-full p-1 shadow-lg text-gray-900 hover:bg-gray-200 z-20"
                 aria-label="Dismiss chat"
                 title="Hide chat"
               >
-                <FiX className="text-lg" />
+                <FiX className="text-sm" />
               </button>
             </div>
           </div>

@@ -26,7 +26,7 @@ const Hero = () => {
       tagColor: "bg-blue-100 text-blue-600",
       title: "Customized Software Tailored to Your Growth",
       decs: "We develop software solutions that adapt to your unique business needs. Our customized technology evolves as your business grows.",
-      image: "/Homepage/hero/hero-customized.png",
+      image: "/Homepage/hero/Customized.webp",
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const Hero = () => {
       tagColor: "bg-pink-100 text-pink-600",
       title: "Empowering Businesses with Smart Fintech Solutions",
       decs: "Fintech blends finance with technology to create smarter, faster, and more secure digital financial Software.",
-      image: "/Homepage/home_about.jpg",
+      image: "/Homepage/hero/fintech.webp",
     },
     {
       id: 3,
@@ -42,12 +42,12 @@ const Hero = () => {
       tagColor: "bg-orange-100 text-orange-600",
       title: "Artificial Intelligence Solutions by Camlenio Software",
       decs: "We harness the power of Artificial Intelligence (AI) to help businesses automate processes, analyze data intelligently.",
-      image: "/Homepage/home_about.jpg",
+      image: "/Homepage/hero/ai.webp",
     },
   ];
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-18 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove pt-10 md:py-18 overflow-hidden">
       <div className="flex flex-col md:flex-row pt-16 md:py-0">
         <FormPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
         <motion.div
@@ -183,8 +183,8 @@ const Hero = () => {
                       <Image
                         src={card.image}
                         alt="alternative"
-                        width={500}
-                        height={300}
+                        width={600}
+                        height={500}
                         priority
                         className="w-full h-full object-cover"
                       />

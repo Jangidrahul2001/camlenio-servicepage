@@ -217,7 +217,7 @@ const DevServices = () => {
           </p>
         </div>
         <div className="relative pb-10 text-gray-800">
-          <div className="max-w-7xl mx-auto  flex flex-col md:flex-row gap-14 border-2 border-black/20  p-6 rounded-2xl   bg-gradient-to-r from-gray-900 via-gray-500/10 to-transparent backdrop-blur-3xl shadow-[0_-2px_28px_rgba(255,255,255,0.1)]">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-14 border-2 border-black/20  p-6 rounded-2xl   bg-gradient-to-r from-gray-900 via-gray-500/10 to-transparent backdrop-blur-3xl shadow-[0_-2px_28px_rgba(255,255,255,0.1)]">
             <div className="w-full md:w-1/3 flex flex-col gap-4">
               {features.map((feature) => (
                 <motion.button

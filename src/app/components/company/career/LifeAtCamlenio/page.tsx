@@ -27,7 +27,7 @@ const LifeAtCamlenio = () => {
   ];
 
   return (
-    <div className="py-20 px-8 md:px-16 ">
+    <div className="pt-20 px-8 md:px-16 ">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
           Life at {""}
