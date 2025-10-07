@@ -9,7 +9,7 @@ const sections = [
   {
     title: "Discovery and Planning",
     desc: "The first step of building an application begins with understanding client requirements and analyzing market dynamics to lay the foundation for successful execution.",
-    img: "/Homepage/ourprocess/discovery-planning.webp",
+    img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1759838267/Discovery-Planning_aix6bd.webp",
     checklist: [
       "In-depth Client Consultation",
       "Market Research",
@@ -20,7 +20,7 @@ const sections = [
   {
     title: "Design & Prototyping",
     desc: "This stage works on an idea as a visual structure or as an interactive model for a clear understanding before the development.",
-    img: "/Homepage/ourprocess/design-prototyping.webp",
+    img: "https://res.cloudinary.com/dxpbriwey/image/upload/v1759838267/design-prototyping_bzrbiv.webp",
     checklist: [
       "Wireframing & Mockups",
       "User Experience (UX) Design",
