@@ -1,78 +1,82 @@
-"use client";
-
+import React from "react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { FaArrowDownLong } from "react-icons/fa6";
-import BackToTopButton from "../../BackToTopButton";
 
 const Hero = () => {
-  const handleScroll = () => {
-    const section = document.getElementById("next-section");
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
-    <>
-      <div className=" relative px-4 sm:px-6 py-20 md:py-26 overflow-hidden">
-        <div className="max-w-[90rem] md:min-h-[45rem] mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-12 my-6">
-          <motion.div
-            initial={{ x: -20, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="w-full text-center md:text-left md:w-1/2"
-          >
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl  font-extrabold text-gray-900 mb-2 md:mb-6 leading-snug md:leading-tight">
-              <span className="text-[3rem] md:text-[6rem] text-orange-500">
-                {" "}
-                M
-              </span>
-              anage Your People, Simplify Your HR
-            </h1>
-            <p className="text-base sm:text-lg text-gray-700 font-normal">
-              Automate and simplify HR operations with Camlenio’s interactive
-              and feature-rich HRMS software. Camlenio HRMS reduces workload and
-              streamlines HR workflows—from recruitment to onboarding, employee
-              tracking, and performance management.
-            </p>
-            <button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white inline-flex items-center text-lg sm:text-lg font-semibold px-8 sm:px-12 py-3 sm:py-4 rounded-xl transition duration-300">
-              Request a demo →
-            </button>
-          </motion.div>
+    <div className="relative min-h-screen bg-orange-500">
+      <div className="absolute inset-0 w-full lg:w-4/5 lg:rounded-br-[36rem] overflow-hidden">
+        <Image
+          src="/ServiceDropdown/hrmssoftware/bg-hrms.jpg"
+          alt="HRMS Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/70 lg:bg-black/80"></div>
+      </div>
 
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="w-full md:w-1/2  relative inline-block  rounded-3xl"
+      <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 py-8 md:py-12">
+        <div className="flex-1 max-w-2xl text-center lg:text-left lg:mb-0">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            Modern HR Management <span className="block">Made Simple</span>
+          </h1>
+          <p className="text-gray-200 text-sm sm:text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Streamline your HR processes with our all-in-one Human Resource
+            Management System
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center transition-colors duration-300 min-w-[140px]">
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-6 rounded-xl flex items-center justify-center transition-colors duration-300 min-w-[140px] backdrop-blur-sm">
+              Learn More <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+          </div>
+        </div>
+
+        <div className="relative flex-1 flex items-center justify-center w-full max-w-2xl">
+          <div
+            className="relative w-full max-w-[280px] h-[220px] 
+                  sm:max-w-[380px] sm:h-[300px] 
+                  md:max-w-[420px] md:h-[330px] 
+                  lg:max-w-[480px] lg:h-[360px] 
+                  xl:max-w-[550px] xl:h-[400px] 
+                  2xl:max-w-[600px] 2xl:h-[450px] 
+                  overflow-hidden rounded-full border-2 border-gray-400 lg:rounded-tl-full lg:rounded-tr-full lg:rounded-bl-full lg:rounded-br-none mx-auto"
           >
             <Image
-              src="/hrmssoftware/hrms1.png"
-              alt="Hero image"
+              src="/ServiceDropdown/hrmssoftware/hrms-right-hero.jpg"
+              alt="HRMS Software Dashboard showing employee management interface"
               width={800}
-              height={500}
-              className="rounded-xl w-full h-auto object-contain z-10"
+              height={600}
+              className="w-full h-full object-cover"
               priority
             />
-          </motion.div>
+          </div>
         </div>
       </div>
-      <div className="text-center">
-        <motion.button
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleScroll}
-          className="absolute bottom-20 left-1/2 -translate-x-1/2 hidden md:inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-500 text-orange-500 text-lg rounded-full shadow hover:bg-orange-600 hover:text-white font-bold transition"
-        >
-          Explore More <FaArrowDownLong />
-        </motion.button>
+
+      <div className="absolute z-10 grid grid-cols-4 gap-6 w-[90%] max-w-6xl -bottom-10 bg-orange-100 p-8 text-center transform -translate-x-1/2 left-1/2 rounded-3xl shadow-lg px-4 sm:px-6 md:px-8 mx-auto">
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-4xl font-bold text-gray-800">01</span>
+          <p className="text-gray-800 text-sm mt-2">Planning</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-4xl font-bold text-gray-800">02</span>
+          <p className="text-gray-800 text-sm mt-2">Design</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-4xl font-bold text-gray-800">03</span>
+          <p className="text-gray-800 text-sm mt-2">Development</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-4xl font-bold text-gray-800">04</span>
+          <p className="text-gray-800 text-sm mt-2">Launch</p>
+        </div>
       </div>
-      <BackToTopButton />
-    </>
+    </div>
   );
 };
 

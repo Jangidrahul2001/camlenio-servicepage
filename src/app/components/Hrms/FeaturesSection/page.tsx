@@ -1,113 +1,119 @@
-"use client";
+// app/components/FeaturesSection.jsx
+import React from "react";
 
-import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
-
-export default function FeaturesSection() {
+const FeaturesSection = () => {
   const features = [
     {
-      title: "Recruitment & Onboarding",
-      points: [
-        "Post jobs and manage applications",
-        "Schedule interviews with ease",
-        "Paperless onboarding with digital document management",
+      title: "Employee Database",
+      items: [
+        "Centralized employee records",
+        "Digital employee files",
+        "Easy access to personnel data",
       ],
     },
     {
-      title: "Employee Management",
-      points: [
-        "Centralized employee database",
-        "Real-time attendance and leave tracking",
-        "Shift scheduling & remote workforce support",
+      title: "Leave Management",
+      items: [
+        "Automated time tracking",
+        "Leave request approvals",
+        "Real-time attendance reports",
       ],
     },
     {
-      title: "Payroll & Compliance",
-      points: [
-        "Automated salary processing",
-        "Tax and statutory compliance",
-        "Error-free calculations every time",
+      title: "Payroll Processing",
+      items: [
+        "Automated salary calculations",
+        "Tax compliance management",
+        "Multiple payment methods",
       ],
     },
     {
       title: "Performance Management",
-      points: [
-        "Goal setting & performance reviews",
+      items: [
+        "Goal setting and tracking",
+        "Performance reviews",
         "Employee feedback system",
-        "Analytics-driven decision making",
+      ],
+    },
+    {
+      title: "Recruitment & Onboarding",
+      items: [
+        "Applicant tracking system",
+        "Automated onboarding workflows",
+        "Digital document signing",
       ],
     },
     {
       title: "Employee Self-Service",
-      points: [
-        "Employees can apply for leave, download payslips, and update profiles",
-        "Managers get instant access to team updates",
-      ],
-    },
-    {
-      title: "Training & Development",
-      points: [
-        "Create and assign learning modules",
-        "Track employee skill growth",
-        "Boost retention with continuous learning",
-      ],
-    },
-    {
-      title: "Analytics & Insights",
-      points: [
-        "Customizable dashboards",
-        "Predictive workforce analytics",
-        "Identify trends to improve HR strategies",
-      ],
-    },
-    {
-      title: "Mobile Access",
-      points: [
-        "Access HRMS anywhere with mobile app",
-        "Push notifications for approvals & updates",
-        "Seamless experience across devices",
+      items: [
+        "Personal information updates",
+        "Leave applications",
+        "Payslip access",
       ],
     },
   ];
 
   return (
-    <div className="w-full py-20">
-      <div className="max-w-screen mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center text-gray-900 mb-12">
-          Key Features of{" "}
-          <span className="font-bold text-orange-500">Camlenio</span> HRMS
+    <section className="py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Everything You Need in{" "}
+          <span
+            className="text-orange-500"
+            style={{
+              textShadow:
+                "-1px -1px 0px #da5f00, 3px 3px 0px #fff, 4px 6px 0px #ff582336",
+            }}
+          >
+            One Platform
+          </span>
         </h2>
+        <p className="max-w-5xl mx-auto text-gray-600 text-sm md:text-base mb-12 font-sans text-center">
+          Comprehensive HR solutions designed to streamline your operations and
+          boost productivity
+        </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 justify-center align-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              viewport={{ once: true }}
-              className="relative rounded-2xl p-[2px] bg-gray-700 shadow-xl"
+              className="bg-orange-100 rounded-3xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-200"
             >
-              <div className="h-full w-full rounded-2xl bg-gray-900/80 backdrop-blur-md p-6">
-                <h3
-                  className="text-2xl font-semibold text-orange-500 mb-4"
-                >
-                  {feature.title}
-                </h3>
-                <ul className="space-y-2">
-                  {feature.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-orange-500 mt-1" />
-                      <span className="text-gray-200">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {feature.title}
+              </h3>
+              <ul className="space-y-3">
+                {feature.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start">
+                    <svg
+                      className="w-5 h-5 text-orange-500 mt-0.5 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
+            Explore All Features
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default FeaturesSection;

@@ -53,7 +53,7 @@ const ItSolution = () => {
   return (
     <div
       ref={ref}
-      className="relative scroll-mt-10 py-16 bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove"
+      className="relative scroll-mt-10 py-16 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove"
     >
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
         <div className="relative inline-block px-4 py-1.5 rounded-full border border-orange-50 bg-orange-100 shadow-sm text-sm font-medium text-orange-600 mb-4">

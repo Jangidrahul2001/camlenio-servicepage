@@ -36,56 +36,58 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="w-full py-16 px-6 md:px-20">
-      <div className="max-w-[100rem] mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-            Frequently Asked Questions
-          </h2>
+    <div className="w-full py-20 bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+              Frequently Asked Questions
+            </h2>
 
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="rounded-2xl shadow-md p-5 cursor-pointer border border-gray-200 bg-white"
-                onClick={() => toggleFAQ(index)}
-              >
-                <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {faq.question}
-                  </h3>
-                  <ChevronDown
-                    className={`w-6 h-6 text-gray-600 transform transition-transform ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  />
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl shadow-md p-5 cursor-pointer border border-gray-200 bg-orange-100"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-base font-semibold text-gray-800">
+                      {faq.question}
+                    </h3>
+                    <ChevronDown
+                      className={`w-4 h-4 text-gray-600 transform transition-transform ${
+                        openIndex === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  </div>
+
+                  <AnimatePresence>
+                    {openIndex === index && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-gray-600 mt-3 text-sm">{faq.answer}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <p className="text-gray-600 mt-3">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="relative w-full h-[500px] rounded-2xl overflow-hidden ">
-          <Image
-            src="/hrmssoftware/FAQ.png"
-            alt="FAQ Illustration"
-            fill
-            className="object-contain"
-          />
+          <div className="relative w-full h-[500px] rounded-2xl overflow-hidden ">
+            <Image
+              src="/ServiceDropdown/hrmssoftware/FAQ.png"
+              alt="FAQ Illustration"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>

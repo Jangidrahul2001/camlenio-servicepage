@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${lufgaFont.className}`}>
-      <body className="bg-orange-100 text-white">
+      <body>
         <Header />
         <main>
           <LenisWrapper>{children}</LenisWrapper>
