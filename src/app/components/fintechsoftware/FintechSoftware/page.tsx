@@ -26,7 +26,7 @@ export default function FintechSoftware() {
   return (
     <div
       id="next-section"
-      className="scroll-mt-30 px-6 md:px-16 text-gray-900"
+      className="relative bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove"
     >
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
@@ -37,22 +37,21 @@ export default function FintechSoftware() {
       >
         Why Choose Camlenio for Fintech Software Solutions?
       </motion.h1>
-      <hr className="border-2 border-orange-500 max-w-6xl mx-auto mt-4 rounded" />
 
-      <motion.h2
+      <motion.p
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="max-w-6xl mx-auto text-sm  md:text-base lg:text-xl font-normal text-center mt-2"
+        className="max-w-6xl mx-auto text-sm  md:text-base lg:text-xl font-normal text-center font-sans mt-2"
       >
         Camlenio builds secure, scalable, and future-ready fintech software.
         From digital banking to payment gateways, we ensure compliance,
         security, and innovation—helping you gain trust while staying ahead in
         the financial ecosystem.
-      </motion.h2>
+      </motion.p>
 
-      <div className="max-w-7xl mx-auto grid items-center gap-10 md:grid-cols-2 mt-12">
+      <div className="max-w-5xl mx-auto grid items-center gap-10 text-gray-600 md:grid-cols-2 mt-12">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

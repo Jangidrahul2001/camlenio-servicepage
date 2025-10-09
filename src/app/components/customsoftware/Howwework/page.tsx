@@ -90,7 +90,7 @@ export default function HowWeWork() {
                   delay: i * 0.1,
                 }}
                 viewport={{ once: true, amount: 0.3 }}
-                className="flex  items-center gap-6 shadow-lg rounded-2xl p-2 text-left border-1 border-r-orange-500 border-l-orange-500"
+                className="flex  items-center gap-6 shadow-lg rounded-2xl p-2 text-left border- border-orange-500 "
               >
                 <div className="flex-shrink-0">
                   <motion.div

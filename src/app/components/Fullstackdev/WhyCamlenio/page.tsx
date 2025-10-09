@@ -19,7 +19,7 @@ const Services = [
       "Not sure where to start? We offer risk-free engagement options, including detailed MVPs, to help you evaluate our services before committing. Our expertise ensures measurable business benefits and client satisfaction.",
   },
   {
-    icon: "/fullstackdev/Highest-Standard.svg",
+    icon: "/ServiceDropdown/fullstackdev/Highest-Standard.svg",
     title: "Highest Standard of Quality Assurance",
     content:
       "Our iterative development process ensures the development of highest quality full-stack applications. We promptly address any issues to deliver products that meet your exact requirements. Partner with us for unparalleled quality assurance.",
@@ -46,7 +46,7 @@ const Services = [
 
 const WhyCamlenio = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove px-8 py-16">
+    <div className="bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove px-8 py-16">
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -55,7 +55,7 @@ const WhyCamlenio = () => {
           // viewport={{ once: true }}
           className="text-left md:text-center mb-10"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Why{" "}
             <span
               className="text-orange-500 font-bold"
@@ -65,7 +65,7 @@ const WhyCamlenio = () => {
             </span>{" "}
             Stands Out as a Full-Stack Development Company
           </h2>
-          <p className="text-sm md:text-base text-gray-700">
+          <p className="max-w-5xl mx-auto text-gray-600 text-sm md:text-base mb-12 font-sans text-justify">
             At Camlenio Software Pvt. Ltd. we harness the power of modern
             technologies—AI, AR/VR, and custom integrations—to deliver dynamic,
             scalable, and future-ready digital solutions. Security is built into

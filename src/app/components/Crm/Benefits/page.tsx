@@ -27,14 +27,9 @@ const benefits = [
 export default function Benefits() {
   return (
     <div className="">
-      <div
-        className="bg-cover bg-center relative px-8 md:px-16 py-20"
-        style={{ backgroundImage: "url('/crmsoftware/crm-benefits.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/80"></div>
-
+      <div className="bg-gradient-to-b from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove relative px-8 md:px-16 py-20">
         <div className="relative max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-6xl font-bold text-white">
+          <h2 className="text-3xl md:text-6xl font-bold text-gray-900 ">
             Why Brands Trust{" "}
             <span
               className="text-orange-500"
@@ -44,7 +39,7 @@ export default function Benefits() {
               Camlenio
             </span>
           </h2>
-          <p className="text-white mt-2 text-lg">
+          <p className="text-gray-600 mt-2 text-lg">
             Why companies love Camlenio CRM
           </p>
         </div>
@@ -53,7 +48,7 @@ export default function Benefits() {
           {benefits.map((b, i) => (
             <motion.div
               key={i}
-              className="p-6 text-center border-2 border-orange-500 rounded-2xl"
+              className="p-6 text-center border-2 border-orange-300 rounded-3xl"
             >
               <div className="text-4xl rounded-full">{b.icon}</div>
               <h3 className="mt-4 text-xl md:text-3xl font-semibold text-gray-50">

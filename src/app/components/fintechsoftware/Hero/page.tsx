@@ -1,103 +1,148 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaArrowRightLong, FaArrowDownLong } from "react-icons/fa6";
-import BackToTopButton from "../../BackToTopButton";
-import Link from "next/link";
+import { Calendar, MapPin } from "lucide-react";
 
-export default function FintechHeroSection() {
-  const handleScroll = () => {
-    const section = document.getElementById("next-section");
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
-
+export function Hero() {
   return (
-    <div className="bg-gradient-to-r from-indigo-100 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div className="max-w-7xl min-h-screen mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-10 items-center relative px-8 md:px-16 text-gray-900">
-        <div className="space-y-4 max-w-2xl">
-          <h1 className="text-2xl md:text-5xl font-bold">
-            Smarter Fintech Solutions with{" "}
+    <section className="relative bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
+      <div className="py-16 grid grid-cols-1 items-center gap-6 px-4 sm:px-6 md:min-h-screen md:grid-cols-2 lg:gap-12 lg:px-8 xl:px-16">
+        {/* Content Section */}
+        <div className="space-y-4 lg:space-y-6 order-2 md:order-1">
+          <p className="text-gray-900 text-sm font-semibold tracking-wide">
+            {"Fintech Solution —"}
+          </p>
+
+          <h1
+            id="travel-hero-heading"
+            className="text-pretty text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+          >
+            {"Discover the"}
+            <br />
+            {"Future of Financial"}
+            <br />
             <span
               className="text-orange-500"
-              style={{ textShadow: "2px 2px 0 #ffff, 4px 4px 0 #FFB26B" }}
+              style={{
+                textShadow:
+                  "-1px -1px 0px #da5f00, 2px 2px 0px #fff, 3px 4px 0px #ff582336",
+              }}
             >
-              Camlenio
+              {"Innovation"}
             </span>
           </h1>
 
-          <p className="text-sm  md:text-lg text-gray-700">
-            Power your business with next-gen digital payment solutions, secure
-            transactions, and custom fintech platforms designed for scale.
+          <p className="max-w-5xl text-gray-600 text-sm leading-relaxed sm:text-base md:text-lg">
+            Empowering businesses with secure, scalable, and intelligent fintech
+            solutions.
           </p>
 
-          <ul className="space-y-1 text-sm text-gray-800 list-disc list-inside">
-            {[
-              "Seamless Digital Payments & Wallet Integration",
-              "Banking APIs & Secure Transaction Processing",
-              "Custom Fintech Dashboards for Businesses",
-              "Fraud Detection & Data Security Compliance",
-              "Scalable Cloud-Based Infrastructure",
-            ].map((item, index) => (
-              <motion.li
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, x: -10 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                whileHover={{ x: 2 }}
-                transition={{
-                  type: "tween",
-                  duration: 0.2,
-                  ease: "easeInOut",
-                }}
-                className="cursor-default text-xs md:text-sm hover:text-orange-500 transition-all duration-300"
-              >
-                {item}
-              </motion.li>
-            ))}
-          </ul>
-
-          <Link
-            href="/fintechsoftware"
-            className="inline-flex items-center gap-2 text-sm md:text-sm  bg-orange-500 text-white px-6 py-3 rounded-lg md:rounded-xl font-medium  hover:bg-orange-600 transition-all duration-300"
+          {/* Quick Action Card */}
+          <div
+            className="rounded-2xl border border-orange-300 bg-orange-200 shadow-sm p-4 md:p-5"
+            role="group"
+            aria-label="Quick trip planner"
           >
-            Book a Free Consultation <FaArrowRightLong />
-          </Link>
+            <div className="flex flex-col items-stretch gap-4 md:flex-row md:items-center md:gap-6">
+              <div className="flex items-center gap-3">
+                <MapPin className="h-8 w-8 sm:h-10 sm:w-10 p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-500 text-white shadow-lg transition-transform duration-200" />
+                <div className="grow">
+                  <div className="text-sm font-semibold">Location</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">
+                    {"Where are you going?"}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Calendar className="h-8 w-8 sm:h-10 sm:w-10 p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-500 text-white shadow-lg transition-transform duration-200" />
+                <div className="grow">
+                  <div className="text-sm font-semibold">Select Date</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">
+                    {"03 August 2020"}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-2 md:mt-0">
+                <button
+                  type="button"
+                  className="inline-flex w-full items-center justify-center rounded-xl px-4 py-3 bg-orange-500 text-gray-100 text-sm font-semibold hover:bg-orange-600 transition-colors duration-200"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mx-auto w-full max-w-md"
-        >
-          <Image
-            src="/fintechsoftware/fintech-hero2.jpg"
-            alt="Camlenio Fintech Illustration"
-            width={700}
-            height={700}
-            className="w-full h-auto object-contain drop-shadow-xl rounded-2xl"
-          />
-        </motion.div>
-      </div>
+        {/* Image Grid Section */}
+        <div className="w-full order-1 md:order-2">
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 lg:gap-6 py-4 md:py-8">
+            {/* Top-left: tall image */}
+            <div className="flex justify-end">
+              <div className="relative aspect-[3/4] w-full sm:w-4/5 md:w-3/4 overflow-hidden rounded-2xl sm:rounded-3xl">
+                <Image
+                  src="/ServiceDropdown/fintechsoftware/fintech1.webp"
+                  alt="Fintech innovation visualization"
+                  width={400}
+                  height={533}
+                  className="h-full w-full object-cover object-bottom"
+                  priority
+                />
+                <div className="absolute left-2 top-2 sm:left-3 sm:top-3 rounded-lg sm:rounded-xl bg-card/90 px-2 py-1 sm:px-3 sm:py-2 text-xs font-semibold text-card-foreground shadow-sm">
+                  100+ Destinations
+                  <div className="block text-[10px] font-normal text-muted-foreground">
+                    More than 100 travelers use the platform
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div className="text-center">
-        <motion.button
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleScroll}
-          className="hidden md:inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-500 text-orange-500 text-lg rounded-full shadow hover:bg-orange-600 hover:text-white font-bold transition "
-        >
-          Explore More <FaArrowDownLong />
-        </motion.button>
+            {/* Top-right: wide image */}
+            <div className="flex justify-start">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl sm:rounded-3xl">
+                <Image
+                  src="/ServiceDropdown/fintechsoftware/fintech2.webp"
+                  alt="Secure fintech platform"
+                  width={500}
+                  height={281}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute left-2 top-2 sm:left-3 sm:top-3 rounded-lg sm:rounded-xl bg-white/30 backdrop-blur-sm px-2 py-1 sm:px-3 sm:py-2 text-xs font-semibold text-gray-900 shadow-sm">
+                  100% <span className="ml-1">Verified</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom-left: wide image */}
+            <div className="flex justify-end">
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl sm:rounded-3xl">
+                <Image
+                  src="/ServiceDropdown/fintechsoftware/fintech3.webp"
+                  alt="Financial technology interface"
+                  width={500}
+                  height={281}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Bottom-right: tall image */}
+            <div className="flex justify-start">
+              <div className="relative aspect-[3/4] w-full sm:w-4/5 md:w-3/4 overflow-hidden rounded-2xl sm:rounded-3xl">
+                <Image
+                  src="/ServiceDropdown/fintechsoftware/fintech4.webp"
+                  alt="Digital banking solution"
+                  width={400}
+                  height={533}
+                  className="h-full w-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <BackToTopButton />
-    </div>
+    </section>
   );
 }
+
+export default Hero;

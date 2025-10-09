@@ -32,7 +32,7 @@ export default function CTASection() {
 
       <div className="relative">
         <Image
-          src="/fullstackdev/discuss-img.webp"
+          src="/ServiceDropdown/fullstackdev/fullstack.webp"
           alt="Business discussion with tech overlay"
           width={800}
           height={800}

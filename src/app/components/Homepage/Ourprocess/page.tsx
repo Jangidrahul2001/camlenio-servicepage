@@ -43,7 +43,7 @@ const sections = [
     title: "Deployment",
     desc: "The core stage where concepts and designs turn into functional software through coding, integration, and testing.",
     img: "/Homepage/process-Development-img.webp",
-    checklist: [
+    checklist: [  
       "Backend Development",
       "Frontend Development",
       "Integration of APIs",

@@ -15,80 +15,80 @@ const products = [
   {
     title: "Moonbeam",
     link: "#",
-    thumbnail: "/uiuxdesign/ui1.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui1.png",
   },
   {
     title: "Cursor",
     link: "#",
-    thumbnail: "/uiuxdesign/ui2.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui2.png",
   },
   {
     title: "Rogue",
     link: "#",
-    thumbnail: "/uiuxdesign/ui3.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui3.png",
   },
 
   {
     title: "Editorially",
     link: "#",
-    thumbnail: "/uiuxdesign/ui1.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui1.png",
   },
   {
     title: "Editrix AI",
     link: "#",
-    thumbnail: "/uiuxdesign/ui2.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui2.png",
   },
   {
     title: "Pixel Perfect",
     link: "#",
-    thumbnail: "/uiuxdesign/ui3.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui3.png",
   },
 
   {
     title: "Algochurn",
     link: "#",
-    thumbnail: "/uiuxdesign/ui1.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui1.png",
   },
   {
     title: "Aceternity UI",
     link: "#",
-    thumbnail: "/uiuxdesign/ui2.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui2.png",
   },
   {
     title: "Tailwind Master Kit",
     link: "#",
-    thumbnail: "/uiuxdesign/ui3.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui3.png",
   },
   {
     title: "SmartBridge",
     link: "#",
-    thumbnail: "/uiuxdesign/ui1.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui1.png",
   },
   {
     title: "Renderwork Studio",
     link: "#",
-    thumbnail: "/uiuxdesign/ui2.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui2.png",
   },
 
   {
     title: "Creme Digital",
     link: "#",
-    thumbnail: "/uiuxdesign/ui3.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui3.png",
   },
   {
     title: "Golden Bells Academy",
     link: "#",
-    thumbnail: "/uiuxdesign/ui1.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui1.png",
   },
   {
     title: "Invoker Labs",
     link: "#l",
-    thumbnail: "/uiuxdesign/ui2.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui2.png",
   },
   {
     title: "E Free Invoice",
     link: "#",
-    thumbnail: "/uiuxdesign/ui3.png",
+    thumbnail: "/ServiceDropdown/uiuxdesign/ui3.png",
   },
 ];
 

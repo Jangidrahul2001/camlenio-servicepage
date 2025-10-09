@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="flex-1 max-w-2xl text-center lg:text-left lg:mb-0">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
             Modern HR Management <span className="block">Made Simple</span>
-          </h1>
+          </h1> 
           <p className="text-gray-200 text-sm sm:text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             Streamline your HR processes with our all-in-one Human Resource
             Management System
@@ -59,19 +59,19 @@ const Hero = () => {
       </div>
 
       <div className="absolute z-10 grid grid-cols-4 gap-6 w-[90%] max-w-6xl -bottom-10 bg-orange-100 p-8 text-center transform -translate-x-1/2 left-1/2 rounded-3xl shadow-lg px-4 sm:px-6 md:px-8 mx-auto">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center border border-gray-300 rounded-3xl shadow-[inset_0_4px_10px_rgba(249,115,22,0.6)]">
           <span className="text-4xl font-bold text-gray-800">01</span>
           <p className="text-gray-800 text-sm mt-2">Planning</p>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center border border-gray-300 rounded-3xl">
           <span className="text-4xl font-bold text-gray-800">02</span>
           <p className="text-gray-800 text-sm mt-2">Design</p>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center border border-gray-300 rounded-3xl">
           <span className="text-4xl font-bold text-gray-800">03</span>
           <p className="text-gray-800 text-sm mt-2">Development</p>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center border border-gray-300 rounded-3xl">
           <span className="text-4xl font-bold text-gray-800">04</span>
           <p className="text-gray-800 text-sm mt-2">Launch</p>
         </div>

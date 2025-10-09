@@ -1,60 +1,102 @@
 "use client";
 import React from "react";
-import { FaArrowDownLong } from "react-icons/fa6";
-import BackToTopButton from "../../BackToTopButton";
-import { BackgroundBeamsWithCollision } from "../../background-beams-with-collision";
+import { motion } from "framer-motion";
+import { ArrowRight, Play } from "lucide-react";
+import Image from "next/image";
 
-export default function HeroSection() {
-  const handleScroll = () => {
-    const section = document.getElementById("next-section");
-    section?.scrollIntoView({ behavior: "smooth" });
-  };
+const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-50 via-orange-100 to-indigo-100 bg-[length:200%_200%] animate-gradientMove">
-      <div className="relative w-full h-screen overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/crmsoftware/crm-bg-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <div className="relative min-h-screen py-20 flex items-start justify-start overflow-hidden px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 via-orange-100 to-gray-100">
+      {/* <Image
+        src="/ServiceDropdown/crmsoftware/panel1.webp"
+        alt="Background decorative"
+        width={800}
+        height={800}
+        className="absolute bottom-0 right-10 p-4 border border-orange-300 rounded-3xl pointer-events-none"
+        style={{
+          width: "450px",
+          height: "auto",
+        }}
+      />
 
-        <div className="absolute inset-0 bg-black/40"></div>
-        <BackgroundBeamsWithCollision>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
-            <h1 className="text-5xl md:text-7xl font-bold max-w-6xl bg-transparent">
-              <span className="text-orange-500">Camlenio</span> CRM – Designed
-              for Growth, Built for You
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div
+        className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: "2s" }}
+      /> */}
+
+      <div className="pt-10 pr-10 pl-10 flex items-center justify-center relative z-10 w-full">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Simplify Customer Management
+              <br />
+              <span className="gradient-text">with Powerful CRM Solutions</span>
             </h1>
-            <p className="mt-4 text-lg md:text-2xl max-w-4xl">
-              Experience a smarter way to manage customers. From powerful
-              insights to effortless workflows, Camlenio CRM helps your business
-              grow with clarity and confidence.
-            </p>
-            <div className="mt-6 flex gap-4">
-              <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-xl">
-                Get Started
-              </button>
-              <button className="px-6 py-3 bg-transparent border-2 border-gray-200 text-white font-bold rounded-xl shadow-lg ">
-                Watch Demo
-              </button>
-            </div>
-          </div>
-          <div className="text-center z-10">
-            <button
-              onClick={handleScroll}
-              className="absolute bottom-20 left-1/2 -translate-x-1/2 hidden md:inline-flex items-center gap-2 px-6 py-3 border-2 border-orange-500 text-orange-500 text-lg rounded-full shadow-xl hover:bg-orange-600 hover:text-white font-bold transition-all duration-300 "
-            >
-              Explore More <FaArrowDownLong />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-12"
+          >
+            Transform your business with our comprehensive CRM platform.
+            Streamline sales, automate workflows, and grow your customer
+            relationships effortlessly.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <button className="bg-orange-500 text-white hover:bg-orange-600 text-base sm:text-lg py-3 px-8 flex items-center rounded-lg transition">
+              Get Demo
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
-          </div>
-        </BackgroundBeamsWithCollision>
-        <BackToTopButton />
+
+            <button
+              id="nextSectionBtn"
+              onClick={() => {
+                const section = document.getElementById("nextSection");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="border border-gray-300 hover:bg-gray-200 text-base sm:text-lg py-3 px-8 flex items-center rounded-2xl transition"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Explore Services
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground"
+          >
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full" />
+              <span>No credit card required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full" />
+              <span>14-day free trial</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-primary rounded-full" />
+              <span>Cancel anytime</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Hero;
