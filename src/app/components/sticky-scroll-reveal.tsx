@@ -14,7 +14,7 @@ export const StickyScrollGSAP = ({
   content: {
     title: string;
     description: string;
-    imageSrc?: string; // <-- image for sticky box
+    imageSrc?: string; 
   }[];
   contentClassName?: string;
 }) => {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Calendar, MapPin } from "lucide-react";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className="relative bg-gradient-to-r from-gray-100 via-orange-100 to-gray-100 bg-[length:200%_200%] animate-gradientMove">
       <div className="py-16 grid grid-cols-1 items-center gap-6 px-4 sm:px-6 md:min-h-screen md:grid-cols-2 lg:gap-12 lg:px-8 xl:px-16">
@@ -145,4 +145,4 @@ export function Hero() {
   );
 }
 
-export default Hero;
+

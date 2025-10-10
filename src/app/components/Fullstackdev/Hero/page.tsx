@@ -125,7 +125,7 @@ export default function Hero() {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-200, 200]),
+    useTransform(scrollYProgress, [0, 0.2], [-80, 80]),
     springConfig
   );
 
@@ -133,11 +133,11 @@ export default function Hero() {
     <>
       <div
         ref={ref}
-        className="h-[200vh] py-16 relative overflow-hidden antialiased flex flex-col [perspective:200px] [transform-style:preserve-3d]"
+        className="h-[160vh] xl:[100vh] max-w-7xl mx-auto py-2 relative overflow-hidden antialiased flex flex-col [perspective:500px] [transform-style:preserve-3d]"
       >
         <Header />
         <motion.div style={{ rotateX, rotateZ, translateY, opacity }}>
-          <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-10">
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 mb-10">
             {firstRow.map((product) => (
               <ProductCard
                 key={product.title}
@@ -146,7 +146,7 @@ export default function Hero() {
               />
             ))}
           </motion.div>
-          <motion.div className="flex flex-row mb-10 space-x-20">
+          <motion.div className="flex flex-row mb-10 aspect-[5/4] space-x-6">
             {secondRow.map((product) => (
               <ProductCard
                 key={product.title}
@@ -165,13 +165,12 @@ export default function Hero() {
 const Header = () => (
   <div className="max-w-7xl relative mx-auto py-20 px-4 w-full">
     <h1 className="text-2xl md:text-[4.5rem] font-black text-gray-900">
-      Full-Stack Development That Transforms Ideas into Scalable Products
+      Simplify Customer Management with Powerful CRM Solutions
     </h1>
     <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-800">
-      At <span className="text-orange-500">Camlenio</span>, we don’t just build
-      websites — we engineer powerful digital ecosystems. From stunning UI/UX to
-      robust backend architecture, our full-stack solutions are designed to
-      deliver performance, security, and growth for your business.
+      Transform your business with our comprehensive CRM platform. Streamline
+      sales, automate workflows, and grow your customer relationships
+      effortlessly.
     </p>
   </div>
 );
@@ -186,19 +185,19 @@ const ProductCard = ({
   <motion.div
     style={{ x: translate }}
     whileHover={{ y: -10 }}
-    className="group h-[25rem] w-[40rem] relative shrink-0 md:w-[40vw] md:h-[18rem]"
+    className="group w-[30rem] h-[15rem]  relative shrink-0 max-w-3xl"
   >
     <a href={product.link} className="block group-hover:shadow-2xl">
       <Image
         src={product.thumbnail}
         alt={product.title}
         fill
-        className="object-contain w-full object-left-top rounded-3xl"
+        className="object-contain w-full object-top rounded-3xl"
         sizes="(max-width: 768px) 100vw, 600px"
       />
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-70 bg-black pointer-events-none rounded-3xl transition-opacity duration-500"></div>
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover:opacity-70 bg-black/40 pointer-events-none rounded-3xl transition-opacity duration-500"></div>
     </a>
-    <h2 className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 text-white transition-opacity duration-300">
+    <h2 className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-white transition-opacity duration-300">
       {product.title}
     </h2>
   </motion.div>
