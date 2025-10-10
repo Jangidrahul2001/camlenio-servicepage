@@ -20,7 +20,7 @@ const availablePages = [
   "/component/services/crmsoftware",
   // "/component/services/ecommerceportel",
   // "/component/services/fintechsoftware",
-  // "/component/services/fullstackdevelopment",
+  "/component/services/fullstackdevelopment",
   "/component/services/hrmssoftware",
   // "/component/services/androidappdevelopment",
   // "/component/services/ui_uxdesigning",
